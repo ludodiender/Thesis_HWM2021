@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.1)  2 SEP 2021 09:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.1)  2 SEP 2021 12:38
 entering extended mode
 **./Proposal_LMD_HWM.tex
 (Proposal_LMD_HWM.tex
@@ -130,25 +130,18 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 )
 \Gin@req@height=\dimen146
 \Gin@req@width=\dimen147
-) (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
-Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip54
-\bibsep=\skip55
-LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count275
 ) (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2021/07/22 3.63 The Babel package
-
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
 File: babel.def 2021/07/22 3.63 Babel common definitions
-\babel@savecnt=\count276
+\babel@savecnt=\count275
 \U@D=\dimen148
 \l@unhyphenated=\language79
 
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 )
-\bbl@dirlevel=\count277
+\bbl@dirlevel=\count276
 
 *************************************
 * Local config file bblopts.cfg used
@@ -179,12 +172,12 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \cmidrulesep=\dimen156
 \cmidrulekern=\dimen157
 \defaultaddspace=\dimen158
-\@cmidla=\count278
-\@cmidlb=\count279
+\@cmidla=\count277
+\@cmidlb=\count278
 \@aboverulesep=\dimen159
 \@belowrulesep=\dimen160
-\@thisruleclass=\count280
-\@lastruleclass=\count281
+\@thisruleclass=\count279
+\@lastruleclass=\count280
 \@thisrulewidth=\dimen161
 )
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
@@ -193,11 +186,20 @@ Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count282
-\rotFPtop=\skip56
-\rotFPbot=\skip57
+\c@r@tfl@t=\count281
+\rotFPtop=\skip54
+\rotFPbot=\skip55
 \rot@float@box=\box53
 \rot@mess@toks=\toks20
+)
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/apacite\apacite.sty
+Package: apacite 2013/07/21 v6.03 APA citation
+\c@BibCnt=\count282
+\bibleftmargin=\skip56
+\bibindent=\skip57
+\bibparsep=\skip58
+\bibitemsep=\skip59
+\biblabelsep=\skip60
 )
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -414,22 +416,22 @@ File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
 ) (Proposal_LMD_HWM.aux)
 \openout1 = `Proposal_LMD_HWM.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 38.
-LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 39.
+LaTeX Font Info:    ... okay on input line 39.
 
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -488,6 +490,13 @@ G,.JBIG2,.JB2,.eps]
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+\c@maskedRefs=\count295
+
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/apacite\english.apc
+File: english.apc 2013/07/21 v6.03 apacite language file
+LaTeX Info: Redefining \BPBI on input line 129.
+LaTeX Info: Redefining \BHBI on input line 130.
+)
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -523,29 +532,54 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 46.
+(Font)              <12> on input line 47.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 46.
+(Font)              <8> on input line 47.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 46.
+(Font)              <6> on input line 47.
 LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
-54.
+55.
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmss.fd
 File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-
-Package natbib Warning: Citation `Brauer2011' on page 1 undefined on input line
- 55.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 62.
 
 (Proposal_LMD_HWM.bbl
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
+2.
 
-Package natbib Warning: Empty `thebibliography' environment on input line 7.
-
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
+Underfull \hbox (badness 10000) in paragraph at lines 16--37
+\T1/lmss/m/n/10 Mea-sur-ing ur-ban rain-fall us-ing mi-crowave
+ []
 
-Package natbib Warning: There were undefined citations.
 
-[1{C:/Users/ludod/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
+Underfull \hbox (badness 10000) in paragraph at lines 16--37
+\T1/lmss/m/n/10 links from com-mer-cial cel-lu-lar com-mu-ni-ca-
+ []
+
+
+Underfull \hbox (badness 2781) in paragraph at lines 16--37
+\T1/lmss/m/n/10 tion net-works [Jour-nal Ar-ti-cle].  \T1/lmss/m/sl/10 Wa-ter R
+e-
+ []
+
+
+Underfull \hbox (badness 4713) in paragraph at lines 16--37
+\T1/lmss/m/sl/10 sources Re-search\T1/lmss/m/n/10 , \T1/lmss/m/sl/10 47\T1/lmss
+/m/n/10 (12).  Re-trieved from
+ []
+
+
+Overfull \hbox (145.15056pt too wide) in paragraph at lines 16--37
+\T1/lmtt/m/n/10 https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2010WR0
+10350
+ []
+
+) [1{C:/Users/ludod/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
 
 ] [2]
@@ -555,22 +589,24 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 6055 strings out of 478927
- 90684 string characters out of 2852536
- 428529 words of memory out of 3000000
- 23785 multiletter control sequences out of 15000+600000
- 427072 words of font info for 45 fonts, out of 8000000 for 9000
+ 6212 strings out of 478927
+ 93163 string characters out of 2852536
+ 436427 words of memory out of 3000000
+ 23934 multiletter control sequences out of 15000+600000
+ 427428 words of font info for 46 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
  61i,10n,70p,764b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{
-C:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/U
+{C:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
+:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/U
 sers/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/U
 sers/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/U
 sers/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/U
-sers/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb>
-Output written on Proposal_LMD_HWM.pdf (2 pages, 92058 bytes).
+sers/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:
+/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C
+:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on Proposal_LMD_HWM.pdf (2 pages, 146140 bytes).
 PDF statistics:
- 34 PDF objects out of 1000 (max. 8388607)
+ 44 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

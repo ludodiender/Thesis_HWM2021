@@ -1,7 +1,38 @@
-\begin{thebibliography}{0}
-\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
-\expandafter\ifx\csname url\endcsname\relax
-  \def\url#1{\texttt{#1}}\fi
-\expandafter\ifx\csname urlprefix\endcsname\relax\def\urlprefix{URL }\fi
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Overeem%
+, Leijnse%
+\BCBL {}\ \BBA {} Uijlenhoet%
+}{%
+Overeem%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2011}}%
+}]{%
+Overeem2011}
+\APACinsertmetastar {%
+Overeem2011}%
+\begin{APACrefauthors}%
+Overeem, A.%
+, Leijnse, H.%
+\BCBL {}\ \BBA {} Uijlenhoet, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Measuring urban rainfall using microwave links from
+  commercial cellular communication networks} {Measuring urban rainfall using
+  microwave links from commercial cellular communication networks}{\BBCQ}\
+  [Journal Article].
+\newblock
+\APACjournalVolNumPages{Water Resources Research}{47}{12}{}.
+\newblock
+\begin{APACrefURL}
+  \url{https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2010WR010350}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1029/2010WR010350} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}

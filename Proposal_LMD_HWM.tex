@@ -4,10 +4,11 @@
 \usepackage{titlesec, blindtext, color}                                  % standard packages
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor} % extra colors 
 \usepackage{graphicx}                                                       % figures
-\usepackage{natbib}                                                          % bibliography
+%\usepackage{natbib}                                                          % bibliography
 \usepackage[english]{babel}                                              % correct hyphenation (afbreekstreepjes)
 \usepackage{booktabs}                                                     % for midrule in tables
 \usepackage{rotating}                                                        % for sdeways table
+\usepackage{apacite}
 
 % PAGE MARGINS
 \usepackage[top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
@@ -52,17 +53,24 @@
 	In this Section, you should:
 	\begin{itemize}
 		\item Motivate and justify the research. Put your research in global context (who cares about your research?)
-		\item State what has been done already. Summarize relevant literature \citep{Brauer2011}.
+		\item State what has been done already. Summarize relevant literature \cite{Overeem2011}.
 		\item State what has NOT been done yet. Where is the gap in knowledge? This should lead directly to the research objectives in the next Section.
 	\end{itemize}
 	
 	\section{Research objectives}
 	
-	State objectives clearly. What is the point of this research? The aim should follow directly from the problem description. 
+	\textit{State objectives clearly. What is the point of this research? The aim should follow directly from the problem description.}
+	The objectives of this research are to 1) train, test and validate a neural network on CML data obtained in the Netherlands, 2) use transfer learning to 
+	 
 	
 	\section{Research questions}
 	
-	Which questions do you want to answer in order to reach the objectives? Divide into sub-questions for clarity.
+	\textit{Which questions do you want to answer in order to reach the objectives? Divide into sub-questions for clarity.}
+	\begin{itemize}
+		\item How does a neural network perform on Dutch data?
+		\item How does transfer learning improve the use of CML's in Sri Lanka as precipitation measurements?
+		\item What is the potential of the use of NN for 2D interpolation of rainfall maps
+	\end{itemize}
 	
 	
 	\section{Field site and data}
@@ -95,9 +103,9 @@
 	% BIBLIOGRAPHY
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
-	\renewcommand{\bibname}{Bibliography} 
-	\bibliographystyle{elsart-harv}
-	\bibliography{references_thesis}
+	% \renewcommand{\bibname}{Bibliography} 
+	\bibliographystyle{apacite}
+	\bibliography{Proposal_Ludo}
 	
 	% to add items to the bibliography:
 	% option 1. open "references_thesis.bib" in JabRef (free downloadable), enter more papers
