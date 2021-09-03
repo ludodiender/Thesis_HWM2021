@@ -48,7 +48,10 @@
 	
 	\section{Problem description}
 	
-	Remove text from this template and write your own (of course). Feel free to change headers, but make sure the topics are covered. There is a lot of valuable information available on the internet on how to write thesis proposals and the thesis reports themselves. 
+	\textbf{In short, without references yet.}
+	Since the start of this century, Commercial Microwave Links have been recognized as an opportunistic method to measure rainfall \cite{Leijnse2007}. The links span around 10 kms on average with a frequency of 30 GHz and their signal gets attenuated by rainfall. This attenuation is measured and stored by telecompanies and can be used to retrieve rainfall rates. Especially in data scarce areas, where little precipitation is measured, CML's have proven to be an excellent addition to precipitation data \cite{Overeem2021,Doumounia2014,Diba2021}. Having ample and correct precipitation data is important for flood warnings, agriculture, river systems, shipping routes and many more.
+	The first studies on the use of CML signals to retrieve rainfall rates where done by using a specific Power-Law (PL) to relate the attenuation of the signal and the rainfall rate. This method, which includes a wet-dry classification, baseline estimation, wet antenna attenuation estimation and finally a rainfall rate retrieval, has shown correlations of well over 95\% in most cases. (ample of references) Recent methods have shifted away from this PL algorithm and used a more data-driven approach in the form of neural networks of different kinds. Studies have been performed in Sweden, Israel \cite{Habi2019}, Germany \cite{Polz2020}, South Korea and Ethiopia \cite{Diba2021} on the use of such data-driven networks in relating CML signals to rainfall rates. In general, the time needed for the algorithm, the ease of implementing and the transferability of the methods are mentioned as main advantages of data-drive neural networks in comparison to the traditional PL method. 
+	Transfer learning carries the power to adapt an already existing model with a certain structure to do a slightly different task.   Although used quite often in different Machine Learning applications, the concept of transfer learning has not yet been used to improve the precipitation estimation of CML's in data-scarce areas.  
 	
 	In this Section, you should:
 	\begin{itemize}
@@ -60,7 +63,7 @@
 	\section{Research objectives}
 	
 	\textit{State objectives clearly. What is the point of this research? The aim should follow directly from the problem description.}
-	The objectives of this research are to 1) train, test and validate a neural network on CML data obtained in the Netherlands, 2) use transfer learning to 
+	The objectives of this research are to 1) train, test and validate a neural network on CML data in the Netherlands to obtain precipitation rates, 2) apply the concept of transfer learning to make the model able to obtain precipitation rates for Sri Lanka, and 3) create 2D interpolated rainfall maps using the neural network.
 	 
 	
 	\section{Research questions}
@@ -76,9 +79,12 @@
 	\section{Field site and data}
 	
 	Are you going to use other people's data or collect data yourself? What are the considered locations, instruments, resolutions? You can also include the data in the methods.
+	Making use of Aart's dataset of the Netherlands and the provided data for Sri Lanka. Combination makes the research come together. \textbf{To what extent do I need to explain the data here? Frequency, number, type of measurements (interval or continuous, min/max or 1 min), time period (probably yes), metadata like average height and frequency.}
 	
 	\section{Methods}
 	
+	To answer my research questions, I will use a neural network set up to infer rainfall rates from CML data. Picking the type of neural network will be part of the research as well, as there is a plethora of different architectures available, all of which serve specific purposes. 
+	The main architectural types that will be considered are one-dimensional convolutional neural networks (CNN), Long Short Term Memory (LSTM) and Gated Recurrent Unit (GRU). The final two are both different types of Recurrent Neural Networks. 
 	How are you going to find the answer to your questions? What do you need for this? Describe the core measurement equipment or models briefly. It often helps to link the steps in the methodology to the research questions.
 	
 	

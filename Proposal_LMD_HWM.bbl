@@ -1,6 +1,164 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Diba%
+}{%
+Diba%
+}{%
+{\protect \APACyear {2021}}%
+}]{%
+Diba2021}
+\APACinsertmetastar {%
+Diba2021}%
+\begin{APACrefauthors}%
+Diba, S\BPBI M\BPBI G\BPBI J\BPBI D\BPBI C., F.D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2021}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Wireless Telecommunication Links for Rainfall
+  Monitoring: Deep Learning Approach and Experimental Results} {Wireless
+  telecommunication links for rainfall monitoring: Deep learning approach and
+  experimental results}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{IEEE}{9}{}{11}.
+\newblock
+\begin{APACrefDOI} \doi{10.1109/ACCESS.2021.3076781} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Doumounia%
+, Gosset%
+, Cazenave%
+, Kacou%
+\BCBL {}\ \BBA {} Zougmore%
+}{%
+Doumounia%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+Doumounia2014}
+\APACinsertmetastar {%
+Doumounia2014}%
+\begin{APACrefauthors}%
+Doumounia, A.%
+, Gosset, M.%
+, Cazenave, F.%
+, Kacou, M.%
+\BCBL {}\ \BBA {} Zougmore, F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Rainfall monitoring based on microwave links from
+  cellular telecommunication networks: First results from a West African test
+  bed} {Rainfall monitoring based on microwave links from cellular
+  telecommunication networks: First results from a west african test
+  bed}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{Geophysical Research Letters}{41}{16}{6016-6022}.
+\newblock
+\begin{APACrefURL}
+  \url{https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2014GL060724}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1002/2014GL060724} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Habi%
+}{%
+Habi%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+Habi2019}
+\APACinsertmetastar {%
+Habi2019}%
+\begin{APACrefauthors}%
+Habi, V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2019}.
+\unskip\
+\newblock
+\APACrefbtitle {Rain Detection and Estimation Using Recurrent Neural Network
+  and Commercial Microwave Link} {Rain detection and estimation using recurrent
+  neural network and commercial microwave link}\ \APACtypeAddressSchool
+  {Thesis}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Leijnse%
+, Uijlenhoet%
+\BCBL {}\ \BBA {} Stricker%
+}{%
+Leijnse%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2007}}%
+}]{%
+Leijnse2007}
+\APACinsertmetastar {%
+Leijnse2007}%
+\begin{APACrefauthors}%
+Leijnse, H.%
+, Uijlenhoet, R.%
+\BCBL {}\ \BBA {} Stricker, J\BPBI N\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2007}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Hydrometeorological application of a microwave link: 2.
+  Precipitation} {Hydrometeorological application of a microwave link: 2.
+  precipitation}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{Water Resources Research}{43}{4}{}.
+\newblock
+\begin{APACrefURL}
+  \url{https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2006WR004989
+  https://agupubs.onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2006WR004989?download=true}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1029/2006WR004989} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Overeem%
+\ \protect \BOthers {.}}{%
+Overeem%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2021}}%
+}]{%
+Overeem2021}
+\APACinsertmetastar {%
+Overeem2021}%
+\begin{APACrefauthors}%
+Overeem, A.%
+, Leijnse, H.%
+, Leth, T.%
+, Bogerd, L.%
+, Priebe, J.%
+, Tricarico, D.%
+\BDBL {}Uijlenhoet, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2021}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Tropical rainfall monitoring with commercial microwave
+  links in Sri Lanka} {Tropical rainfall monitoring with commercial microwave
+  links in sri lanka}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{Environmental Research Letters}{16}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{10.1088/1748-9326/ac0fa6} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Overeem%
 , Leijnse%
 \BCBL {}\ \BBA {} Uijlenhoet%
@@ -33,6 +191,37 @@ Overeem, A.%
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{https://doi.org/10.1029/2010WR010350} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Polz%
+, Chwala%
+, Graf%
+\BCBL {}\ \BBA {} Kunstmann%
+}{%
+Polz%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+Polz2020}
+\APACinsertmetastar {%
+Polz2020}%
+\begin{APACrefauthors}%
+Polz, J.%
+, Chwala, C.%
+, Graf, M.%
+\BCBL {}\ \BBA {} Kunstmann, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Rain event detection in commercial microwave link
+  attenuation data using convolutional neural networks} {Rain event detection
+  in commercial microwave link attenuation data using convolutional neural
+  networks}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{Atmos. Meas. Tech.}{13}{}{18}.
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}
