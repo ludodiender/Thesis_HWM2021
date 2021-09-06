@@ -27,10 +27,6 @@ Chwala, C.%
 \newblock
 \APACjournalVolNumPages{WIREs Water}{6}{2}{e1337}.
 \newblock
-\begin{APACrefURL}
-  \url{https://wires.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/wat2.1337?download=true}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{https://doi.org/10.1002/wat2.1337} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -65,10 +61,6 @@ de Vos, L\BPBI W.%
 \newblock
 \APACjournalVolNumPages{Journal of Atmospheric and Oceanic
   Technology}{36}{7}{1267-1283}.
-\newblock
-\begin{APACrefURL}
-  \url{https://journals.ametsoc.org/downloadpdf/journals/atot/36/7/jtech-d-18-0197.1.pdf}
-  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1175/JTECH-D-18-0197.1} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
@@ -139,10 +131,6 @@ Doumounia, A.%
 \newblock
 \APACjournalVolNumPages{Geophysical Research Letters}{41}{16}{6016-6022}.
 \newblock
-\begin{APACrefURL}
-  \url{https://agupubs.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/2014GL060724?download=true}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{https://doi.org/10.1002/2014GL060724} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -174,10 +162,6 @@ Fencl, M.%
   links}{\BBCQ}\ [Journal Article].
 \newblock
 \APACjournalVolNumPages{Hydrol. Earth Syst. Sci.}{21}{1}{617-634}.
-\newblock
-\begin{APACrefURL}
-  \url{https://hess.copernicus.org/articles/21/617/2017/hess-21-617-2017.pdf}
-  \end{APACrefURL}
 \newblock
 \APACrefnote{HESS}
 \newblock
@@ -214,10 +198,6 @@ Graf, M.%
   [Journal Article].
 \newblock
 \APACjournalVolNumPages{Hydrol. Earth Syst. Sci.}{24}{6}{2931-2950}.
-\newblock
-\begin{APACrefURL}
-  \url{https://hess.copernicus.org/articles/24/2931/2020/hess-24-2931-2020.pdf}
-  \end{APACrefURL}
 \newblock
 \APACrefnote{HESS}
 \newblock
@@ -275,10 +255,6 @@ Leijnse, H.%
 \newblock
 \APACjournalVolNumPages{Water Resources Research}{43}{4}{}.
 \newblock
-\begin{APACrefURL}
-  \url{https://agupubs.onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2006WR004989?download=true}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{https://doi.org/10.1029/2006WR004989} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -311,10 +287,6 @@ Overeem, A.%
 \newblock
 \APACjournalVolNumPages{Environmental Research Letters}{16}{}{}.
 \newblock
-\begin{APACrefURL}
-  \url{https://iopscience.iop.org/article/10.1088/1748-9326/ac0fa6}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{10.1088/1748-9326/ac0fa6} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -346,11 +318,38 @@ Overeem, A.%
 \newblock
 \APACjournalVolNumPages{Water Resources Research}{47}{12}{}.
 \newblock
-\begin{APACrefURL}
-  \url{https://agupubs.onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2010WR010350?download=true}
-  \end{APACrefURL}
-\newblock
 \begin{APACrefDOI} \doi{https://doi.org/10.1029/2010WR010350} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Overeem%
+, Leijnse%
+\BCBL {}\ \BBA {} Uijlenhoet%
+}{%
+Overeem%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+Overeem2013}
+\APACinsertmetastar {%
+Overeem2013}%
+\begin{APACrefauthors}%
+Overeem, A.%
+, Leijnse, H.%
+\BCBL {}\ \BBA {} Uijlenhoet, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Country-wide rainfall maps from cellular communication
+  networks} {Country-wide rainfall maps from cellular communication
+  networks}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{Proceedings of the National Academy of
+  Sciences}{110}{8}{2741-2745}.
+\newblock
+\begin{APACrefDOI} \doi{10.1073/pnas.1217961110} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -382,6 +381,39 @@ Polz, J.%
   networks}{\BBCQ}\ [Journal Article].
 \newblock
 \APACjournalVolNumPages{Atmos. Meas. Tech.}{13}{}{18}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pudashine%
+\ \protect \BOthers {.}}{%
+Pudashine%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+Pudashine2020}
+\APACinsertmetastar {%
+Pudashine2020}%
+\begin{APACrefauthors}%
+Pudashine, J.%
+, Guyot, A.%
+, Petitjean, F.%
+, Pauwels, V\BPBI R\BPBI N.%
+, Uijlenhoet, R.%
+, Seed, A.%
+\BDBL {}Walker, J\BPBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Deep Learning for an Improved Prediction of Rainfall
+  Retrievals From Commercial Microwave Links} {Deep learning for an improved
+  prediction of rainfall retrievals from commercial microwave links}{\BBCQ}\
+  [Journal Article].
+\newblock
+\APACjournalVolNumPages{Water Resources Research}{56}{7}{e2019WR026255}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1029/2019WR026255} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -473,9 +505,6 @@ Weiss, K.%
   learning}{\BBCQ}\ [Journal Article].
 \newblock
 \APACjournalVolNumPages{Journal of Big Data}{3}{1}{9}.
-\newblock
-\begin{APACrefURL} \url{https://doi.org/10.1186/s40537-016-0043-6}
-  \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1186/s40537-016-0043-6} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
