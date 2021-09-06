@@ -14,140 +14,47 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: Proposal_Ludo.bib
-I was expecting a `,' or a `}'---line 86 of file Proposal_Ludo.bib
- : 
- : Year,
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5062 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5062 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5062 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5062 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5066 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5066 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5066 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5066 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5066 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5066 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5066 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5066 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5068 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5068 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5068 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5068 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5068 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5068 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5068 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5068 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5072 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5072 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5072 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5072 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5075 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5075 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5075 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5075 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5076 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5076 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5076 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5076 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5079 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5079 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5079 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5079 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5079 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5079 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5079 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5079 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5079 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5079 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5079 of file apacite.bst
-Too many commas in name 1 of "Diba, F.D., Samad, M.A., Ghimire, J., D. Choi" for entry Diba2021
-while executing---line 5079 of file apacite.bst
 Warning--No school in Habi2019
-You've used 7 entries,
+You've used 15 entries,
             6951 wiz_defined-function locations,
-            1327 strings with 12555 characters,
-and the built_in function-call counts, 16362 in all, are:
-= -- 1959
-> -- 135
-< -- 890
-+ -- 946
-- -- 14
-* -- 1176
-:= -- 3214
-add.period$ -- 27
-call.type$ -- 7
-change.case$ -- 119
+            1396 strings with 14773 characters,
+and the built_in function-call counts, 34882 in all, are:
+= -- 4092
+> -- 334
+< -- 1828
++ -- 1905
+- -- 30
+* -- 2515
+:= -- 6595
+add.period$ -- 60
+call.type$ -- 15
+change.case$ -- 255
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 418
-empty$ -- 577
-format.name$ -- 241
-if$ -- 2917
+cite$ -- 31
+duplicate$ -- 1002
+empty$ -- 1307
+format.name$ -- 600
+if$ -- 6305
 int.to.chr$ -- 0
-int.to.str$ -- 21
+int.to.str$ -- 45
 missing$ -- 0
-newline$ -- 200
-num.names$ -- 56
-pop$ -- 149
+newline$ -- 456
+num.names$ -- 120
+pop$ -- 371
 preamble$ -- 1
-purify$ -- 28
+purify$ -- 60
 quote$ -- 0
-skip$ -- 992
+skip$ -- 2085
 stack$ -- 0
-substring$ -- 1000
-swap$ -- 282
-text.length$ -- 14
+substring$ -- 2024
+swap$ -- 676
+text.length$ -- 37
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 624
+type$ -- 1328
 warning$ -- 1
-while$ -- 83
+while$ -- 204
 width$ -- 0
-write$ -- 255
-(There were 45 error messages)
+write$ -- 599
+(There was 1 warning)

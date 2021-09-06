@@ -1,17 +1,96 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Chwala%
+\ \BBA {} Kunstmann%
+}{%
+Chwala%
+\ \BBA {} Kunstmann%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+Chwala2019}
+\APACinsertmetastar {%
+Chwala2019}%
+\begin{APACrefauthors}%
+Chwala, C.%
+\BCBT {}\ \BBA {} Kunstmann, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Commercial microwave link networks for rainfall
+  observation: Assessment of the current status and future challenges}
+  {Commercial microwave link networks for rainfall observation: Assessment of
+  the current status and future challenges}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{WIREs Water}{6}{2}{e1337}.
+\newblock
+\begin{APACrefURL}
+  \url{https://wires.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/wat2.1337?download=true}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1002/wat2.1337} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+de Vos%
+, Overeem%
+, Leijnse%
+\BCBL {}\ \BBA {} Uijlenhoet%
+}{%
+de Vos%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+deVos2019}
+\APACinsertmetastar {%
+deVos2019}%
+\begin{APACrefauthors}%
+de Vos, L\BPBI W.%
+, Overeem, A.%
+, Leijnse, H.%
+\BCBL {}\ \BBA {} Uijlenhoet, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Rainfall Estimation Accuracy of a Nationwide
+  Instantaneously Sampling Commercial Microwave Link Network: Error Dependency
+  on Known Characteristics} {Rainfall estimation accuracy of a nationwide
+  instantaneously sampling commercial microwave link network: Error dependency
+  on known characteristics}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{Journal of Atmospheric and Oceanic
+  Technology}{36}{7}{1267-1283}.
+\newblock
+\begin{APACrefURL}
+  \url{https://journals.ametsoc.org/downloadpdf/journals/atot/36/7/jtech-d-18-0197.1.pdf}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1175/JTECH-D-18-0197.1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Diba%
+, Samad%
+, Ghimire%
+\BCBL {}\ \BBA {} Choi%
 }{%
 Diba%
-}{%
+\ \protect \BOthers {.}}{%
 {\protect \APACyear {2021}}%
 }]{%
 Diba2021}
 \APACinsertmetastar {%
 Diba2021}%
 \begin{APACrefauthors}%
-Diba, S\BPBI M\BPBI G\BPBI J\BPBI D\BPBI C., F.D.%
+Diba, F.%
+, Samad, M.%
+, Ghimire, J.%
+\BCBL {}\ \BBA {} Choi, D.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
@@ -61,10 +140,88 @@ Doumounia, A.%
 \APACjournalVolNumPages{Geophysical Research Letters}{41}{16}{6016-6022}.
 \newblock
 \begin{APACrefURL}
-  \url{https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1002/2014GL060724}
+  \url{https://agupubs.onlinelibrary.wiley.com/doi/pdfdirect/10.1002/2014GL060724?download=true}
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{https://doi.org/10.1002/2014GL060724} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Fencl%
+, Dohnal%
+, Rieckermann%
+\BCBL {}\ \BBA {} Bareš%
+}{%
+Fencl%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+Fencl2017}
+\APACinsertmetastar {%
+Fencl2017}%
+\begin{APACrefauthors}%
+Fencl, M.%
+, Dohnal, M.%
+, Rieckermann, J.%
+\BCBL {}\ \BBA {} Bareš, V.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Gauge-adjusted rainfall estimates from commercial
+  microwave links} {Gauge-adjusted rainfall estimates from commercial microwave
+  links}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{Hydrol. Earth Syst. Sci.}{21}{1}{617-634}.
+\newblock
+\begin{APACrefURL}
+  \url{https://hess.copernicus.org/articles/21/617/2017/hess-21-617-2017.pdf}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{HESS}
+\newblock
+\begin{APACrefDOI} \doi{10.5194/hess-21-617-2017} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Graf%
+, Chwala%
+, Polz%
+\BCBL {}\ \BBA {} Kunstmann%
+}{%
+Graf%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+Graf2020}
+\APACinsertmetastar {%
+Graf2020}%
+\begin{APACrefauthors}%
+Graf, M.%
+, Chwala, C.%
+, Polz, J.%
+\BCBL {}\ \BBA {} Kunstmann, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Rainfall estimation from a German-wide commercial
+  microwave link network: optimized processing and validation for 1 year of
+  data} {Rainfall estimation from a german-wide commercial microwave link
+  network: optimized processing and validation for 1 year of data}{\BBCQ}\
+  [Journal Article].
+\newblock
+\APACjournalVolNumPages{Hydrol. Earth Syst. Sci.}{24}{6}{2931-2950}.
+\newblock
+\begin{APACrefURL}
+  \url{https://hess.copernicus.org/articles/24/2931/2020/hess-24-2931-2020.pdf}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{HESS}
+\newblock
+\begin{APACrefDOI} \doi{10.5194/hess-24-2931-2020} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -119,8 +276,7 @@ Leijnse, H.%
 \APACjournalVolNumPages{Water Resources Research}{43}{4}{}.
 \newblock
 \begin{APACrefURL}
-  \url{https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2006WR004989
-  https://agupubs.onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2006WR004989?download=true}
+  \url{https://agupubs.onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2006WR004989?download=true}
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{https://doi.org/10.1029/2006WR004989} \end{APACrefDOI}
@@ -155,6 +311,10 @@ Overeem, A.%
 \newblock
 \APACjournalVolNumPages{Environmental Research Letters}{16}{}{}.
 \newblock
+\begin{APACrefURL}
+  \url{https://iopscience.iop.org/article/10.1088/1748-9326/ac0fa6}
+  \end{APACrefURL}
+\newblock
 \begin{APACrefDOI} \doi{10.1088/1748-9326/ac0fa6} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
@@ -187,7 +347,7 @@ Overeem, A.%
 \APACjournalVolNumPages{Water Resources Research}{47}{12}{}.
 \newblock
 \begin{APACrefURL}
-  \url{https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2010WR010350}
+  \url{https://agupubs.onlinelibrary.wiley.com/doi/pdfdirect/10.1029/2010WR010350?download=true}
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{https://doi.org/10.1029/2010WR010350} \end{APACrefDOI}
@@ -222,6 +382,133 @@ Polz, J.%
   networks}{\BBCQ}\ [Journal Article].
 \newblock
 \APACjournalVolNumPages{Atmos. Meas. Tech.}{13}{}{18}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Ruf%
+, Aydin%
+, Mathur%
+\BCBL {}\ \BBA {} Bobak%
+}{%
+Ruf%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1996}}%
+}]{%
+Ruf1996}
+\APACinsertmetastar {%
+Ruf1996}%
+\begin{APACrefauthors}%
+Ruf, C\BPBI S.%
+, Aydin, K.%
+, Mathur, S.%
+\BCBL {}\ \BBA {} Bobak, J\BPBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1996}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {35-GHz Dual-Polarization Propagation Link for Rain-Rate
+  Estimation} {35-ghz dual-polarization propagation link for rain-rate
+  estimation}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{Journal of Atmospheric and Oceanic
+  Technology}{13}{2}{419-425}.
+\newblock
+\begin{APACrefDOI} \doi{10.1175/1520-0426(1996)013<0419:Gdpplf>2.0.Co;2}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tan%
+\ \protect \BOthers {.}}{%
+Tan%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+TanYear}
+\APACinsertmetastar {%
+TanYear}%
+\begin{APACrefauthors}%
+Tan, C.%
+, Sun, F.%
+, Kong, T.%
+, Zhang, W.%
+, Yang, C.%
+\BCBL {}\ \BBA {} Liu, C.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A Survey on Deep Transfer Learning} {A survey on deep
+  transfer learning}{\BBCQ}\ [Conference Proceedings].
+\newblock
+\BIn{} (\BPG~270-279).
+\newblock
+\APACaddressPublisher{}{Springer International Publishing}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Weiss%
+, Khoshgoftaar%
+\BCBL {}\ \BBA {} Wang%
+}{%
+Weiss%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+Weiss2016}
+\APACinsertmetastar {%
+Weiss2016}%
+\begin{APACrefauthors}%
+Weiss, K.%
+, Khoshgoftaar, T\BPBI M.%
+\BCBL {}\ \BBA {} Wang, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A survey of transfer learning} {A survey of transfer
+  learning}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{Journal of Big Data}{3}{1}{9}.
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.1186/s40537-016-0043-6}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.1186/s40537-016-0043-6} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Zhuang%
+\ \protect \BOthers {.}}{%
+Zhuang%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2021}}%
+}]{%
+Zhuang2021}
+\APACinsertmetastar {%
+Zhuang2021}%
+\begin{APACrefauthors}%
+Zhuang, F.%
+, Qi, Z.%
+, Duan, K.%
+, Xi, D.%
+, Zhu, Y.%
+, Zhu, H.%
+\BDBL {}He, Q.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2021}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A Comprehensive Survey on Transfer Learning} {A
+  comprehensive survey on transfer learning}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{Proceedings of the IEEE}{109}{1}{43-76}.
+\newblock
+\begin{APACrefDOI} \doi{10.1109/JPROC.2020.3004555} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}
