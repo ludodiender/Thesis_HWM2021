@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.1)  6 SEP 2021 17:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.1)  7 SEP 2021 12:19
 entering extended mode
 **./Proposal_LMD_HWM.tex
 (Proposal_LMD_HWM.tex
@@ -531,86 +531,111 @@ LaTeX Info: Redefining \BHBI on input line 130.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 47.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 47.
-LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 47.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 63.
-[1{C:/Users/ludod/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
+[1
 
+{C:/Users/ludod/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
+
+]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 51.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 51.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 51.
+
+Underfull \vbox (badness 7981) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [2
 
 ]
 LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
-71.
+68.
 
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmss.fd
 File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-(Proposal_LMD_HWM.bbl [2]
+) [3]
+(Proposal_LMD_HWM.bbl
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 28.
+
 Underfull \hbox (badness 1043) in paragraph at lines 116--136
 []\T1/lmss/m/n/10 Doumounia, A., Gos-set, M., Cazenave, F., Ka-cou,
  []
 
 
-Underfull \hbox (badness 1629) in paragraph at lines 244--260
+Underfull \hbox (badness 2261) in paragraph at lines 184--201
+[]\T1/lmss/m/n/10 French, M. N., Kra-jew-ski, W. F., & Cuyk-endall,
+ []
+
+
+Underfull \hbox (badness 1629) in paragraph at lines 309--325
 []\T1/lmss/m/n/10 Leijnse, H., Ui-jlen-hoet, R., & Stricker, J. N. M.
  []
 
 
-Underfull \hbox (badness 1286) in paragraph at lines 244--260
+Underfull \hbox (badness 1286) in paragraph at lines 309--325
 \T1/lmss/m/n/10 (2007).  Hy-drom-e-te-o-ro-log-i-cal ap-pli-ca-tion of a
  []
 
-
-Underfull \vbox (badness 1803) has occurred while \output is active []
-
-
-Underfull \hbox (badness 2080) in paragraph at lines 397--418
+[4]
+Underfull \hbox (badness 2080) in paragraph at lines 462--483
 []\T1/lmss/m/n/10 Pudashine, J., Guyot, A., Pe-tit-jean, F., Pauwels,
  []
 
 
-Underfull \hbox (badness 1092) in paragraph at lines 397--418
+Underfull \hbox (badness 1092) in paragraph at lines 462--483
 \T1/lmss/m/n/10 mi-crowave links [Jour-nal Ar-ti-cle].  \T1/lmss/m/sl/10 Wa-ter
  Re-
  []
 
 
-Underfull \hbox (badness 3838) in paragraph at lines 433--452
+Underfull \hbox (badness 3838) in paragraph at lines 498--517
 []\T1/lmss/m/n/10 Ruf, C. S., Ay-din, K., Mathur, S., & Bobak,
  []
 
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
+49.
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Underfull \hbox (badness 2042) in paragraph at lines 529--555
+\T1/lmss/m/n/10 P., Hsu, K., Sorooshian, S., & Braith-waite,
+ []
 
-Underfull \hbox (badness 1248) in paragraph at lines 523--542
+
+Underfull \hbox (badness 1248) in paragraph at lines 626--645
 []\T1/lmss/m/n/10 Zhuang, F., Qi, Z., Duan, K., Xi, D., Zhu, Y.,
  []
 
-) [3] (Proposal_LMD_HWM.aux)
+) [5
+
+] (Proposal_LMD_HWM.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 6223 strings out of 478927
- 93135 string characters out of 2852536
- 442233 words of memory out of 3000000
- 23949 multiletter control sequences out of 15000+600000
- 429877 words of font info for 46 fonts, out of 8000000 for 9000
+ 6279 strings out of 478927
+ 94039 string characters out of 2852536
+ 443606 words of memory out of 3000000
+ 24001 multiletter control sequences out of 15000+600000
+ 432964 words of font info for 48 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 61i,10n,70p,1011b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}{
-C:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C:/U
+ 61i,10n,70p,1199b,275s stack positions out of 5000i,500n,10000p,200000b,80000s
+{C:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
+:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/U
 sers/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C:/U
 sers/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C:/U
 sers/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/U
 sers/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:
-/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb>
-Output written on Proposal_LMD_HWM.pdf (3 pages, 135818 bytes).
+/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C
+:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on Proposal_LMD_HWM.pdf (5 pages, 162525 bytes).
 PDF statistics:
- 42 PDF objects out of 1000 (max. 8388607)
+ 53 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

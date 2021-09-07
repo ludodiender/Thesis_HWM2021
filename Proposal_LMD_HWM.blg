@@ -16,45 +16,45 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: Proposal_Ludo.bib
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No school in Habi2019
-You've used 17 entries,
+You've used 20 entries,
             6951 wiz_defined-function locations,
-            1404 strings with 14672 characters,
-and the built_in function-call counts, 39447 in all, are:
-= -- 4649
-> -- 380
-< -- 2078
-+ -- 2178
-- -- 34
-* -- 2821
-:= -- 7472
-add.period$ -- 67
-call.type$ -- 17
-change.case$ -- 289
+            1429 strings with 15513 characters,
+and the built_in function-call counts, 46862 in all, are:
+= -- 5504
+> -- 453
+< -- 2478
++ -- 2615
+- -- 40
+* -- 3368
+:= -- 8875
+add.period$ -- 79
+call.type$ -- 20
+change.case$ -- 340
 chr.to.int$ -- 0
-cite$ -- 35
-duplicate$ -- 1143
-empty$ -- 1436
-format.name$ -- 690
-if$ -- 7118
+cite$ -- 41
+duplicate$ -- 1383
+empty$ -- 1703
+format.name$ -- 830
+if$ -- 8433
 int.to.chr$ -- 0
-int.to.str$ -- 51
+int.to.str$ -- 60
 missing$ -- 0
-newline$ -- 496
-num.names$ -- 136
-pop$ -- 420
+newline$ -- 590
+num.names$ -- 160
+pop$ -- 493
 preamble$ -- 1
-purify$ -- 68
+purify$ -- 80
 quote$ -- 0
-skip$ -- 2359
+skip$ -- 2771
 stack$ -- 0
-substring$ -- 2318
-swap$ -- 767
-text.length$ -- 41
+substring$ -- 2782
+swap$ -- 919
+text.length$ -- 47
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 1488
+type$ -- 1728
 warning$ -- 1
-while$ -- 235
+while$ -- 282
 width$ -- 0
-write$ -- 658
+write$ -- 785
 (There was 1 warning)

@@ -169,6 +169,71 @@ Fencl, M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+French%
+, Krajewski%
+\BCBL {}\ \BBA {} Cuykendall%
+}{%
+French%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1992}}%
+}]{%
+French1992}
+\APACinsertmetastar {%
+French1992}%
+\begin{APACrefauthors}%
+French, M\BPBI N.%
+, Krajewski, W\BPBI F.%
+\BCBL {}\ \BBA {} Cuykendall, R\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1992}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Rainfall forecasting in space and time using a neural
+  network} {Rainfall forecasting in space and time using a neural
+  network}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{Journal of Hydrology}{137}{1}{1-31}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/0022-1694(92)90046-X}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Gaona%
+, Overeem%
+, Raupach%
+, Leijnse%
+\BCBL {}\ \BBA {} Uijlenhoet%
+}{%
+Gaona%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017a}}%
+}]{%
+RiosGaona2017a}
+\APACinsertmetastar {%
+RiosGaona2017a}%
+\begin{APACrefauthors}%
+Gaona, M.%
+, Overeem, A.%
+, Raupach, T.%
+, Leijnse, H.%
+\BCBL {}\ \BBA {} Uijlenhoet, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017a}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Rainfall retrieval with commercial microwave links in
+  Sao Paulo, Brazil} {Rainfall retrieval with commercial microwave links in sao
+  paulo, brazil}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{Atmos. Meas. Tech.}{11}{7}{11}.
+\newblock
+\begin{APACrefDOI} \doi{10.5194/amt-11-4465-2018} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Graf%
 , Chwala%
 , Polz%
@@ -448,6 +513,44 @@ Ruf, C\BPBI S.%
 \newblock
 \begin{APACrefDOI} \doi{10.1175/1520-0426(1996)013<0419:Gdpplf>2.0.Co;2}
   \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sadeghi%
+\ \protect \BOthers {.}}{%
+Sadeghi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2019}}%
+}]{%
+Sadeghi2019}
+\APACinsertmetastar {%
+Sadeghi2019}%
+\begin{APACrefauthors}%
+Sadeghi, M.%
+, Asanjan, A\BPBI A.%
+, Faridzad, M.%
+, Nguyen, P.%
+, Hsu, K.%
+, Sorooshian, S.%
+\BCBL {}\ \BBA {} Braithwaite, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {PERSIANN-CNN: Precipitation Estimation from Remotely
+  Sensed Information Using Artificial Neural Networks-Convolutional Neural
+  Networks} {Persiann-cnn: Precipitation estimation from remotely sensed
+  information using artificial neural networks-convolutional neural
+  networks}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{Journal of Hydrometeorology}{20}{12}{2273-2289}.
+\newblock
+\begin{APACrefURL} \url{<Go to ISI>://WOS:000499430000001} \end{APACrefURL}
+\newblock
+\APACrefnote{Jr1yt Times Cited:30 Cited References Count:65}
+\newblock
+\begin{APACrefDOI} \doi{10.1175/Jhm-D-19-0110.1} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
