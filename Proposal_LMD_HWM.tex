@@ -9,6 +9,7 @@
 \usepackage{booktabs}                                                     % for midrule in tables
 \usepackage{rotating}                                                        % for sdeways table
 \usepackage{apacite}
+\usepackage[modulo, switch]{lineno}
 
 % PAGE MARGINS
 \usepackage[top=2.5cm, bottom=2.5cm, left=2cm, right=2cm]{geometry}
@@ -23,7 +24,7 @@
 % LINE SPACE
 \linespread{1.1}                          % more space between lines
 \setlength{\parindent}{5mm}       % indenting first line paragraph
-
+\linenumbers
 
 % HYPHENATION (afbreekstreepjes)
 % set words that are not abbreviated correctly  (expand list when necessary)
@@ -92,7 +93,7 @@
 	To conduct this research, I will make use of a neural network. Neural networks are part of deep learning. An input signal is transferred through different layers of the model. Every layer consists of different neurons (or nodes) that are able to extract features from the input signal. Every node consists of a weighted sum of the complete input signal. The weights that are given to the different values in this input signal, together with a bias that is added to this weighted sum, make up the parameter set of the neuron. 
 	The subsequent layers extract combinations out of the previous layer, until finally the network ends up with a prediction with a certain probability. By applying a loss function, the network can learn how to improve, by changing the different parameters in all neurons. The to-be-extracted features are unknown beforehand to the researcher. The network itself learns which features are interesting, separable and are helpful in classifying the specific signal. This is the cornerstone of machine learning/deep learning. 
 	
-	In this research I will use a Long Short Term Memory (LSTM) architecture for my neural network, which is part of a Recurrent Neural Networks (RNN). RNN's a characterized by the recurrent use of the same bit of network, to keep on improving the prediction. The network has one or two layers, depending on the complexity of the features and the signal. The signal is then processed multiple times by the same two layers. RNN's are designed for sequential data like the time signals that are used in this research. A disadvantage of RNN's is the risk of vanishing or exploding gradients, due to the lack of memory in the network. LSTM's resolve this issue by adding a memory to the model by using different gates to combine old and new data on every recurrent step of the network. The use of LSTM's to create a network for CML data has been demonstrated before \cite{Habi2019, Diba2021, Pudashine2020}. Other types of neural networks have been proposed as well \cite{Polz2020}, but as RNN's are designed to work with sequential data, those are preferred in this research.
+	In this research I will use a Long Short Term Memory (LSTM) architecture for my neural network, which is part of a Recurrent Neural Networks (RNN). RNN's a characterized by the recurrent use of the same bit of network, to keep on improving the prediction. The network has one or two layers, depending on the complexity of the features and the signal. The signal is then processed multiple times by the same two layers. RNN's are designed for sequential data like the time signals that are used in this research. A disadvantage of RNN's is the risk of vanishing or exploding gradients, due to the lack of memory in the network. LSTM's resolve this issue by adding a memory to the model by using different gates to combine old and new data on every recurrent step of the network. The use of LSTM's to create a network for CML data has been demonstrated before \cite{Habi2019, Diba2021, Pudashine2020}. The networks used in those studies will serve as a source of inspiration for this research. Other types of neural networks have been proposed as well \cite{Polz2020}, but as RNN's are designed to work with sequential data, those are preferred in this research.
 	
 	\subsection{Training, testing and transferring}
 	The  Dutch dataset as described in section 4 will be split up in two sets. One is dedicated to training the model and the other one will be used for testing. The training data is passed through the LSTM, the loss is calculated for each training sample and the network 'learns' (is updated) by using backward propagation. Backward propagation is a machine learning technique where the final layers are updated first and the updates move backwards through the model. 
