@@ -418,6 +418,39 @@ Overeem, A.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Overeem%
+, Leijnse%
+\BCBL {}\ \BBA {} Uijlenhoet%
+}{%
+Overeem%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+Overeem2016}
+\APACinsertmetastar {%
+Overeem2016}%
+\begin{APACrefauthors}%
+Overeem, A.%
+, Leijnse, H.%
+\BCBL {}\ \BBA {} Uijlenhoet, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Retrieval algorithm for rainfall mapping from microwave
+  links in a cellular communication network} {Retrieval algorithm for rainfall
+  mapping from microwave links in a cellular communication network}{\BBCQ}\
+  [Journal Article].
+\newblock
+\APACjournalVolNumPages{Atmos. Meas. Tech.}{9}{5}{2425-2444}.
+\newblock
+\APACrefnote{AMT}
+\newblock
+\begin{APACrefDOI} \doi{10.5194/amt-9-2425-2016} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Polz%
 , Chwala%
 , Graf%
@@ -479,6 +512,37 @@ Pudashine, J.%
 \APACjournalVolNumPages{Water Resources Research}{56}{7}{e2019WR026255}.
 \newblock
 \begin{APACrefDOI} \doi{https://doi.org/10.1029/2019WR026255} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Rigol%
+, Jarvis%
+\BCBL {}\ \BBA {} Stuart%
+}{%
+Rigol%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2001}}%
+}]{%
+Rigol2001}
+\APACinsertmetastar {%
+Rigol2001}%
+\begin{APACrefauthors}%
+Rigol, J\BPBI P.%
+, Jarvis, C\BPBI H.%
+\BCBL {}\ \BBA {} Stuart, N.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2001}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Artificial neural networks as a tool for spatial
+  interpolation} {Artificial neural networks as a tool for spatial
+  interpolation}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{International Journal of Geographical Information
+  Science}{15}{4}{323-343}.
+\newblock
+\begin{APACrefDOI} \doi{10.1080/13658810110038951} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -554,6 +618,32 @@ Sadeghi, M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Sarkar%
+}{%
+Sarkar%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+Sarkar2018}
+\APACinsertmetastar {%
+Sarkar2018}%
+\begin{APACrefauthors}%
+Sarkar, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{November 14, 2018}{}.
+\newblock
+\APACrefbtitle {A Comprehensive Hands-on Guide to Transfer Learning with
+  Real-World Applications in Deep Learning} {A comprehensive hands-on guide to
+  transfer learning with real-world applications in deep learning}\ [Web Page].
+\newblock
+\begin{APACrefURL}
+  \url{https://towardsdatascience.com/a-comprehensive-hands-on-guide-to-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Tan%
 \ \protect \BOthers {.}}{%
 Tan%
@@ -581,6 +671,37 @@ Tan, C.%
 \BIn{} (\BPG~270-279).
 \newblock
 \APACaddressPublisher{}{Springer International Publishing}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Uijlenhoet%
+, Overeem%
+\BCBL {}\ \BBA {} Leijnse%
+}{%
+Uijlenhoet%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+Uijlenhoet2018}
+\APACinsertmetastar {%
+Uijlenhoet2018}%
+\begin{APACrefauthors}%
+Uijlenhoet, R.%
+, Overeem, A.%
+\BCBL {}\ \BBA {} Leijnse, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Opportunistic remote sensing of rainfall using microwave
+  links from cellular communication networks} {Opportunistic remote sensing of
+  rainfall using microwave links from cellular communication networks}{\BBCQ}\
+  [Journal Article].
+\newblock
+\APACjournalVolNumPages{WIREs Water}{5}{4}{e1289}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1002/wat2.1289} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

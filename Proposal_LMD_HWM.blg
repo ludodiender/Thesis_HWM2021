@@ -14,47 +14,51 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: Proposal_Ludo.bib
+Repeated entry---line 317 of file Proposal_Ludo.bib
+ : @article{Overeem2016
+ :                     ,
+I'm skipping whatever remains of this entry
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No school in Habi2019
-You've used 20 entries,
+You've used 24 entries,
             6951 wiz_defined-function locations,
-            1429 strings with 15513 characters,
-and the built_in function-call counts, 46862 in all, are:
-= -- 5504
-> -- 453
-< -- 2478
-+ -- 2615
-- -- 40
-* -- 3368
-:= -- 8875
-add.period$ -- 79
-call.type$ -- 20
-change.case$ -- 340
+            1457 strings with 16409 characters,
+and the built_in function-call counts, 55697 in all, are:
+= -- 6558
+> -- 520
+< -- 2996
++ -- 3116
+- -- 48
+* -- 4008
+:= -- 10652
+add.period$ -- 95
+call.type$ -- 24
+change.case$ -- 410
 chr.to.int$ -- 0
-cite$ -- 41
-duplicate$ -- 1383
-empty$ -- 1703
-format.name$ -- 830
-if$ -- 8433
+cite$ -- 49
+duplicate$ -- 1595
+empty$ -- 2012
+format.name$ -- 940
+if$ -- 10019
 int.to.chr$ -- 0
-int.to.str$ -- 60
+int.to.str$ -- 72
 missing$ -- 0
-newline$ -- 590
-num.names$ -- 160
-pop$ -- 493
+newline$ -- 698
+num.names$ -- 192
+pop$ -- 615
 preamble$ -- 1
-purify$ -- 80
+purify$ -- 98
 quote$ -- 0
-skip$ -- 2771
+skip$ -- 3248
 stack$ -- 0
-substring$ -- 2782
-swap$ -- 919
-text.length$ -- 47
+substring$ -- 3310
+swap$ -- 1067
+text.length$ -- 57
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 1728
+type$ -- 2048
 warning$ -- 1
-while$ -- 282
+while$ -- 325
 width$ -- 0
-write$ -- 785
-(There was 1 warning)
+write$ -- 922
+(There was 1 error message)
