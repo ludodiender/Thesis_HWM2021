@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.1)  14 SEP 2021 10:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.1)  15 SEP 2021 17:48
 entering extended mode
 **./Proposal_LMD_HWM.tex
 (Proposal_LMD_HWM.tex
@@ -130,18 +130,41 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 )
 \Gin@req@height=\dimen146
 \Gin@req@width=\dimen147
+)
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen148
+\captionmargin@=\dimen149
+\captionwidth=\dimen150
+\caption@tempdima=\dimen151
+\caption@indent=\dimen152
+\caption@parindent=\dimen153
+\caption@hangindent=\dimen154
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count275
+\c@continuedfloat=\count276
+)
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
+Package: subcaption 2020/10/07 v1.3j Sub-captions (AR)
+\c@subfigure=\count277
+\c@subtable=\count278
 ) (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2021/07/22 3.63 The Babel package
+
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
 File: babel.def 2021/07/22 3.63 Babel common definitions
-\babel@savecnt=\count275
-\U@D=\dimen148
+\babel@savecnt=\count279
+\U@D=\dimen155
 \l@unhyphenated=\language79
 
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read2
 )
-\bbl@dirlevel=\count276
+\bbl@dirlevel=\count280
 
 *************************************
 * Local config file bblopts.cfg used
@@ -162,23 +185,23 @@ Package babel Info: Hyphen rules for 'newzealand' set to \l@ukenglish
 ))
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen149
-\lightrulewidth=\dimen150
-\cmidrulewidth=\dimen151
-\belowrulesep=\dimen152
-\belowbottomsep=\dimen153
-\aboverulesep=\dimen154
-\abovetopsep=\dimen155
-\cmidrulesep=\dimen156
-\cmidrulekern=\dimen157
-\defaultaddspace=\dimen158
-\@cmidla=\count277
-\@cmidlb=\count278
-\@aboverulesep=\dimen159
-\@belowrulesep=\dimen160
-\@thisruleclass=\count279
-\@lastruleclass=\count280
-\@thisrulewidth=\dimen161
+\heavyrulewidth=\dimen156
+\lightrulewidth=\dimen157
+\cmidrulewidth=\dimen158
+\belowrulesep=\dimen159
+\belowbottomsep=\dimen160
+\aboverulesep=\dimen161
+\abovetopsep=\dimen162
+\cmidrulesep=\dimen163
+\cmidrulekern=\dimen164
+\defaultaddspace=\dimen165
+\@cmidla=\count281
+\@cmidlb=\count282
+\@aboverulesep=\dimen166
+\@belowrulesep=\dimen167
+\@thisruleclass=\count283
+\@lastruleclass=\count284
+\@thisrulewidth=\dimen168
 )
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/graphics\rotating.sty
 Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
@@ -186,7 +209,7 @@ Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@r@tfl@t=\count281
+\c@r@tfl@t=\count285
 \rotFPtop=\skip54
 \rotFPbot=\skip55
 \rot@float@box=\box53
@@ -194,7 +217,7 @@ Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/apacite\apacite.sty
 Package: apacite 2013/07/21 v6.03 APA citation
-\c@BibCnt=\count282
+\c@BibCnt=\count286
 \bibleftmargin=\skip56
 \bibindent=\skip57
 \bibparsep=\skip58
@@ -203,19 +226,19 @@ Package: apacite 2013/07/21 v6.03 APA citation
 )
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/lineno\lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
-\linenopenalty=\count283
+\linenopenalty=\count287
 \output=\toks21
-\linenoprevgraf=\count284
-\linenumbersep=\dimen162
-\linenumberwidth=\dimen163
-\c@linenumber=\count285
-\c@pagewiselinenumber=\count286
-\c@LN@truepage=\count287
-\c@internallinenumber=\count288
-\c@internallinenumbers=\count289
-\quotelinenumbersep=\dimen164
-\bframerule=\dimen165
-\bframesep=\dimen166
+\linenoprevgraf=\count288
+\linenumbersep=\dimen169
+\linenumberwidth=\dimen170
+\c@linenumber=\count289
+\c@pagewiselinenumber=\count290
+\c@LN@truepage=\count291
+\c@internallinenumber=\count292
+\c@internallinenumbers=\count293
+\quotelinenumbersep=\dimen171
+\bframerule=\dimen172
+\bframesep=\dimen173
 \bframebox=\box54
 LaTeX Info: Redefining \\ on input line 3056.
 )
@@ -232,17 +255,17 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count290
-\Gm@cntv=\count291
-\c@Gm@tempcnt=\count292
-\Gm@bindingoffset=\dimen167
-\Gm@wd@mp=\dimen168
-\Gm@odd@mp=\dimen169
-\Gm@even@mp=\dimen170
-\Gm@layoutwidth=\dimen171
-\Gm@layoutheight=\dimen172
-\Gm@layouthoffset=\dimen173
-\Gm@layoutvoffset=\dimen174
+\Gm@cnth=\count294
+\Gm@cntv=\count295
+\c@Gm@tempcnt=\count296
+\Gm@bindingoffset=\dimen174
+\Gm@wd@mp=\dimen175
+\Gm@odd@mp=\dimen176
+\Gm@even@mp=\dimen177
+\Gm@layoutwidth=\dimen178
+\Gm@layoutheight=\dimen179
+\Gm@layouthoffset=\dimen180
+\Gm@layoutvoffset=\dimen181
 \Gm@dimlist=\toks22
 
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
@@ -257,7 +280,7 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 \XKV@toks=\toks23
 \XKV@tempa@toks=\toks24
 )
-\XKV@depth=\count293
+\XKV@depth=\count297
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 )) (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
@@ -416,7 +439,7 @@ Package: svn-prov 2010/04/24 v3.1862 Package Date/Version from SVN Keywords
 )
 Package: nfssext-cfr 2017/03/28 (SVN Rev: 6140){} specially mangled by cfr; bas
 ed on 2003/03/14 v1.2 Experimental NFSS Extensions
-\c@taken=\count294
+\c@taken=\count298
 LaTeX Info: Redefining \itshape on input line 515.
 LaTeX Info: Redefining \scshape on input line 523.
 LaTeX Info: Redefining \upshape on input line 537.
@@ -433,41 +456,41 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
 tex.def
 File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count295
+\l__color_backend_stack_int=\count299
 \l__pdf_internal_box=\box55
 ) (Proposal_LMD_HWM.aux)
 \openout1 = `Proposal_LMD_HWM.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 42.
-LaTeX Font Info:    ... okay on input line 42.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 44.
+LaTeX Font Info:    ... okay on input line 44.
 
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count296
-\scratchdimen=\dimen175
+\scratchcounter=\count300
+\scratchdimen=\dimen182
 \scratchbox=\box56
-\nofMPsegments=\count297
-\nofMParguments=\count298
+\nofMPsegments=\count301
+\nofMParguments=\count302
 \everyMPshowfont=\toks25
-\MPscratchCnt=\count299
-\MPscratchDim=\dimen176
-\MPnumerator=\count300
-\makeMPintoPDFobject=\count301
+\MPscratchCnt=\count303
+\MPscratchDim=\dimen183
+\MPnumerator=\count304
+\makeMPintoPDFobject=\count305
 \everyMPtoPDFconversion=\toks26
 )
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
@@ -512,7 +535,10 @@ G,.JBIG2,.JB2,.eps]
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@maskedRefs=\count302
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: rotating package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@maskedRefs=\count306
 
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/apacite\english.apc
 File: english.apc 2013/07/21 v6.03 apacite language file
@@ -553,45 +579,71 @@ LaTeX Info: Redefining \BHBI on input line 130.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-[1
-
-{C:/Users/ludod/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
-
-]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 54.
+(Font)              <12> on input line 51.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 54.
+(Font)              <8> on input line 51.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 54.
-<./images//Transfer_learning_concept.png, id=8, 534.36pt x 235.644pt>
+(Font)              <6> on input line 51.
+<./images//Transfer_learning_concept.png, id=1, 534.36pt x 235.644pt>
 File: ./images//Transfer_learning_concept.png Graphic file (type png)
 <use ./images//Transfer_learning_concept.png>
 Package pdftex.def Info: ./images//Transfer_learning_concept.png  used on input
- line 65.
+ line 62.
 (pdftex.def)             Requested size: 227.62204pt x 100.37929pt.
- [2
+[1{C:/Users/ludod/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
+
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 76--80
+Underfull \hbox (badness 10000) in paragraph at lines 73--77
 
  []
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 88.
+(Font)              <7> on input line 85.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 88.
+(Font)              <5> on input line 85.
+<./images//Dutch_CML_network.png, id=12, 268.713pt x 311.199pt>
+File: ./images//Dutch_CML_network.png Graphic file (type png)
+<use ./images//Dutch_CML_network.png>
+Package pdftex.def Info: ./images//Dutch_CML_network.png  used on input line 98
+.
+(pdftex.def)             Requested size: 221.12102pt x 256.0748pt.
 
-Underfull \vbox (badness 2035) has occurred while \output is active []
+Overfull \hbox (3.45891pt too wide) in paragraph at lines 98--99
+[][] 
+ []
 
- [3 <./images//Transfer_learning_concept.png>]
+<./images//SriLanka_CML_network.png, id=13, 301.72725pt x 467.346pt>
+File: ./images//SriLanka_CML_network.png Graphic file (type png)
+<use ./images//SriLanka_CML_network.png>
+Package pdftex.def Info: ./images//SriLanka_CML_network.png  used on input line
+ 103.
+(pdftex.def)             Requested size: 165.32434pt x 256.0748pt.
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[2 <./images//Transfer_learning_concept.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4]
+ [3 <./images//Dutch_CML_network.png> <./images//SriLanka_CML_network.png>]
+
+pdfTeX warning: pdflatex.exe (file ./images/Proposal Schedule.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<images/Proposal Schedule.pdf, id=24, 794.97pt x 614.295pt>
+File: images/Proposal Schedule.pdf Graphic file (type pdf)
+<use images/Proposal Schedule.pdf>
+Package pdftex.def Info: images/Proposal Schedule.pdf  used on input line 143.
+(pdftex.def)             Requested size: 497.38315pt x 384.35522pt.
+
+Overfull \hbox (13.68628pt too wide) in paragraph at lines 143--144
+[][] 
+ []
+
 (Proposal_LMD_HWM.bbl
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
 (Font)              Font shape `T1/lmss/m/sl' tried instead on input line 28.
- [5]
+ [4] [5 <./images/Proposal Schedule.pdf>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 6
 13.
 
@@ -633,33 +685,35 @@ Underfull \hbox (badness 10000) in paragraph at lines 631--645
 \T1/lmtt/m/n/10 -with [] -real [] -world [] -applications [] -in [] -deep []
  []
 
-) [6
 
-] (Proposal_LMD_HWM.aux)
+Underfull \vbox (badness 1874) has occurred while \output is active []
+
+) [6]
+(Proposal_LMD_HWM.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 6566 strings out of 478927
- 98280 string characters out of 2852536
- 466320 words of memory out of 3000000
- 24281 multiletter control sequences out of 15000+600000
- 438136 words of font info for 49 fonts, out of 8000000 for 9000
+ 7918 strings out of 478927
+ 124783 string characters out of 2852536
+ 482986 words of memory out of 3000000
+ 25622 multiletter control sequences out of 15000+600000
+ 438145 words of font info for 49 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 61i,10n,70p,1533b,322s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,10n,70p,1533b,592s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}<C
 :/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss10.pfb><C
 :/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss12.pfb><C
 :/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C
 :/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:
-/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><
-C:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb>
-<C:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-
-Output written on Proposal_LMD_HWM.pdf (6 pages, 267912 bytes).
+/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss9.pfb><C:/
+Users/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C
+:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><
+C:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
+Output written on Proposal_LMD_HWM.pdf (6 pages, 2348815 bytes).
 PDF statistics:
- 60 PDF objects out of 1000 (max. 8388607)
+ 84 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 27 words of extra memory for PDF output out of 10000 (max. 10000000)
 
