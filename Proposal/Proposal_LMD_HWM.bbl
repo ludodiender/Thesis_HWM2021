@@ -294,6 +294,37 @@ Habi, V.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Hu%
+, Zhang%
+\BCBL {}\ \BBA {} Zhou%
+}{%
+Hu%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+Hu2016}
+\APACinsertmetastar {%
+Hu2016}%
+\begin{APACrefauthors}%
+Hu, Q.%
+, Zhang, R.%
+\BCBL {}\ \BBA {} Zhou, Y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Transfer learning for short-term wind speed prediction
+  with deep neural networks} {Transfer learning for short-term wind speed
+  prediction with deep neural networks}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{Renewable Energy}{85}{}{83-95}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.renene.2015.06.034}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Leijnse%
 , Uijlenhoet%
 \BCBL {}\ \BBA {} Stricker%
@@ -515,6 +546,40 @@ Pudashine, J.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Qureshi%
+, Khan%
+, Zameer%
+\BCBL {}\ \BBA {} Usman%
+}{%
+Qureshi%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+Qureshi2017}
+\APACinsertmetastar {%
+Qureshi2017}%
+\begin{APACrefauthors}%
+Qureshi, A\BPBI S.%
+, Khan, A.%
+, Zameer, A.%
+\BCBL {}\ \BBA {} Usman, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Wind power prediction using deep neural network based
+  meta regression and transfer learning} {Wind power prediction using deep
+  neural network based meta regression and transfer learning}{\BBCQ}\ [Journal
+  Article].
+\newblock
+\APACjournalVolNumPages{Applied Soft Computing}{58}{}{742-755}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.asoc.2017.05.031}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Rigol%
 , Jarvis%
 \BCBL {}\ \BBA {} Stuart%
@@ -615,6 +680,38 @@ Sadeghi, M.%
 \APACrefnote{Jr1yt Times Cited:30 Cited References Count:65}
 \newblock
 \begin{APACrefDOI} \doi{10.1175/Jhm-D-19-0110.1} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sagheer%
+, Hamdoun%
+\BCBL {}\ \BBA {} Youness%
+}{%
+Sagheer%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2021}}%
+}]{%
+Sagheer2021}
+\APACinsertmetastar {%
+Sagheer2021}%
+\begin{APACrefauthors}%
+Sagheer, A.%
+, Hamdoun, H.%
+\BCBL {}\ \BBA {} Youness, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2021}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Deep LSTM-Based Transfer Learning Approach for Coherent
+  Forecasts in Hierarchical Time Series} {Deep lstm-based transfer learning
+  approach for coherent forecasts in hierarchical time series}{\BBCQ}\ [Journal
+  Article].
+\newblock
+\APACjournalVolNumPages{Sensors}{21}{13}{4379}.
+\newblock
+\begin{APACrefURL} \url{https://www.mdpi.com/1424-8220/21/13/4379}
+  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
