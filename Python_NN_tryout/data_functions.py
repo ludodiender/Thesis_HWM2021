@@ -38,11 +38,11 @@ def load_CML_data(date_selected, provider):
     return (data)
 
 
-def split_data(data, train_perc, test_perc, val_perc=0):
+def split_data(dataset, train_perc, test_perc, val_perc=0):
     # TODO: make this function compatible with numpy arrays, add multiple strategies of splitting the data (spatial or temporal)
     # This function splits the supplied data in three different sets (or two if val_perc is not supplied) and returns those
     # It takes four arguments
-    # - data (dataframe): dataset to be split
+    # - dataset (dataframe): dataset to be split
     # - train_perc (int): percentage of the dataset that will be used for training
     # - test_perc (int): percentage of the dataset that will be used for testing
     # - val_perc (int): percentage of the dataset that will be used for validating
@@ -54,12 +54,16 @@ def split_data(data, train_perc, test_perc, val_perc=0):
         raise ValueError('Insert only positive integers as percentages')
     else:
         # Split the data here
-        train_idx = round(len(data) * (train_perc / 100))
-        test_idx = round(len(data) * (test_perc / 100)) + train_idx
-        train_data = data.loc[0:train_idx, :]
-        test_data = data.loc[train_idx + 1:test_idx, :]
-        val_data = data.loc[test_idx + 1:, :]
+        train_idx = round(len(dataset) * (train_perc / 100))
+        test_idx = round(len(dataset) * (test_perc / 100)) + train_idx
+        train_data = dataset.iloc[0:train_idx, :]
+        test_data = dataset.iloc[train_idx:test_idx, :]
+        val_data = dataset.iloc[test_idx:, :]
 
+    # Sort the datasets by links ID
+    train_data = train_data.sort_values(['ID','DATE'])
+    test_data  = test_data.sort_values(['ID', 'DATE'])
+    val_data   = val_data.sort_values(['ID','DATE'])
     return (train_data, test_data, val_data)
 
 
@@ -133,7 +137,8 @@ def load_radar_data_netcdf(date_selected, time_selected):
 def ReadRainLocation(CML_data):
     # This function takes the CML data with time and AVG_LON and AVG_LAT of the link and returns a dataset with an extra column
     # that represents the true value for the precipitation.
-
+    # TODO: Don't use the middle of the link but a weighted average of all pixels it passes through.
+    # TODO: Store the combined dataset on a disk somewhere to avoid loading it over and over
     # Load the grid with the coordinates for the radar.
     cwd = os.getcwd()
     coord_grid = pd.read_csv(os.path.join(cwd, "radarcoordinaten_NL25_1km2_WGS84_full.dat"))
@@ -164,7 +169,7 @@ def ReadRainLocation(CML_data):
         match_set.at[i, 'Y_radar'] = Dist_lat.argmin()
         # print(i,' added correctly')
 
-    current_index = 5630  # Keep track of where you are in the list
+    current_index = 0  # Keep track of where you are in the list
     CML_data['TARG_PRCP'] = 0.0000  # Create an empty column to be filled later
     CML_data = CML_data.sort_values(by='DATE')
 
@@ -178,13 +183,13 @@ def ReadRainLocation(CML_data):
             x_cell = match_set[match_set['ID'] == CML_data['ID'][current_index]]['X_radar'].item()
             y_cell = match_set[match_set['ID'] == CML_data['ID'][current_index]]['Y_radar'].item()
             #CML_data['TARG_PRCP'][current_index] = radar_set.data[x_cell, y_cell]
-            CML_data.at[current_index,'TARG_PRCP'] = radar_set.data[x_cell, y_cell]
+            CML_data.at[current_index,'TARG_PRCP'] = radar_set.data[y_cell, x_cell]
 
-            if current_index % 100 == 0:
+            if current_index % 1000 == 0:
                 print(current_index, "Timestep:", CML_data['DATE'].iloc[current_index])
             current_index = current_index + 1
 
             if current_index == len(CML_data):
                 break
 
-    return (CML_data, match_set)
+    return (CML_data, match_set, lon_grid,lat_grid)
