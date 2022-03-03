@@ -18,12 +18,13 @@ def load_CML_data(provider, date_selected = None, filename=None):
     if (date_selected != None) & (filename !=None):
         raise TypeError('Specify either a selected date or a filename, not both')
 
+    header_names = ['SITE_LAT', 'SITE_LON', 'FAR_LAT', 'FAR_LON', 'FREQ', 'DATE', 'RXMIN', 'RXMAX',
+                    'DIST', 'P4_start.v', 'P4_start.u', 'P4_end.v', 'P4_end.u', 'PROV']
     if filename == None:
         # Create the right folder URL for the right dataset and specify the headers
         folder_URL_NEC = 'C:/Users/ludod/Documents/MSc Thesis/transfer_1153027_files_feb7e0a7/NEC_data/NEC_data/'
         folder_URL_NOKIA = 'C:/Users/ludod/Documents/MSc Thesis/transfer_1153027_files_feb7e0a7/NOKIA_data/NOKIA_data/'
-        header_names = ['SITE_LAT', 'SITE_LON', 'FAR_LAT', 'FAR_LON', 'FREQ', 'DATE', 'RXMIN', 'RXMAX',
-                        'DIST', 'P4_start.v', 'P4_start.u', 'P4_end.v', 'P4_end.u', 'PROV']
+
 
         # Select the right data location based on the provider and the date_selected
         if provider == 'NOKIA':
@@ -35,17 +36,10 @@ def load_CML_data(provider, date_selected = None, filename=None):
 
     # Load the dataset
     data = pd.read_csv(spec_URL, header=None, delim_whitespace=True, names=header_names)
-    ID_data = data[:]
-
-    # Add a unique identifier for each link in the dataset
-    matching_ID_table = create_ID_table(ID_data)
-
-    data_ID,matching_ID_table_new = generate_ID(data,matching_ID_table)
-
-    return data,matching_ID_table_new
+    return data
 
 
-def create_ID_table(dataset):
+def create_ID_table(dataset,coord_from_harddrive):
     data_copy = dataset.copy()
     data_copy.insert(0, "ID", value=np.nan)
     # Add average Longitude and Latitude for the middle of the link
@@ -59,10 +53,33 @@ def create_ID_table(dataset):
     data_copy.loc[:, 'ID'] = groupIDS  # Start ID at 1, by adding +1 to the groupby function
 
     matching_ID_table = data_copy[['ID','AVG_LON','AVG_LAT','FREQ']].drop_duplicates(ignore_index=True)
+    if coord_from_harddrive:
+        coord_path = 'D:/radarcoordinaten_NL25_1km2_WGS84_full.dat'
+    else:
+        coord_path = 'C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Python_NN_tryout/radarcoordinaten_NL25_1km2_WGS84_full.dat'
+    coord_grid = pd.read_csv(coord_path)
+    #print('Coordinates loaded')
+    # The coordinates for each row of the dataset change slightly from row to row as the Earth curves. The spread in
+    # these coordinates however is smaller than the difference from column to column, so an average is taken for each grid cell.
+    # This ensures that the right column and row are selected for the right CML
 
-    return matching_ID_table
+    lon_grid = coord_grid['lon'].values.reshape(765, 700).mean(axis=0)
+    lat_grid = coord_grid['lat'].values.reshape(765, 700).mean(axis=1)
 
-def generate_ID(dataset, matchset):
+    # grid cell in the radar image.
+    matching_ID_table['X_radar'] = 0
+    matching_ID_table['Y_radar'] = 0
+
+    # Calculate the distance to all rows and columns and take the smallest of these distances.
+    for i in range(0, len(matching_ID_table)):
+        Dist_lon = np.sqrt(np.power((lon_grid - matching_ID_table['AVG_LON'][i]), 2))
+        Dist_lat = np.sqrt(np.power((lat_grid - matching_ID_table['AVG_LAT'][i]), 2))
+        matching_ID_table.at[i, 'X_radar'] = Dist_lon.argmin()
+        matching_ID_table.at[i, 'Y_radar'] = Dist_lat.argmin()
+
+    return matching_ID_table, lon_grid, lat_grid
+
+def generate_ID(dataset, matchset, lon_grid, lat_grid):
     dataset.insert(0, "ID", value=np.nan)
     # Add average Longitude and Latitude for the middle of the link
     dataset['AVG_LON'] = (dataset['FAR_LON'] + dataset['SITE_LON']) / 2
@@ -74,35 +91,49 @@ def generate_ID(dataset, matchset):
                                      (matchset['FREQ']    == dataset['FREQ'][i])].tolist()
         if len(match_index) == 0: # If the link is not yet in the matchset, add it with a new ID
             maxID = np.max(matchset['ID'])
-            matchset.append({'ID': maxID+1, 'AVG_LON': dataset['AVG_LON'][i], 'AVG_LAT': dataset['AVG_LAT'][i], 'FREQ': dataset['FREQ'][i]}, ignore_index = True)
-            match_index = [-1]
+            print(len(matchset))
+            matchset = matchset.append({'ID': maxID+1, 'AVG_LON': dataset['AVG_LON'][i], 'AVG_LAT': dataset['AVG_LAT'][i], 'FREQ': dataset['FREQ'][i]}, ignore_index = True)
+            match_index = [len(matchset)-1]
+            print(match_index,len(matchset))
+            # Calculate the closest point on the grid and add it to the matchset
+            #Dist_lon = np.sqrt(np.power((lon_grid - matchset['AVG_LON'][match_index]), 2))
+            #Dist_lat = np.sqrt(np.power((lat_grid - matchset['AVG_LAT'][match_index]), 2))
+
+            Dist_lon = np.sqrt(np.power((lon_grid - matchset.at[match_index[0], 'AVG_LON']), 2))
+            Dist_lat = np.sqrt(np.power((lat_grid - matchset.at[match_index[0], 'AVG_LAT']), 2))
+
+            matchset.at[match_index, 'X_radar'] = Dist_lon.argmin()
+            matchset.at[match_index, 'Y_radar'] = Dist_lat.argmin()
 
         dataset.at[i,'ID'] = int(matchset.at[match_index[0],'ID'].item()) # Select the first ID if there is something wrong with selecting ID
-
     return dataset, matchset
 
-def write_to_csv(dataset, provider):
+def write_to_csv(dataset, provider,data_model_function):
     t0 = time.time()
     dataset_sorted = dataset.sort_values(['ID','DATE'])
+
     # Temporary file path
     header_names = ['ID','SITE_LAT', 'SITE_LON', 'FAR_LAT', 'FAR_LON', 'FREQ', 'DATE', 'RXMIN', 'RXMAX',
                     'DIST', 'P4_start.v', 'P4_start.u', 'P4_end.v', 'P4_end.u', 'PROV','AVG_LON','AVG_LAT','TARG_PRCP']
-
-    folderpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_per_ID/'
+    if data_model_function == 'train':
+        folderpath = 'D:/CML_RAD_perID/2011_training/' + provider + '/'
+    elif data_model_function == 'test':
+        folderpath = 'D:/CML_RAD_perID/2012_testing/' + provider + '/'
+    elif data_model_function == 'validate':
+        folderpath = 'D:/CML_RAD_perID/2013_validating/' + provider + '/'
+    # folderpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_per_ID/'
     nr_of_IDS = len(dataset_sorted['ID'].unique())
     ID_cumsum = dataset_sorted['ID'].value_counts().cumsum()
     occ_of_IDS = pd.concat([pd.Series([0]),ID_cumsum])
     for i in range(0,nr_of_IDS):
         measure_sample = dataset_sorted.iloc[occ_of_IDS.iloc[i]:occ_of_IDS.iloc[i+1],:]
         linkID = int(measure_sample.iloc[0,:]['ID'].item())
-        filepath = folderpath + provider + '/' + provider + '_linkID_' + str(linkID) +'.txt'
+        filepath = folderpath + provider + '_linkID_' + str(linkID) +'.txt'
         if os.path.exists(filepath):
             measure_sample.to_csv(filepath, mode='a',index=False, header = False)
         else:
             measure_sample.to_csv(filepath, mode='w',index=False, header=header_names)
-        if i % 200 == 0:
-            print('Sample',i,': Time spent',time.time()-t0)
-    print(time.time()-t0)
+
 
 def split_data(dataset, train_perc, test_perc, val_perc=0):
     """ This function splits the supplied data in three different sets (or two if val_perc is not supplied). The data are sorted
@@ -137,13 +168,24 @@ def split_data(dataset, train_perc, test_perc, val_perc=0):
     return (train_data, test_data, val_data)
 
 
-def load_radar_data_netcdf(date_selected, time_selected):
+def load_radar_data_netcdf(date_selected, time_selected, from_ext_drive = False):
     # This function loads the radar data from a specific time in a netCDF format.
     # - date_selected (int): selected date
     # - time_selected (int): selected time
     endyear = str(date_selected)[0:4] # Year ends on the last date of the year
-    startyear = str(int(endyear)-1) # Year starts on the final date of the previous year
-    base_URL = 'C:/Users/ludod/Documents/MSc Thesis/RADNL_CLIM_EM_MFBSNL25_05m_'+startyear+'1231T235500_'+endyear+'1231T235500_netCDF4_0002/'+endyear+'/'
+    startyear = str(int(endyear) - 1)  # Year starts on the final date of the previous year
+
+    if (str(date_selected)[4:] == '0101') & (str(time_selected).zfill(4)=='0000'):
+        endyear_folder = str(int(endyear)-1)
+        startyear_folder = str(int(startyear)-1)
+    else:
+        endyear_folder = endyear
+        startyear_folder = startyear
+
+    if from_ext_drive:
+        base_URL = 'D:/RADNL_CLIM_EM_MFBSNL25_05m_'+startyear_folder+'1231T235500_'+endyear_folder+'1231T235500_netCDF4_0002/'+endyear_folder+'/'
+    else:
+        base_URL = 'C:/Users/ludod/Documents/MSc Thesis/RADNL_CLIM_EM_MFBSNL25_05m_'+startyear_folder+'1231T235500_'+endyear_folder+'1231T235500_netCDF4_0002/'+endyear_folder+'/'
 
     # Select the month from the selected date to go to the right folder
     month = str(date_selected)[4:6]
@@ -152,6 +194,19 @@ def load_radar_data_netcdf(date_selected, time_selected):
     for i in [1, 2, 3]:
         if time_selected == 0000:  # TODO: fix this part, difficult to deal with the string and integer formats
             date_selected = date_selected - 1
+            if date_selected % 100 == 0: # Start of the month
+                if int(str(date_selected)[4:]) in [200, 400, 600, 800, 900, 1100]: date_selected = date_selected - 69
+                elif int(str(date_selected)[4:]) in [500, 700, 1000, 1200]: date_selected = date_selected - 70
+                elif int(str(date_selected)[4:]) in [100]:
+                    date_selected = date_selected - 8869
+                    month = '13' # Set to 13, 1 will be subtracted later to fix
+                elif int(str(date_selected)[0:4]) == 2012: date_selected = date_selected - 71
+                else:
+                    date_selected = date_selected - 72
+
+                month = str(int(month)-1).zfill(2)
+
+
             time_selected = time_selected + 2400
         if str(time_selected).zfill(4)[2:4] == '00':
             time_selected_prior = time_selected - 40 - i * 5
@@ -170,39 +225,18 @@ def load_radar_data_netcdf(date_selected, time_selected):
     return (total_radar, temp_dataset)
 
 
-def ReadRainLocation(CML_data,matchset_XY):
+def ReadRainLocation(CML_data,matchset_XY, from_ext_drive):
     # This function takes the CML data with time and AVG_LON and AVG_LAT of the link and returns a dataset with an extra column
     # that represents the true value for the precipitation.
     # TODO: Don't use the middle of the link but a weighted average of all pixels it passes through.
-    # TODO: Store the combined dataset on a disk somewhere to avoid loading it over and over
+
     # Load the grid with the coordinates for the radar.
     t0 = time.time()
     cwd = os.getcwd()
-    coord_grid = pd.read_csv(os.path.join(cwd, "radarcoordinaten_NL25_1km2_WGS84_full.dat"))
-    print('Coordinates loaded')
-    # The coordinates for each row of the dataset change slightly from row to row as the Earth curves. The spread in
-    # these coordinates however is smaller than the difference from column to column, so an average is taken for each grid cell.
-    # This ensures that the right column and row are selected for the right CML
-
-    lon_grid = coord_grid['lon'].values.reshape(765, 700).mean(axis=0)
-    lat_grid = coord_grid['lat'].values.reshape(765, 700).mean(axis=1)
 
     # Create a 'unique' list of times in the dataset
     times_inCML = CML_data['DATE'].unique()
     times_inCML.sort()
-
-    # grid cell in the radar image.
-    matchset_XY['X_radar'] = 0
-    matchset_XY['Y_radar'] = 0
-
-    print('Matching set created. Size:', matchset_XY.shape)
-    # Calculate the distance to all rows and columns and take the smallest of these distances.
-
-    for i in range(0, len(matchset_XY)):
-        Dist_lon = np.sqrt(np.power((lon_grid - matchset_XY['AVG_LON'][i]), 2))
-        Dist_lat = np.sqrt(np.power((lat_grid - matchset_XY['AVG_LAT'][i]), 2))
-        matchset_XY.at[i, 'X_radar'] = Dist_lon.argmin()
-        matchset_XY.at[i, 'Y_radar'] = Dist_lat.argmin()
 
     current_index = 0  # Keep track of where you are in the list
     CML_data['TARG_PRCP'] = 0.0000  # Create an empty column to be filled later
@@ -210,26 +244,26 @@ def ReadRainLocation(CML_data,matchset_XY):
 
     # Loop over all timesteps in the file
     for i in times_inCML:
-        radar_set, _ = load_radar_data_netcdf(int(str(i)[0:8]), int(str(i)[8:12]))
+        radar_set, _ = load_radar_data_netcdf(int(str(i)[0:8]), int(str(i)[8:12]),from_ext_drive=from_ext_drive)
 
 
         # The while loop ensures that the for loop continues to the next time step as all links have been added
         while CML_data['DATE'].iloc[current_index] == i:
-            x_cell = matchset_XY[matchset_XY['ID'] == CML_data['ID'][current_index]]['X_radar'].item()
-            y_cell = matchset_XY[matchset_XY['ID'] == CML_data['ID'][current_index]]['Y_radar'].item()
+            x_cell = int(matchset_XY[matchset_XY['ID'] == CML_data.loc[current_index, 'ID']]['X_radar'].item())
+            y_cell = int(matchset_XY[matchset_XY['ID'] == CML_data.loc[current_index, 'ID']]['Y_radar'].item())
 
             CML_data.at[current_index,'TARG_PRCP'] = radar_set.data[y_cell, x_cell]
 
-            # if current_index % 1000 == 0:
-                # print(current_index, "Timestep:", CML_data['DATE'].iloc[current_index])
+            #if current_index % 10000 == 0:
+                #print('Target added for sample',current_index, 'out of ',len(CML_data))
             current_index = current_index + 1
 
             if current_index == len(CML_data):
                 break
     CML_data['TARG_PRCP'] = CML_data['TARG_PRCP'] * 4 # To convert from mm/15 min to mm/h
-    print(time.time()-t0)
+    #print(time.time()-t0)
 
-    return (CML_data, matchset_XY, lon_grid,lat_grid)
+    return CML_data
 
 
 def filter_data_error(data_target):
@@ -244,29 +278,91 @@ def filter_data_error(data_target):
     ID_values = data_with_target_errorless['ID'].value_counts()  # Get the number of times a certain ID occurs
 
     # Select the number of occurances that occurs the most
-    max_ID_length = ID_values.value_counts()[ID_values.value_counts() == ID_values.value_counts().max()].index.item()
-    IDs_tokeep = ID_values[
-        ID_values == max_ID_length].index.to_list()  # Add all IDs that have the highest occurring occurence to a list
+    max_ID_length = ID_values.value_counts()[ID_values.value_counts() == ID_values.value_counts().max()].index.values[0]
+    IDs_tokeep = ID_values[ID_values == max_ID_length].index.to_list()  # Add all IDs that have the highest occurring occurence to a list
 
     data_with_target_errorless = data_with_target_errorless[
         data_with_target_errorless['ID'].isin(IDs_tokeep)]  # Select only those IDs that occur in the list
 
     return data_with_target_errorless
 
+
+def get_ID_table_from_data(foldername):
+    headers = ['ID', 'SITE_LAT', 'SITE_LON', 'FAR_LAT', 'FAR_LON', 'FREQ', 'DATE', 'RXMIN', 'RXMAX', 'DIST',
+               'P4_start.v', 'P4_start.u', 'P4_end.v', 'P4_end.u', 'PROV', 'AVG_LON', 'AVG_LAT', 'TARG_PRCP']
+    empty_matchset = pd.DataFrame(columns=headers)
+    files = [f for f in listdir(foldername) if isfile(join(foldername, f))]
+
+    for f in files:
+
+        f_full = foldername + '/' + f
+        data_sup = pd.read_csv(f_full, header=0)
+        j = 0
+        for i in range(0, len(data_sup)):
+            j += 1
+            if j == 1:
+                data_line = data_sup.iloc[j]
+                empty_matchset = empty_matchset.append(data_line)
+                break
+        print('Done with', f)
+
+    return(empty_matchset)
+'''
+matching_ID_table = empty_matchset_new2[['ID','AVG_LON','AVG_LAT','FREQ']].reset_index(drop=True)
+matching_ID_table = matching_ID_table.assign(X_radar = 0)
+matching_ID_table = matching_ID_table.assign(Y_radar = 0)
+# Calculate the distance to all rows and columns and take the smallest of these distances.
+for i in range(0, len(matching_ID_table)):
+    Dist_lon = np.sqrt(np.power((lon_grid - matching_ID_table.iloc[i]['AVG_LON']), 2))
+    Dist_lat = np.sqrt(np.power((lat_grid - matching_ID_table.iloc[i]['AVG_LAT']), 2))
+    matching_ID_table.at[i, 'X_radar'] = Dist_lon.argmin()
+    matching_ID_table.at[i, 'Y_radar'] = Dist_lat.argmin()
+'''
+
+
 ######################################
 ## Full data to hard drive function ##
 ######################################
-def data_to_harddrive(filepath,provider):
+def data_to_harddrive(filepath,provider,longrid,latgrid,match_table = None):
+    t0 = time.time()
     # Get a list of all the files in the filepath
     files = [f for f in listdir(filepath) if isfile(join(filepath, f))]
     # For every file, run the whole script of combining it with the right file somewhere on the disk
+    count=0
     for f in files:
+        t0_0 = time.time()
         filename = filepath+'/'+f
-        data, matching_ID_table = load_CML_data(provider, filename=filename)
-        data_with_target, match_set, lon_grid, lat_grid = ReadRainLocation(data, matching_ID_table)
-        data_with_target_errorless = filter_data_error(data_with_target)
-        write_to_csv(data_with_target_errorless, provider)
-        print('Done with file:', f)
+        year = f[9:13] # Extract the year from the file name to send the results to the right folder
+        month = f[13:15]
+        if year == '2013':  # Start with just writing the year 2011 to the training folder
+            data = load_CML_data(provider, filename=filename)
+
+            if data.loc[0, 'PROV'].endswith(';'):
+                data['PROV'] = data['PROV'].str.slice(start=0, stop=-1)
+            if year == '2012': model_function = 'test'
+            if year == '2013': model_function = 'validate'
+
+            if count == 0:
+                if isinstance(match_table,type(None)):
+                    data_ID = data[:]
+                    matching_ID_table, lon_grid, lat_grid = create_ID_table(data_ID, coord_from_harddrive=True)
+                else:
+                    matching_ID_table = match_table
+                    lon_grid = longrid
+                    lat_grid = latgrid
+
+
+            data, matching_ID_table = generate_ID(data, matching_ID_table, lon_grid, lat_grid)
+            print('IDs generated for file ', f)
+            data_with_target = ReadRainLocation(data, matching_ID_table, from_ext_drive=True)
+            data_with_target_errorless = filter_data_error(data_with_target)
+
+            write_to_csv(data_with_target_errorless, provider, data_model_function=model_function)
+
+            count += 1
+            print('Done with file:', f, '. Time spent:', time.time() - t0_0)
+
+    print('Done with all files. Total time spent:', time.time()-t0)
 
     # For 2011 -> training, 2012 -> testing, 2013 -> validating
 
