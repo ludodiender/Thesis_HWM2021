@@ -1,0 +1,58 @@
+\changetocdepth {3}
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{\chapternumberline {1}Introduction}{1}{}%
+\contentsline {section}{\numberline {1.1}Context and motivation}{1}{}%
+\contentsline {subsection}{\numberline {1.1.1}Relevance of precipitation data}{2}{}%
+\contentsline {subsection}{\numberline {1.1.2}Current methods for precipitation data}{2}{}%
+\contentsline {subsection}{\numberline {1.1.3}Commercial Microwave Links Advantages}{2}{}%
+\contentsline {subsection}{\numberline {1.1.4}Opportunity for AI/DL models to improve estimations}{2}{}%
+\contentsline {subsection}{\numberline {1.1.5}How do DL models work (briefly)}{2}{}%
+\contentsline {subsection}{\numberline {1.1.6}Shortcomings of DL models}{2}{}%
+\contentsline {subsection}{\numberline {1.1.7}Transfer learning to improve predcitions}{2}{}%
+\contentsline {section}{\numberline {1.2}Research questions}{2}{}%
+\contentsline {section}{\numberline {1.3}Thesis contents}{2}{}%
+\contentsline {chapter}{\chapternumberline {2}Field site and data}{3}{}%
+\contentsline {section}{\numberline {2.1}Commercial Microwave Link data}{3}{}%
+\contentsline {subsection}{\numberline {2.1.1}Netherlands}{3}{}%
+\contentsline {paragraph}{Location of the links}{3}{}%
+\contentsline {paragraph}{Static vs dynamic data}{3}{}%
+\contentsline {paragraph}{Freq,temp res and timespan}{3}{}%
+\contentsline {subsection}{\numberline {2.1.2}Sri Lanka}{3}{}%
+\contentsline {paragraph}{Location of the links}{3}{}%
+\contentsline {paragraph}{Static vs dynamic data}{3}{}%
+\contentsline {paragraph}{Freq,temp res and timespan}{3}{}%
+\contentsline {section}{\numberline {2.2}Reference precipitation data}{3}{}%
+\contentsline {subsection}{\numberline {2.2.1}Netherlands}{3}{}%
+\contentsline {paragraph}{Obtained from (provider)}{3}{}%
+\contentsline {paragraph}{Temporal and spatial resolution}{3}{}%
+\contentsline {paragraph}{Quality and availability}{3}{}%
+\contentsline {subsection}{\numberline {2.2.2}Sri Lanka}{3}{}%
+\contentsline {paragraph}{Obtained from (provider)}{3}{}%
+\contentsline {paragraph}{Temporal and spatial resolution}{3}{}%
+\contentsline {paragraph}{Quality and availability}{3}{}%
+\contentsline {chapter}{\chapternumberline {3}Methods}{5}{}%
+\contentsline {section}{\numberline {3.1}Neural network explanation}{5}{}%
+\contentsline {subsection}{\numberline {3.1.1}Goal and concepts of neural networks}{5}{}%
+\contentsline {subsection}{\numberline {3.1.2}Neural network architectures}{5}{}%
+\contentsline {subsection}{\numberline {3.1.3}Learning process of neural networks}{5}{}%
+\contentsline {subsection}{\numberline {3.1.4}Available hyperparameters}{6}{}%
+\contentsline {section}{\numberline {3.2}Data preprocessing}{6}{}%
+\contentsline {subsection}{\numberline {3.2.1}Connecting CML and reference data}{6}{}%
+\contentsline {subsection}{\numberline {3.2.2}Error filtering}{7}{}%
+\contentsline {subsection}{\numberline {3.2.3}Data splitting and scaling}{7}{}%
+\contentsline {section}{\numberline {3.3}Model selection}{8}{}%
+\contentsline {subsection}{\numberline {3.3.1}Automated hyperparameter tuning}{8}{}%
+\contentsline {subsection}{\numberline {3.3.2}Non-automated hyperparameter tuning}{8}{}%
+\contentsline {section}{\numberline {3.4}Evaluation metrics and summary statistics}{9}{}%
+\contentsline {section}{\numberline {3.5}Transfer learning}{9}{}%
+\contentsline {subsection}{\numberline {3.5.1}Architecture transfer}{9}{}%
+\contentsline {subsection}{\numberline {3.5.2}Weights transfer}{9}{}%
+\contentsline {subsection}{\numberline {3.5.3}Partly weights transfer}{9}{}%
+\contentsline {chapter}{\chapternumberline {4}Results}{11}{}%
+\contentsline {section}{\numberline {4.1}The Netherlands}{11}{}%
+\contentsline {section}{\numberline {4.2}Transfer learning to Sri Lanka}{11}{}%
+\contentsline {section}{\numberline {4.3}Discussion}{11}{}%
+\contentsline {chapter}{\chapternumberline {5}Conclusion}{13}{}%
+\contentsline {chapter}{Acknowledgements}{15}{}%
+\contentsline {section}{References}{15}{}%
+\contentsline {appendix}{\chapternumberline {A}Additional figures}{17}{}%
