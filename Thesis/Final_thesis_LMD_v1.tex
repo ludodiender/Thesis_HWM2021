@@ -3,7 +3,8 @@
 % standard packages
 \usepackage{titlesec, blindtext, color}                                  % standard packages
 \usepackage[usenames,dvipsnames,svgnames,table]{xcolor} % extra colors 
-\usepackage{graphicx}                                                       % figures
+\usepackage{graphicx}    
+\usepackage{amsmath}                                                   % figures
 %\usepackage{natbib}                                                          % bibliography
 \usepackage{apacite}
 \usepackage[english]{babel}
@@ -39,7 +40,7 @@
 % set words that are not abbreviated correctly (expand list when necessary)
 \hyphenation{catch-ment areas a-na-lyse}
 
-
+\graphicspath{ {./images/} }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % headers: page numbers and running titles
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -157,41 +158,26 @@ Don't make the abstract too long. See the list of tricks on Blackbord.
 \chapter{Introduction}\vspace{-6mm} 
 \section{Context and motivation}
 
-Having ample and correct precipitation data is important for a plethora of applications, including flood warnings, agriculture, river safety and shipping routes \shortcite{Chwala2019}. In urban areas, an even higher spatial and temporal resolution of rainfall is needed, due to the complex and quickly responding urban hydrological system \shortcite{Overeem2011}. Due to their high density in populated areas, Commercial Microwave Links (CML) from telecommunication networks could help in retrieving these high-resolution urban precipitation data. CML are back-haul links used by telecommunication companies to transfer information from one telecom station to the next using microwave signals. The links' signals get attenuated by rainfall by means of scattering and absorption. The received signal level is measured and stored by the telecommunication companies for monitoring purposes and can be used to retrieve path-averaged rainfall rates by calculating the attenuation. In the past 25 years, CML have been recognized as a valuable opportunistic method to measure rainfall \shortcite{Leijnse2007, Ruf1996}. Especially in data-scarce areas, where little precipitation is measured, CML have proven to be an excellent additional information source for precipitation amounts \shortcite{Overeem2021,Doumounia2014,Diba2021}.   
+Having ample and correct precipitation data is important for a plethora of applications, including flood warnings, agriculture, river safety and shipping routes \shortcite{Chwala2019}. In urban areas, an even higher spatial and temporal resolution of rainfall is needed, due to the complex and quickly responding urban hydrological system \shortcite{Overeem2011}. A high rain gauge density can help in providing this resolution in urban areas \shortcite{Yoon2017}, but is not always availabe. Commercial Microwave Links (CML) do typically have a high density in populated areas and could therefore help in retrieving these high-resolution urban precipitation data. CML are back-haul links used by telecommunication companies to transfer information from one telecom station to the next using microwave signals. The links' signals get attenuated by rainfall by means of scattering and absorption. The received signal level is measured and stored by the telecommunication companies for monitoring purposes and can be used to retrieve path-averaged rainfall rates by calculating the attenuation. In the past 25 years, CML have been recognized as a valuable opportunistic method to measure rainfall \shortcite{Leijnse2007, Ruf1996}. Especially in data-scarce areas, where little precipitation is measured, CML have proven to be an excellent additional information source for precipitation data \shortcite{Overeem2021,Doumounia2014,Diba2021}.   
 
 The first studies on the use of CML signals to retrieve rainfall rates were done by using a specific Power Law (PL) to relate the attenuation of the signal and the rainfall rate \shortcite{Overeem2011,Leijnse2007}. This method, which includes a wet-dry classification, baseline estimation, wet antenna attenuation estimation and finally a rainfall rate retrieval, has yielded good results in multiple studies \shortcite{deVos2019,Graf2020,Fencl2017}. Recently, the community has been exploring a more data-driven approach in the form of neural networks of different architectures. Neural networks are a subpart of Machine Learning that is inspired by the neural structure of the brain. A neural network consists of different layers of nodes (neurons) that are connected to each other. If the network contains more than one layer, it is considered a deep network and Deep Learning is used as equivalent naming. A neural network is able to learn the relationship between the input and output, without intervention from a researcher. Studies have been performed in Sweden, Israel \shortcite{Habi2019}, Germany \shortcite{Polz2020}, South Korea and Ethiopia \cite{Diba2021} on the use of such data-driven networks in relating CML signals to rainfall rates. Previous studies have shown that data-driven models can be more accurate, less time-demanding and more robust in estimating rainfall rates compared to the PL method \shortcite{Polz2020,Pudashine2020}. Neural networks are not a novelty in predicting rainfall \shortcite{French1992}, but the application to CML data has recently gained popularity.
 
-One of the disadvantages of using data-driven methods like neural networks, is the dependency on a large training data set. Neural networks need this large dataset to learn the relationships between input and output. In areas with less or little available training data, transfer learning provides the opportunity to adapt an already existing model with a certain structure to do a slightly different task \cite{TanYear}. The concept of transfer learning is based on the way humans learn. When humans learn a new task, we do not start from scratch. We use previous knowledge and skills to quickly adapt to the new task. When learning to ride a motorcycle, it helps if you already know how to ride a bike. Concepts like balance and steering can be transferred from the latter task to the former, thus speeding up the learning process. 
-The technique exploits the availability of data in the source domain and is able to transfer that knowledge to the target domain.
+\begin{figure}[t]
+	\includegraphics[width=8cm]{Transfer_learning_concept}
+	\caption{Concept of transfer learning. Adapted from \protect\cite{Sarkar2018} }
+	\label{fig:transferconcept}
+\end{figure} 
 
-%\begin{figure}[t]
-%	\includegraphics[width=8cm]{Transfer_learning_concept}
-%	\caption{Concept of transfer learning. Adapted from \protect\cite{Sarkar2018} }
-%	\label{fig:transferconcept}
-%\end{figure} 
-It does so by relaxing the underlying assumption that training and test data for a Machine Learning model should be independent and identically distributed \cite{Weiss2016}. A conceptual picture of transfer learning can be seen in figure \ref{fig:transferconcept}. Although used quite often in different applications \cite{Zhuang2021}, transfer learning concerning environmental sciences has so far primarily been applied in wind farm modelling \shortcite{Hu2016,Qureshi2017}. The potential of transfer learning in CML rainfall estimations has not been studied before. 
+One of the disadvantages of using data-driven methods like neural networks, is the dependency on a large training data set. Neural networks need this large dataset to learn the relationships between input and output. In areas with less or little available training data, which is generally the case in less developed countries, transfer learning provides the opportunity to adapt an already existing model with a certain structure to do a slightly different task \cite{TanYear}. The concept of transfer learning is based on the way humans learn. When humans learn a new task, we do not start from scratch. We use previous knowledge and skills to quickly adapt to the new task. When learning to ride a motorcycle, it helps if you already know how to ride a bike. Concepts like balance and steering can be transferred from the latter task to the former, thus speeding up the learning process. 
+The technique exploits the availability of data in the source domain and is able to transfer that knowledge to the target domain. It does so by relaxing the underlying assumption that training and test data for a Machine Learning model should be independent and identically distributed \cite{Weiss2016}. Training data from a different domain might not fulfill this assumption but it can still carry important information about the modelled concept. A conceptual picture of transfer learning can be seen in figure \ref{fig:transferconcept}. Although used quite often in different applications \cite{Zhuang2021}, transfer learning concerning environmental sciences has so far primarily been applied in wind farm modelling \shortcite{Hu2016,Qureshi2017}. The potential of transfer learning in CML rainfall estimations has not been studied before. 
 
 Recent research focused on the use of CML data to measure rainfall in tropical regions, more specifically Sri Lanka \shortcite{Overeem2021} and Brazil \shortcite{RiosGaona2017a}. The relatively small amount of reference rain gauges in Sri Lanka especially made this research more challenging compared to well-equipped countries like the Netherlands \shortcite{Overeem2013}. Both of the two studies mentioned above (Sri Lanka and the Netherlands) are based on the PL method. There have not been any efforts yet to analyze the potential of CML for rainfall retrieval using data-driven methods for neither the Netherlands nor Sri Lanka. This research aims to fill this knowledge gap by creating a neural network used for CML rainfall retrieval in the Netherlands and by studying the potential of transer learning within the Dutch context.
- \subsection{Relevance of precipitation data}
- text text text
- \subsection{Current methods for precipitation data}
- text text text
- \subsection{Commercial Microwave Links Advantages}
- text text text
- \subsection{Opportunity for AI/DL models to improve estimations}
- text text text
- \subsection{How do DL models work (briefly)}
- text text text
- \subsection{Shortcomings of DL models}
- text text text 
- \subsection{Transfer learning to improve predcitions}
- text text text
-
 
 \section{Research questions}
 This study focusses on two main research questions.
 1) How does a Neural Network perform on estimating rainfall rates from Dutch Commercial Microwave Link data?
-2) How can the concept of transfer learning be applied to improve this performance?
+2) How can the concept of transfer learning be applied to enhance performance or modelling efforts?
+By answering these questions, this study will give a first impression of the potential of Deep Transfer Learning related to precipitation estimation with CML. 
 
 
 \section{Thesis contents}
@@ -374,9 +360,10 @@ This chapter describes the methodology of this study. The chapter starts with a 
 		\subsection{Neural network architectures} \label{NN architecture}
 		The versatility of neural networks allows for a wide range of different model architectures to choose from. Every architecture has its own strengths and weaknesses. For image recognition for example, the most common type of neural network is a Convolutional Neural Network (CNN). In time series prediction, the most common architecture is the Recurrent Neural Network (RNN), which is therefore most suited for precipitation estimation using Commercial Microwave Links.
 		
-		\textbf{RNNs are looping-based architectures, which make them ideal for dealing with sequences.} The core unit of RNNs, the Recurrent Unit (the lightgreen blocks in Figure \ref{fig: multilayer RNN}), is used multiple times. The output of the unit is added to the input of the next step in the same recurrent unit. This creates an architecture that is well suited for time series with sequential data patterns. How many layers of these recurrent units are used in a model depends on the modeler and can be tuned (see Section \ref{modelselection})
+		RNNs are looping-based architectures, which make them ideal for dealing with sequences. The core unit of RNNs, the Recurrent Unit (the lightgreen blocks in Figure \ref{fig: multilayer RNN}), is used multiple times. The output of the unit is added to the input of the next step in the same recurrent unit. This creates an architecture that is well suited for time series with sequential data patterns. How many layers of these recurrent units are used in a model depends on the modeler and can be tuned (see Section \ref{modelselection})
 		
-		In this study, a default RNN was used for the rainfall rate estimation. A many-to-one architecture is used, which means that a sequence of signal levels is used to predict one rainfall rate at a specific timestep. 
+		One of the limitations of default RNNs is the lack of memory in the model. While information within a sequence is passed through the model well, information from previous sequences is lost. A Long Short Term Memory (LSTM) model circumvents this problem by having an extra stream of information through the model. This stream of information carries aspects of the previous sequences and can therefore be considered a memory. In an LSTM, more information of the former step is taken into account when making a
+		prediction for the current step. This creates a memory in the model, where information from a longer time ago can still be valuable in the current prediction. Similar to \cite{Habi2019}, this study uses a LSTM neural network. A many-to-one architecture is used, which means that a sequence of signal levels is used to predict one rainfall rate at a specific timestep. 
 		
 		\begin{figure} 
 			\center
@@ -386,16 +373,36 @@ This chapter describes the methodology of this study. The chapter starts with a 
 		\end{figure}
 		
 		\subsection{Learning process of neural networks} \label{Learning NN}
-		The self-learning ability of Neural Networks is mainly relying on the loss function. The model calculates the error between its output and the target output and tries to adjust accordingly. The selected loss function determines amongst others the behavior of the model. In this study, a standard Mean Square Error (MSE) loss function is used (see Eq.~\ref{eq: MSE}). 
+		The self-learning ability of Neural Networks is mainly relying on the loss function. The model calculates the error between its output and the target output and tries to adjust accordingly. The selected loss function determines amongst others the behavior of the model. In this study, a standard Mean Square Error (MSE) loss function is used as a basis (see Eq.~\ref{eq: MSE}). 
 		\begin{equation} \label{eq: MSE}
-			\label{eq: testequation}
 			MSE = \frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y})^2
 		\end{equation}
 		where ${y_i}$ is the predicted 15-min interval precipitation and $\hat{y}$ is the observed 15-min interval precipitation.
-		MSE as a common loss function has been used before in similar studies \cite{Pudashine2020, Diba2021}
-		The effect of this choice and the relation with the inherently skewed nature of precipitation distributions will be discussed later on in this thesis. 
-		(SIDENOTE FOR THESIS RING: Ultimately, a different metric will be tried as well to see if the predictions improve by using a different error metric to train the model. A statistical metric that puts more emphasis on higher rainfall rate values could outperform the standard MSE metric.)
+		MSE as a loss function has been used before in similar studies \cite{Pudashine2020, Diba2021}. These studies, however, had a more elaborate preprocessing of the data to correct for the inherently skewed nature of precipitation distributions. \citeA{Habi2019} showed that the loss function can also be altered to correct for this skewedness by using a Rain Distribution Factor (RDF). In this research, the application of a RDF serves two purposes:
 		
+		\begin{itemize}
+			\item Penalize negative predictions more to force the model into predictions bigger than or equal to zero. A random initialization can cause negative output which is physically impossible.
+			\item Penalize the model more for higher target variables. This steers the model towards a better prediction of the actual precipitation events. 
+		\end{itemize} 
+	
+		The RDF is defined in Eq~\ref{eq: RDF},
+		
+		\begin{equation} 
+			\label{eq: RDF}
+			RDF=\begin{cases}
+				3, & y_i < 0\\
+				1-y_s e^{y_r\cdot{}\hat{y}}, & \text{otherwise}.
+			\end{cases}
+		\end{equation}	
+		where $y_i$ is the predicted rainfall rate, $\hat{y}$ is the observed rainfall rate and $y_s$ and $y_r$ are hyperparameters, set to $0.95$ and $-5$ respectively in accordance with \citeA{Habi2019}.
+		
+		The combination of Eq~\ref{eq: MSE} and Eq~\ref{eq: RDF} leads to the final loss function used in this thesis (Eq~\ref{eq: final_loss})
+		
+		\begin{equation}
+			\label{eq: final_loss}
+			Loss = \frac{1}{n} \sum_{i=1}^{n} RDF \ (y_i - \hat{y})^2 
+		\end{equation}
+	
 		To update and improve the model prediction, a propagation algorithm is selected. Such a propagation algorithm is a mathematical set of equations that determines how the model learns. In this study, Stochastic Gradient Descent (SGD) will be used. SGD is one of the most commonly used algorithms to improve neural networks. SGD is based on a gradient descent algorithm to optimize the loss function In simple terms: the method is looking for an optimum (minimum or maximum) per weight. Based on this gradient, the weight is adjusted up or down to minimize the loss function (MSE in this study). As calculating the full gradient field for all weights present in the model is a tedious task, SGD takes a randomly selected subset of the data and uses that to calculate the gradients. This might lead to more steps, but the steps are less computationally intensive and typically lead to an improved performance.  
 		The SGD method is back-propagated. This implies that the final layer of the network is updated first and the learning process works itself back to the start of the model. In this study, the fully connected layer at the end of the RNN is updated first before the model improves and adjusts in the recurrent unit itself. A back-propagated model is chosen in this study since it is the most common type of neural network, easy to implement, fast, flexible and generally good. 
 		 

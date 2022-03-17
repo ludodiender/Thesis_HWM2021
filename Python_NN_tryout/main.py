@@ -3,7 +3,7 @@
 # First example python script. The script allows to switch between the locally stored complete dataset (not publicly available)
 # and a sample dataset of one day that can be used to try out the script.
 # TODO: implement switch between local dataset on my PC and a smaller example dataset
-'''
+
 # Import the necessary functions and modules
 import importlib
 import data_functions as df
@@ -28,7 +28,7 @@ data_with_target_errorless = df.filter_data_error(data_with_target)
 df.write_to_csv(data_with_target_errorless, 'NOKIA')
 
 files = df.data_to_harddrive('D:/CML_data_NL/NOKIA_data/NOKIA_data',provider='NOKIA')
-df.data_to_harddrive('D:/CML_data_NL/NOKIA_data/NOKIA_data', provider='NOKIA',longrid=lon_grid,latgrid=lat_grid,match_table=matching_ID_table_2011_2012_unique)
+df.data_to_harddrive('D:/CML_data_NL_4_months/NOKIA_data/NOKIA_data', provider='NOKIA') #,longrid=lon_grid,latgrid=lat_grid,match_table=matching_ID_table_2011_2012_unique)
 
 # Split the data in a training, test and validation set
 train,test,val = df.split_data(data_with_target_errorless,40,40,20)
@@ -52,7 +52,7 @@ plt.show()
 
 plt.hist(train['ID'].value_counts(),bins=100, range=[30,50])
 plt.show()
-'''
+
 
 #####################################
 ############### RNN #################
@@ -61,6 +61,7 @@ plt.show()
 import torch
 import numpy as np
 import torch.nn as nn
+import pandas as pd
 import torchvision
 import torch.utils.tensorboard
 from torch.utils.tensorboard import SummaryWriter
@@ -86,17 +87,24 @@ importlib.reload(dc)
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-output_file_name = 'output_cpu_small_seql_8_2ep_updatedRDF_highlr.txt'
+output_file_name = 'output_LSTM_seql8_numl_2_hids_128_nepo_100_lr01_1link_notransform.txt'
 
 # Hyper parameter setting, only needed when not tuning using RayTune
+include_dist_as_feature = False
+do_transform = False
+
 num_classes = 1
-num_epochs = 2
+num_epochs = 100
 batch_size = 256
-learning_rate = 0.001
+learning_rate = 0.1
 input_size = 2
+
+if include_dist_as_feature:
+    input_size = 3
+
 sequence_length = 8
 hidden_size = 128
-num_layers = 4
+num_layers = 2
 
 # Set starting time
 t_start = time.time()
@@ -146,7 +154,7 @@ class MyCMLDataset(torch.utils.data.Dataset):
 
             with file_.open() as f:
                 data_raw = pd.read_csv(f, sep=',', header=0, names=self.header_names)
-                process_data, sep_dates = dc.load_data_separate(data_raw)
+                process_data, sep_dates = dc.load_data_separate(data_raw, do_transform = do_transform,include_dist_as_feature=include_dist_as_feature)
                 self.data = process_data
                 self.dates = sep_dates
                 print(self.index_in_list, 'loaded, datasize:', len(self.data))
@@ -158,6 +166,8 @@ class MyCMLDataset(torch.utils.data.Dataset):
         if file_idx < (self.seq_len - 1):
             return None
         elif not dc.DatesCheck(self.dates[file_idx - (self.seq_len - 1):file_idx + 1]):
+            return None
+        elif self.data.tensors[1][file_idx] == 0: # Add a check that only uses the wet cases in the dataset
             return None
         else:
             return self.data.tensors[0][file_idx - (self.seq_len - 1):file_idx + 1], self.data.tensors[1][file_idx]
@@ -192,6 +202,38 @@ class RNNModel(nn.Module):
 
         # One time step
         out, hn = self.rnn(x, h0)
+        # many to one RNN: get the last result
+        out = self.fc(out[:, -1, :])
+
+        return out
+
+class LSTMModel(nn.Module):
+    def __init__(self, input_size, hidden_size, num_layers, num_classes, device):
+        super(LSTMModel, self).__init__()
+
+        # Number of hidden dimensions
+        self.hidden_size = hidden_size
+
+        # Set device
+        self.device = device
+
+        # Number of hidden layers
+        self.num_layers = num_layers
+
+        # RNN
+        self.lstm = nn.LSTM(input_size, hidden_size, num_layers, batch_first=True)
+
+        # Readout layer
+        self.fc = nn.Linear(hidden_size, num_classes)
+
+    def forward(self, x):
+        # Initialize hidden state with zeros
+        h0 = torch.autograd.Variable(torch.zeros(self.num_layers, x.size(0), self.hidden_size)).double().to(device)
+        c0 = torch.autograd.Variable(torch.zeros(self.num_layers, x.size(0), self.hidden_size)).double().to(device)
+
+        # One time step
+        out, _ = self.lstm(x, (h0,c0))
+
         # many to one RNN: get the last result
         out = self.fc(out[:, -1, :])
 
@@ -457,9 +499,10 @@ if __name__ == "__main__":
 #################
 # OLD MODEL RUN # This model run works, beforehand is the optimizing tuning algorithm implemented
 #################
-writer = SummaryWriter(filename_suffix='scaled with DIST, 10 epochs')
+writer = SummaryWriter(filename_suffix='DIST as feature, not transformed, 5 epochs')
 
-model = RNNModel(input_size,hidden_size,num_layers,num_classes,device)
+#model = RNNModel(input_size,hidden_size,num_layers,num_classes,device)
+model = LSTMModel(input_size,hidden_size,num_layers,num_classes,device)
 
 # Cross Entropy Loss
 # error = nn.MSELoss() # Use MSELoss instead of CrossEntropyLoss, since CEL needs labels and classification
@@ -474,6 +517,7 @@ count = 0
 model = model.double()
 
 delta_loss = 4e-10
+first_stop = 0
 old_loss = 10
 # 10 links
 #trainpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_train_testing'
@@ -485,9 +529,9 @@ trainpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_Small_testset/train'
 testpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_Small_testset/test'
 valpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_Small_testset/validate'
 
-train_pytorch = MyCMLDataset(data_dir=trainpath, seq_len=4, headers=header_names)
-test_pytorch = MyCMLDataset(data_dir=testpath, seq_len=4, headers=header_names)
-val_pytorch= MyCMLDataset(data_dir=valpath, seq_len=4, headers=header_names)
+train_pytorch = MyCMLDataset(data_dir=trainpath, seq_len=sequence_length, headers=header_names)
+test_pytorch = MyCMLDataset(data_dir=testpath, seq_len=sequence_length, headers=header_names)
+val_pytorch= MyCMLDataset(data_dir=valpath, seq_len=sequence_length, headers=header_names)
 
 train_loader = DataLoader(train_pytorch, batch_size=batch_size, collate_fn=dc.my_collate, shuffle=False,drop_last=True)
 test_loader = DataLoader(test_pytorch, batch_size=batch_size, collate_fn=dc.my_collate, shuffle=False, drop_last=True)
@@ -498,9 +542,12 @@ TuningStop = False
 torch.autograd.set_detect_anomaly(True)
 
 for epoch in range(num_epochs):
-    j=0
+    train_count = []
     running_loss_train = []
-    for i, (features, targets) in enumerate(train_loader):
+    for i in enumerate(train_loader):
+        if len(i[1]) == 0: # Only selecting rain events can cause the batch to be empty. Skip it in that case.
+            continue
+        features, targets = i[1]
         train_set = torch.autograd.Variable(features)
         targets = torch.autograd.Variable(targets)
 
@@ -520,6 +567,7 @@ for epoch in range(num_epochs):
         optimizer.step()
 
         count += 1
+        train_count.append(len(outputs))
 
     # Calculate Accuracy
     print('count is: ', count)
@@ -533,8 +581,10 @@ for epoch in range(num_epochs):
     test_count = []
     # Iterate through test dataset
     with torch.no_grad():
-        for features,targets in test_loader:
-            # images = torch.autograd.Variable(images.view(-1, sequence_length, input_size))
+        for i in enumerate(test_loader):
+            if len(i[1]) == 0:
+                continue
+            features, targets = i[1]
             test_set = torch.autograd.Variable(features)
             targets = torch.autograd.Variable(targets)
     
@@ -558,7 +608,7 @@ for epoch in range(num_epochs):
             
             if TuningStop:
                 with open(output_file_name,'a') as f:
-                    for k in range(1,len(outputs)):
+                    for k in range(0,len(outputs)):
                         output_val = outputs_real.data[k].item()
                         target_val = targets_real.data[k].item()
                         output_val_non = outputs.data[k].item()
@@ -573,30 +623,35 @@ for epoch in range(num_epochs):
             MSE_per_batch_nontrans.append((targets_real - outputs_real).square().mean().item())
             output_to_calc = outputs
             targets_to_calc = targets
-            break
+
     test_pytorch.current_iter +=1
 
     MSE = np.average(MSE_per_batch, weights=test_count)
     MSE_nontrans = np.average(MSE_per_batch_nontrans, weights=test_count)
 
     # store loss and iteration
-    batch_train_loss = np.mean(running_loss_train)
+    batch_train_loss = np.average(running_loss_train, weights=train_count)
     loss_list.append(batch_train_loss)
     iteration_list.append(count)
     MSE_list.append(MSE)
     writer.add_scalar('Test loss', MSE, count)
     writer.add_scalar('Training loss',batch_train_loss,count)
     writer.add_scalar('Test loss (untransformed)',MSE_nontrans,count)
-    
-    if count % 10 == 0:
-        # Print Loss
-        print('Iteration: {}  Loss: {}  MSE: {} %'.format(count, loss.data.item(), MSE))
+
+    print('Iteration: {}  Loss: {}  MSE: {} %'.format(count, batch_train_loss, MSE))
 
     if TuningStop: break
     # Check if tuning can continue
     if (old_loss - MSE) < delta_loss:
-        print('Test loss not decreasing enough anymore, this run is terminated after', epoch, 'epochs.')
-        TuningStop = True
+        if first_stop == 1:
+            print('Second epoch where Test loss is not decreasing. Terminated after',epoch,'epochs.')
+            TuningStop = True
+        if first_stop == 0:
+            print('First epoch where Test loss is not decreasing anymore. After', epoch, 'epochs.')
+            first_stop += 1
+
+    else:
+        first_stop = 0
     if epoch == (num_epochs - 2):
         TuningStop = True
         print('End of epochs reached.')

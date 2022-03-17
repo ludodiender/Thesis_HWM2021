@@ -640,6 +640,32 @@ Ruf, C\BPBI S.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Sarkar%
+}{%
+Sarkar%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+Sarkar2018}
+\APACinsertmetastar {%
+Sarkar2018}%
+\begin{APACrefauthors}%
+Sarkar, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{November 14, 2018}{}.
+\newblock
+\APACrefbtitle {A Comprehensive Hands-on Guide to Transfer Learning with
+  Real-World Applications in Deep Learning} {A comprehensive hands-on guide to
+  transfer learning with real-world applications in deep learning}\ [Web Page].
+\newblock
+\begin{APACrefURL}
+  \url{https://towardsdatascience.com/a-comprehensive-hands-on-guide-to-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a}
+  \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Tan%
 \ \protect \BOthers {.}}{%
 Tan%
@@ -696,6 +722,37 @@ Weiss, K.%
 \APACjournalVolNumPages{Journal of Big Data}{3}{1}{9}.
 \newblock
 \begin{APACrefDOI} \doi{10.1186/s40537-016-0043-6} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Yoon%
+\ \BBA {} Lee%
+}{%
+Yoon%
+\ \BBA {} Lee%
+}{%
+{\protect \APACyear {2017}}%
+}]{%
+Yoon2017}
+\APACinsertmetastar {%
+Yoon2017}%
+\begin{APACrefauthors}%
+Yoon, S\BHBI S.%
+\BCBT {}\ \BBA {} Lee, B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Effects of Using High-Density Rain Gauge Networks and
+  Weather Radar Data on Urban Hydrological Analyses} {Effects of using
+  high-density rain gauge networks and weather radar data on urban hydrological
+  analyses}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{Water}{9}{12}{931}.
+\newblock
+\begin{APACrefURL} \url{https://www.mdpi.com/2073-4441/9/12/931}
+  \end{APACrefURL}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%

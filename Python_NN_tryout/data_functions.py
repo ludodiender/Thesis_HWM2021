@@ -6,6 +6,8 @@ import netCDF4 as nc
 import time
 from os import listdir
 from os.path import isfile, join
+from datetime import datetime
+import pytz
 
 
 def load_CML_data(provider, date_selected = None, filename=None):
@@ -116,11 +118,11 @@ def write_to_csv(dataset, provider,data_model_function):
     header_names = ['ID','SITE_LAT', 'SITE_LON', 'FAR_LAT', 'FAR_LON', 'FREQ', 'DATE', 'RXMIN', 'RXMAX',
                     'DIST', 'P4_start.v', 'P4_start.u', 'P4_end.v', 'P4_end.u', 'PROV','AVG_LON','AVG_LAT','TARG_PRCP']
     if data_model_function == 'train':
-        folderpath = 'D:/CML_RAD_perID/2011_training/' + provider + '/'
+        folderpath = 'D:/CML_RAD_perID_4months_UTC/2011_training/' + provider + '/'
     elif data_model_function == 'test':
-        folderpath = 'D:/CML_RAD_perID/2012_testing/' + provider + '/'
+        folderpath = 'D:/CML_RAD_perID_4months_UTC/2012_testing/' + provider + '/'
     elif data_model_function == 'validate':
-        folderpath = 'D:/CML_RAD_perID/2013_validating/' + provider + '/'
+        folderpath = 'D:/CML_RAD_perID_4months_UTC/2013_validating/' + provider + '/'
     # folderpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_per_ID/'
     nr_of_IDS = len(dataset_sorted['ID'].unique())
     ID_cumsum = dataset_sorted['ID'].value_counts().cumsum()
@@ -238,17 +240,28 @@ def ReadRainLocation(CML_data,matchset_XY, from_ext_drive):
     times_inCML = CML_data['DATE'].unique()
     times_inCML.sort()
 
+
+    # Create a list of UTC times associated to these times to match with the radar
+    UTC_times_inCML = times_inCML.copy()
+    format = '%Y%m%d%H%M'
+    for i in range(len(times_inCML)):
+        local_time_i = datetime.strptime(str(times_inCML[i]),format)
+        utc_time_i = local_time_i.astimezone(pytz.UTC)
+        str_utc_time = utc_time_i.strftime(format)
+        UTC_times_inCML[i] = str_utc_time
+
     current_index = 0  # Keep track of where you are in the list
     CML_data['TARG_PRCP'] = 0.0000  # Create an empty column to be filled later
     CML_data = CML_data.sort_values(by='DATE')
 
     # Loop over all timesteps in the file
-    for i in times_inCML:
-        radar_set, _ = load_radar_data_netcdf(int(str(i)[0:8]), int(str(i)[8:12]),from_ext_drive=from_ext_drive)
+    for i in range(len(times_inCML)):
+
+        radar_set, _ = load_radar_data_netcdf(int(str(UTC_times_inCML[i])[0:8]), int(str(UTC_times_inCML[i])[8:12]),from_ext_drive=from_ext_drive)
 
 
         # The while loop ensures that the for loop continues to the next time step as all links have been added
-        while CML_data['DATE'].iloc[current_index] == i:
+        while CML_data['DATE'].iloc[current_index] == times_inCML[i]:
             x_cell = int(matchset_XY[matchset_XY['ID'] == CML_data.loc[current_index, 'ID']]['X_radar'].item())
             y_cell = int(matchset_XY[matchset_XY['ID'] == CML_data.loc[current_index, 'ID']]['Y_radar'].item())
 
@@ -323,7 +336,7 @@ for i in range(0, len(matching_ID_table)):
 ######################################
 ## Full data to hard drive function ##
 ######################################
-def data_to_harddrive(filepath,provider,longrid,latgrid,match_table = None):
+def data_to_harddrive(filepath,provider,longrid=None,latgrid=None,match_table = None):
     t0 = time.time()
     # Get a list of all the files in the filepath
     files = [f for f in listdir(filepath) if isfile(join(filepath, f))]
@@ -334,35 +347,45 @@ def data_to_harddrive(filepath,provider,longrid,latgrid,match_table = None):
         filename = filepath+'/'+f
         year = f[9:13] # Extract the year from the file name to send the results to the right folder
         month = f[13:15]
-        if year == '2013':  # Start with just writing the year 2011 to the training folder
-            data = load_CML_data(provider, filename=filename)
 
-            if data.loc[0, 'PROV'].endswith(';'):
-                data['PROV'] = data['PROV'].str.slice(start=0, stop=-1)
-            if year == '2012': model_function = 'test'
-            if year == '2013': model_function = 'validate'
+        data = load_CML_data(provider, filename=filename)
 
-            if count == 0:
-                if isinstance(match_table,type(None)):
-                    data_ID = data[:]
-                    matching_ID_table, lon_grid, lat_grid = create_ID_table(data_ID, coord_from_harddrive=True)
-                else:
-                    matching_ID_table = match_table
-                    lon_grid = longrid
-                    lat_grid = latgrid
+        if data.loc[0, 'PROV'].endswith(';'):
+            data['PROV'] = data['PROV'].str.slice(start=0, stop=-1)
+        if year == '2011': model_function = 'train'
+        if year == '2012': model_function = 'test'
+        if year == '2013': model_function = 'validate'
+
+        if count == 0:
+            if isinstance(match_table,type(None)):
+                data_ID = data[:]
+                matching_ID_table, lon_grid, lat_grid = create_ID_table(data_ID, coord_from_harddrive=True)
+            else:
+                matching_ID_table = match_table
+                lon_grid = longrid
+                lat_grid = latgrid
 
 
-            data, matching_ID_table = generate_ID(data, matching_ID_table, lon_grid, lat_grid)
-            print('IDs generated for file ', f)
-            data_with_target = ReadRainLocation(data, matching_ID_table, from_ext_drive=True)
-            data_with_target_errorless = filter_data_error(data_with_target)
+        data, matching_ID_table = generate_ID(data, matching_ID_table, lon_grid, lat_grid)
+        print('IDs generated for file ', f)
+        data_with_target = ReadRainLocation(data, matching_ID_table, from_ext_drive=True)
+        data_with_target_errorless = filter_data_error(data_with_target)
 
-            write_to_csv(data_with_target_errorless, provider, data_model_function=model_function)
+        write_to_csv(data_with_target_errorless, provider, data_model_function=model_function)
 
-            count += 1
-            print('Done with file:', f, '. Time spent:', time.time() - t0_0)
+        count += 1
+        print('Done with file:', f, '. Time spent:', time.time() - t0_0)
 
     print('Done with all files. Total time spent:', time.time()-t0)
 
     # For 2011 -> training, 2012 -> testing, 2013 -> validating
 
+
+#### TRY OUT WITH DATETIME
+from datetime import datetime
+import pytz
+format = '%Y%m%d%H%M'
+date = '201104010815'
+
+local_time = datetime.strptime(date,format)
+utc_time = local_time.astimezone(pytz.UTC)

@@ -20,45 +20,45 @@ Repeated entry---line 243 of file Thesis_Ludo.bib
 I'm skipping whatever remains of this entry
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
 Warning--No school in Habi2019
-You've used 23 entries,
+You've used 25 entries,
             6951 wiz_defined-function locations,
-            1448 strings with 15975 characters,
-and the built_in function-call counts, 52541 in all, are:
-= -- 6195
-> -- 509
-< -- 2743
-+ -- 2884
-- -- 46
-* -- 3739
-:= -- 9881
-add.period$ -- 91
-call.type$ -- 23
-change.case$ -- 391
+            1462 strings with 16468 characters,
+and the built_in function-call counts, 57031 in all, are:
+= -- 6741
+> -- 533
+< -- 3024
++ -- 3154
+- -- 50
+* -- 4059
+:= -- 10843
+add.period$ -- 99
+call.type$ -- 25
+change.case$ -- 427
 chr.to.int$ -- 0
-cite$ -- 47
-duplicate$ -- 1552
-empty$ -- 1932
-format.name$ -- 927
-if$ -- 9524
+cite$ -- 51
+duplicate$ -- 1638
+empty$ -- 2082
+format.name$ -- 965
+if$ -- 10318
 int.to.chr$ -- 0
-int.to.str$ -- 69
+int.to.str$ -- 75
 missing$ -- 0
-newline$ -- 669
-num.names$ -- 184
-pop$ -- 599
+newline$ -- 718
+num.names$ -- 200
+pop$ -- 679
 preamble$ -- 1
-purify$ -- 92
+purify$ -- 102
 quote$ -- 0
-skip$ -- 3116
+skip$ -- 3340
 stack$ -- 0
-substring$ -- 3073
-swap$ -- 1026
-text.length$ -- 53
+substring$ -- 3358
+swap$ -- 1084
+text.length$ -- 59
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 1968
+type$ -- 2128
 warning$ -- 1
-while$ -- 315
+while$ -- 329
 width$ -- 0
-write$ -- 890
+write$ -- 947
 (There was 1 error message)
