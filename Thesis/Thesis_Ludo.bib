@@ -1,4 +1,53 @@
-﻿@article{Chung2014,
+﻿@inbook{Bengio2012,
+   author = {Bengio, Yoshua},
+   title = {Practical Recommendations for Gradient-Based Training of Deep Architectures},
+   booktitle = {Neural Networks: Tricks of the Trade: Second Edition},
+   editor = {Montavon, Grégoire and Orr, Geneviève B. and Müller, Klaus-Robert},
+   publisher = {Springer Berlin Heidelberg},
+   address = {Berlin, Heidelberg},
+   pages = {437-478},
+   abstract = {Learning algorithms related to artificial neural networks and in particular for Deep Learning may seem to involve many bells and whistles, called hyper-parameters. This chapter is meant as a practical guide with recommendations for some of the most commonly used hyperparameters, in particular in the context of learning algorithms based on back-propagated gradient and gradient-based optimization. It also discusses how to deal with the fact that more interesting results can be obtained when allowing one to adjust many hyper-parameters. Overall, it describes elements of the practice used to successfully and efficiently train and debug large-scale and often deep multi-layer neural networks. It closes with open questions about the training difficulties observed with deeper architectures.},
+   ISBN = {978-3-642-35289-8},
+   year = {2012},
+   type = {Book Section}
+}
+
+@article{Beven2006,
+   author = {Beven, Keith},
+   title = {A manifesto for the equifinality thesis},
+   journal = {Journal of Hydrology},
+   volume = {320},
+   number = {1},
+   pages = {18-36},
+   abstract = {This essay discusses some of the issues involved in the identification and predictions of hydrological models given some calibration data. The reasons for the incompleteness of traditional calibration methods are discussed. The argument is made that the potential for multiple acceptable models as representations of hydrological and other environmental systems (the equifinality thesis) should be given more serious consideration than hitherto. It proposes some techniques for an extended GLUE methodology to make it more rigorous and outlines some of the research issues still to be resolved.},
+   keywords = {Equifinality
+GLUE
+Hydrological models
+Observation error
+Fuzzy measures
+Uncertainty},
+   ISSN = {0022-1694},
+   DOI = {https://doi.org/10.1016/j.jhydrol.2005.07.007},
+   year = {2006},
+   type = {Journal Article}
+}
+
+@article{Burbidge1988,
+   author = {Burbidge, John B. and Magee, Lonnie and Robb, A. Leslie},
+   title = {Alternative Transformations to Handle Extreme Values of the Dependent Variable},
+   journal = {Journal of the American Statistical Association},
+   volume = {83},
+   number = {401},
+   pages = {123-127},
+   abstract = {[Transformations that could be used to reduce the influence of extreme observations of dependent variables, which can assume either sign, on regression coefficient estimates are studied in this article. Two that seem reasonable on a priori grounds--the extended Box-Cox (BC) and the inverse hyperbolic sine (IHS)--are evaluated in detail. One feature is that the log-likelihood function for IHS is defined for zero values of the dependent variable, which is not true of BC. The double-length regression technique (Davidson and MacKinnon 1984) is used to perform hypothesis tests of one transformation against the other using Canadian data on household net worth. These tests support the use of IHS instead of BC for this data set. Empirical investigators in economics often work with a logged dependent variable (taking the natural logarithm of a data series is, of course, a special case of BC) to reduce the weight their particular estimation procedure might otherwise attach to extreme values of the dependent variable. Logging dependent and independent variables has the added attraction that slope coefficients may be interpreted as elasticities. In the event that the dependent variable assumes nonpositive values, some researchers (e.g., Diamond and Hausman 1984; King and Dicks-Mireaux 1982) have dropped the nonpositive values and others have added a constant so that each observation is positive. An alternative transformation, which is defined for any real number, is the IHS transformation, <tex-math>$\operatorname{sinh}^{-1}(x) = \log(x + (x^2 + 1)^{1/2})$</tex-math>. This was proposed in Johnson (1949) and is just as easy to employ as the BC transformation.]},
+   ISSN = {01621459},
+   DOI = {10.2307/2288929},
+   url = {http://www.jstor.org/stable/2288929},
+   year = {1988},
+   type = {Journal Article}
+}
+
+@article{Chung2014,
    author = {Chung, J. and Gülçehre, Çaglar and Cho, Kyunghyun and Bengio, Yoshua},
    title = {Empirical Evaluation of Gated Recurrent Neural Networks on Sequence Modeling},
    journal = {ArXiv},
@@ -164,6 +213,16 @@
    type = {Book}
 }
 
+@inproceedings{HabiYear,
+   author = {Habi, Hai Victor and Messer, Hagit},
+   title = {Wet-dry classification using lstm and commercial microwave links},
+   booktitle = {2018 IEEE 10th Sensor Array and Multichannel Signal Processing Workshop (SAM)},
+   publisher = {IEEE},
+   pages = {149-153},
+   ISBN = {1538647524},
+   type = {Conference Proceedings}
+}
+
 @phdthesis{Habi2019,
    author = {Habi, V.H. },
    title = {Rain Detection and Estimation Using Recurrent Neural Network and Commercial Microwave Link},
@@ -213,6 +272,25 @@ Stacked denoising autoencoder},
    type = {Conference Proceedings}
 }
 
+@article{Kandel2020,
+   author = {Kandel, Ibrahem and Castelli, Mauro},
+   title = {The effect of batch size on the generalizability of the convolutional neural networks on a histopathology dataset},
+   journal = {ICT Express},
+   volume = {6},
+   number = {4},
+   pages = {312-315},
+   abstract = {Many hyperparameters have to be tuned to have a robust convolutional neural network that will be able to accurately classify images. One of the most important hyperparameters is the batch size, which is the number of images used to train a single forward and backward pass. In this study, the effect of batch size on the performance of convolutional neural networks and the impact of learning rates will be studied for image classification, specifically for medical images. To train the network faster, a VGG16 network with ImageNet weights was used in this experiment. Our results concluded that a higher batch size does not usually achieve high accuracy, and the learning rate and the optimizer used will have a significant impact as well. Lowering the learning rate and decreasing the batch size will allow the network to train better, especially in the case of fine-tuning.},
+   keywords = {Convolutional neural networks
+Deep learning
+Image classification
+Medical images
+Batch size},
+   ISSN = {2405-9595},
+   DOI = {https://doi.org/10.1016/j.icte.2020.04.010},
+   year = {2020},
+   type = {Journal Article}
+}
+
 @article{Kilmartin1972,
    author = {Kilmartin, R. F. and Peterson, J. R.},
    title = {Rainfall-runoff regression with logarithmic transforms and zeros in the data},
@@ -224,6 +302,15 @@ Stacked denoising autoencoder},
    DOI = {10.1029/wr008i004p01096},
    url = {https://dx.doi.org/10.1029/wr008i004p01096},
    year = {1972},
+   type = {Journal Article}
+}
+
+@article{Kingma2014,
+   author = {Kingma, D.P. and Ba, J.},
+   title = {Adam: A Method or Stochastic Optimization},
+   journal = {arXiv eprint},
+   DOI = {https://doi.org/10.48550/arXiv.1412.6980},
+   year = {2014},
    type = {Journal Article}
 }
 
@@ -536,6 +623,14 @@ classification},
    pages = {858},
    ISSN = {1424-8220},
    year = {2021},
+   type = {Journal Article}
+}
+
+@article{Staudemeyer2019,
+   author = {Staudemeyer, Ralf C and Morris, Eric Rothstein},
+   title = {Understanding LSTM--a tutorial into long short-term memory recurrent neural networks},
+   journal = {arXiv preprint arXiv:1909.09586},
+   year = {2019},
    type = {Journal Article}
 }
 

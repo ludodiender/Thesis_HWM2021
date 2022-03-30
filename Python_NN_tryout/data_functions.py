@@ -304,22 +304,44 @@ def get_ID_table_from_data(foldername):
     headers = ['ID', 'SITE_LAT', 'SITE_LON', 'FAR_LAT', 'FAR_LON', 'FREQ', 'DATE', 'RXMIN', 'RXMAX', 'DIST',
                'P4_start.v', 'P4_start.u', 'P4_end.v', 'P4_end.u', 'PROV', 'AVG_LON', 'AVG_LAT', 'TARG_PRCP']
     empty_matchset = pd.DataFrame(columns=headers)
-    files = [f for f in listdir(foldername) if isfile(join(foldername, f))]
+    coord_path = 'C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Python_NN_tryout/radarcoordinaten_NL25_1km2_WGS84_full.dat'
+    coord_grid = pd.read_csv(coord_path)
 
-    for f in files:
+    lon_grid = coord_grid['lon'].values.reshape(765, 700).mean(axis=0)
+    lat_grid = coord_grid['lat'].values.reshape(765, 700).mean(axis=1)
 
-        f_full = foldername + '/' + f
-        data_sup = pd.read_csv(f_full, header=0)
-        j = 0
-        for i in range(0, len(data_sup)):
-            j += 1
-            if j == 1:
-                data_line = data_sup.iloc[j]
+    folders = [f for f in listdir(foldername)]
+    links_already_used = []
+    for f in folders:
+        foldername_sub = foldername + '/' + f + '/NOKIA'
+        files = [f_ for f_ in listdir(foldername_sub) if isfile(join(foldername_sub, f_))]
+
+        for sepf in files:
+            if sepf in links_already_used:
+                continue
+            else:
+                links_already_used.append(sepf)
+
+                f_full = foldername_sub + '/' + sepf
+                data_sup = pd.read_csv(f_full, header=0)
+                j = 0
+                data_line = data_sup.iloc[1]
                 empty_matchset = empty_matchset.append(data_line)
-                break
-        print('Done with', f)
+                print('Done with', sepf)
 
-    return(empty_matchset)
+
+    matching_ID_table = empty_matchset[['ID', 'AVG_LON', 'AVG_LAT', 'FREQ']].reset_index(drop=True)
+    matching_ID_table = matching_ID_table.assign(X_radar=0)
+    matching_ID_table = matching_ID_table.assign(Y_radar=0)
+
+    # Calculate the distance to all rows and columns and take the smallest of these distances.
+    for i in range(0, len(matching_ID_table)):
+        Dist_lon = np.sqrt(np.power((lon_grid - matching_ID_table.iloc[i]['AVG_LON']), 2))
+        Dist_lat = np.sqrt(np.power((lat_grid - matching_ID_table.iloc[i]['AVG_LAT']), 2))
+        matching_ID_table.at[i, 'X_radar'] = Dist_lon.argmin()
+        matching_ID_table.at[i, 'Y_radar'] = Dist_lat.argmin()
+
+    return(matching_ID_table)
 '''
 matching_ID_table = empty_matchset_new2[['ID','AVG_LON','AVG_LAT','FREQ']].reset_index(drop=True)
 matching_ID_table = matching_ID_table.assign(X_radar = 0)

@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2fc86a9f-5492-4d1c-8b85-3374c33320a4" name="Changes" comment="">
+    <list default="true" id="2fc86a9f-5492-4d1c-8b85-3374c33320a4" name="Changes" comment="Loads of changes -&gt; backuptime&#10;&#10;- Added the MSE with the RDF&#10;- Fixed the sequence length&#10;- Added Early Stopping for the OLD MODEL">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_functions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data_visualization_tryout.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_visualization_tryout.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataclass_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/dataclass_functions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thesis/Final_thesis_LMD_v1.toc" beforeDir="false" afterPath="$PROJECT_DIR$/../Thesis/Final_thesis_LMD_v1.toc" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,6 +34,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1z29ilknaUazRXWuWqBz1Wky5ZD" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -90,8 +101,24 @@
       <workItem from="1639223257383" duration="25778000" />
       <workItem from="1639646681015" duration="138353000" />
       <workItem from="1643368620899" duration="27584000" />
-      <workItem from="1644828641376" duration="83549000" />
+      <workItem from="1644828641376" duration="166050000" />
+      <workItem from="1648110351783" duration="23787000" />
     </task>
+    <task id="LOCAL-00001" summary="Loads of changes -&gt; backuptime">
+      <created>1646296120306</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1646296120306</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Loads of changes -&gt; backuptime&#10;&#10;- Added the MSE with the RDF&#10;- Fixed the sequence length&#10;- Added Early Stopping for the OLD MODEL">
+      <created>1646296211973</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1646296211973</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -108,6 +135,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Loads of changes -&gt; backuptime" />
+    <MESSAGE value="Loads of changes -&gt; backuptime&#10;&#10;- Added the MSE with the RDF&#10;- Fixed the sequence length&#10;- Added Early Stopping for the OLD MODEL" />
+    <option name="LAST_COMMIT_MESSAGE" value="Loads of changes -&gt; backuptime&#10;&#10;- Added the MSE with the RDF&#10;- Fixed the sequence length&#10;- Added Early Stopping for the OLD MODEL" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

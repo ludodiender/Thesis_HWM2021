@@ -3,26 +3,21 @@ import matplotlib.pyplot as plt
 main_folder = 'C:/Users/ludod/Documents/MSc Thesis/'
 new_small_folder = 'C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Python_NN_tryout/'
 
-sample_small_1link_40ep = 'output_cpu_small_1sam_seql_8_1link_40ep.txt'
-sample_small_1link_200ep = 'output_cpu_small_1sam_seql_8_1link_200ep.txt'
-sample_small_1link_200ep_lr0008 = 'output_cpu_small_seql_8_1link_200ep_lr0008.txt'
-sample_small_1link_50ep_lr0008 = 'output_cpu_small_seql_8_1link_50ep_lr0008.txt'
-sample_small_1link_40ep_RDF = 'output_cpu_small_seql_8_1link_40ep_RDF.txt'
-sample_small_1link_50ep_RDF = 'output_cpu_small_seql_8_1link_50ep_RDF.txt'
-sample_small_1link_200ep_RDF = 'output_cpu_small_seql_8_200ep_RDF.txt'
-sample_small_1link_200ep_updatedRDF = 'output_cpu_small_seql_8_200ep_updatedRDF.txt'
-sample_small_1link_200ep_updatedRDF_highlr = 'output_cpu_small_seql_8_200ep_updatedRDF_highlr.txt'
-sample_small_testaverage = 'output_cpu_small_seql_8_2ep_updatedRDF_highlr.txt'
-sample_small_testRDF = 'output_cpu_small_seql_8_100ep_updatedRDF_highlr.txt'
-sample_small_newarch = 'output_sql8_numl_4_hids_256_nepo_100_lr00001.txt'
-sample_small_newarch_lr = 'output_sql8_numl_4_hids_256_nepo_100_lr00005.txt'
 sample_LSTM = 'output_LSTM_seql8_numl_2_hids_256_nepo_100_lr00005.txt'
 sample_LSTM_10 = 'output_LSTM_seql8_numl_2_hids_256_nepo_10_lr00005_median_10links.txt'
 sample_LSTM_10_highlr = 'output_LSTM_seql8_numl_2_hids_256_nepo_10_lr001_median_10links.txt'
 sample_notrans_LSTM_10 = 'output_LSTM_seql8_numl_2_hids_256_nepo_10_lr0001_10links_notransform.txt'
 sample_50_1ep_RDF = 'output_cpu8_seql_8_50runs_1epochRDF.txt'
 sample_onlyrain = 'output_LSTM_seql8_numl_2_hids_128_nepo_100_lr0005_10links_notransform_test.txt'
-
+sample_10links_notransform_UTC = 'output_LSTM_UTC_numl_2_hids_128_nepo_10_lr0001_10link.txt'
+sample_10links_transform_UTC = 'output_LSTM_UTC_numl_2_hids_128_nepo_10_lr0001_10link_transformed.txt'
+sample_10links_transform_UTC_median = 'output_LSTM_UTC_numl_2_hids_128_nepo_10_lr0001_10link_transformed_median.txt'
+sample_10links_notransform_UTC_onlyrain = 'output_LSTM_UTC_numl_2_hids_128_nepo_10_lr00005_10link_nontransformed_onlyrain.txt'
+sample_test = 'output_LSTM_MSE_test.txt'
+sample_test_trans = 'output_LSTM_MSE_test_trans.txt'
+sample_test_trans_RDF = 'output_LSTM_RDF_test_trans.txt'
+sample_test_trans_MAE_RDF = 'output_LSTM_RDF_MAE_test_trans.txt'
+sample_test_full_features_RDF = 'output_LSTM_RDF_test_trans_features.txt'
 # Plot the target precipitation
 testlink = pd.read_csv('C:/Users/ludod/Documents/MSc Thesis/CML_Small_testset/train/NOKIA_linkID_1003.txt', sep=',',header=0,names=header_names)
 RXMIN_med = np.median(testlink['RXMIN'])
@@ -82,128 +77,13 @@ plt.hist(testlink1['RXMAX'],bins=20)
 plt.hist(testdata_link1['RXMIN'],bins=20)
 plt.show()
 
-# Plot small dataset, sequence lenght 8 1 sample mean scaled 1 link higher lr
-data_small_bestof50 = pd.read_csv(main_folder + sample_50_1ep_RDF)
-plt.scatter(data_small_bestof50['outputs_real'],data_small_bestof50['targets_real'])
-plt.title('Small dataset seq = 8, meanscaled and with logsine, best of 50 runs, 1 epoch')
-plt.xlabel('Model prediction [mm/h]')
-plt.ylabel('Observation [mm/h]')
-plt.show()
 
-# Plot small dataset, sequence lenght 8 1 sample mean scaled 1 link higher lr
-data_small_seq8_log40ep = pd.read_csv(new_small_folder + sample_small_1link_40ep)
-plt.scatter(data_small_seq8_log40ep['outputs'],data_small_seq8_log40ep['targets'])
-plt.title('Small dataset seq = 8, meanscaled and with logsine, 40 epochs, 1 link, lr=0.08')
-plt.xlabel('Model prediction [mm/h]')
-plt.ylabel('Observation [mm/h]')
-plt.show()
 
-# Plot small dataset, sequence lenght 8 1 sample mean scaled 1 link higher lr
-data_small_seq8_log200ep = pd.read_csv(new_small_folder + sample_small_1link_200ep)
-plt.scatter(data_small_seq8_log200ep['outputs'],data_small_seq8_log200ep['targets'])
-plt.title('Small dataset seq = 8, meanscaled and \n with logsine, 200 epochs, 1 link, lr=0.08')
-plt.xlabel('Model prediction [mm/h]')
-plt.ylabel('Observation [mm/h]')
-plt.show()
 
-# Plot small dataset, sequence lenght 8 1 sample mean scaled 1 link higher lr
-data_small_seq8_log200eplr0008 = pd.read_csv(new_small_folder + sample_small_1link_200ep_lr0008)
-plt.scatter(data_small_seq8_log200eplr0008['outputs'],data_small_seq8_log200eplr0008['targets'])
-plt.title('Small dataset seq = 8, meanscaled and \n with logsine, 200 epochs, 1 link, lr=0.008')
-plt.xlabel('Model prediction [mm/h]')
-plt.ylabel('Observation [mm/h]')
-plt.show()
 
-# Plot small dataset, sequence lenght 8 1 sample mean scaled 1 link higher lr, 50 ep
-data_small_seq8_log50eplr0008 = pd.read_csv(new_small_folder + sample_small_1link_50ep_lr0008)
-plt.scatter(data_small_seq8_log50eplr0008['outputs'],data_small_seq8_log50eplr0008['targets'])
-plt.title('Small dataset seq = 8, meanscaled and \n with logsine, 50 epochs, 1 link, lr=0.008')
-plt.xlabel('Model prediction [mm/h]')
-plt.ylabel('Observation [mm/h]')
-plt.show()
-
-# Plot small dataset, sequence lenght 8 1 sample mean scaled 1 link higher lr, 50 ep
-data_small_seq8_log40ep_RDF = pd.read_csv(new_small_folder + sample_small_1link_40ep_RDF)
-plt.scatter(data_small_seq8_log40ep_RDF['outputs'],data_small_seq8_log40ep_RDF['targets'])
-plt.title('Small dataset seq = 8, meanscaled and \n with logsine, 50 epochs, 1 link, lr=0.008')
-plt.xlabel('Model prediction [mm/h]')
-plt.ylabel('Observation [mm/h]')
-plt.show()
-
-# Plot small dataset, sequence lenght 8 1 sample mean scaled 1 link higher lr, 50 ep
-data_small_seq8_log50ep_RDF = pd.read_csv(new_small_folder + sample_small_1link_50ep_RDF)
-plt.scatter(data_small_seq8_log50ep_RDF['outputs'],data_small_seq8_log50ep_RDF['targets'])
-plt.title('Small dataset seq = 8, meanscaled and \n with logsine, 50 epochs, 1 link, lr=0.008')
-plt.xlabel('Model prediction [mm/h]')
-plt.ylabel('Observation [mm/h]')
-plt.show()
-
-# Plot small dataset, sequence lenght 8 1 sample mean scaled 1 link higher lr, 200 ep
-data_small_seq8_log10ep_updatedRDF = pd.read_csv(new_small_folder + sample_small_1link_200ep_RDF)
-plt.scatter(data_small_seq8_log10ep_updatedRDF['outputs'],data_small_seq8_log10ep_updatedRDF['targets'])
-plt.title('Small dataset seq = 8, meanscaled and \n with logsine, 80 epochs, 1 link, lr=0.0008')
-plt.xlabel('Model prediction [mm/h]')
-plt.ylabel('Observation [mm/h]')
-plt.show()
-
-# Plot small dataset, sequence lenght 8 1 sample mean scaled 1 link higher lr, 200 ep
-data_small_seq8_log200ep_updatedRDF = pd.read_csv(new_small_folder + sample_small_1link_200ep_updatedRDF)
-plt.scatter(data_small_seq8_log200ep_updatedRDF['outputs'],data_small_seq8_log200ep_updatedRDF['targets'])
-plt.title('Small dataset seq = 8, meanscaled and \n with logsine, 80 epochs, 1 link, lr=0.0008')
-plt.xlabel('Model prediction [mm/h]')
-plt.ylabel('Observation [mm/h]')
-plt.show()
-
-# Plot small dataset, sequence lenght 8 1 sample mean scaled 1 link higher lr, 200 ep
-data_small_seq8_log200ep_updatedRDF_highlr = pd.read_csv(new_small_folder + sample_small_1link_200ep_updatedRDF_highlr)
-plt.scatter(data_small_seq8_log200ep_updatedRDF_highlr['outputs'],data_small_seq8_log200ep_updatedRDF_highlr['targets'])
-plt.title('Small dataset seq = 8, meanscaled and \n with logsine, 80 epochs, 1 link, lr=0.0008')
-plt.xlabel('Model prediction [mm/h]')
-plt.ylabel('Observation [mm/h]')
-plt.show()
-
-# Plot small dataset, sequence lenght 8 1 sample mean scaled 1 link higher lr, 200 ep
-data_small_testaverage = pd.read_csv(new_small_folder + sample_small_testaverage)
-plt.scatter(data_small_testaverage['outputs'],data_small_testaverage['targets'])
-plt.title('Small dataset seq = 8, meanscaled and \n with logsine, 2 epochs, 1 link, lr=0.0008, new weighted average')
-plt.xlabel('Model prediction [mm/h]')
-plt.ylabel('Observation [mm/h]')
-plt.show()
 
 targets_test = torch.tensor(data_small_testaverage['targets_nontrans'])
 outputs_test = torch.tensor(data_small_testaverage['outputs_nontrans'])
-
-# Plot small dataset, sequence lenght 8 1 sample mean scaled 1 link higher lr, 100 ep with early stopping after 20 epochs
-data_small_testRDF = pd.read_csv(new_small_folder + sample_small_testRDF)
-plt.scatter(data_small_testRDF['outputs'],data_small_testRDF['targets'])
-plt.title('Small dataset seq = 8, meanscaled and \n with logsine, 2 epochs, 1 link, lr=0.001, new weighted average')
-plt.xlabel('Model prediction [mm/h]')
-plt.ylabel('Observation [mm/h]')
-plt.show()
-
-# Plot small dataset, sequence lenght 8 1 sample mean scaled 1 link higher lr, 100 ep with early stopping after 20 epochs
-data_small_testRDF_newarch = pd.read_csv(new_small_folder + sample_small_newarch)
-plt.scatter(data_small_testRDF_newarch['outputs'],data_small_testRDF_newarch['targets'])
-plt.title('Small dataset seq = 8, meanscaled and \n with logsine, 2 epochs, 1 link, lr=0.001, new architecture')
-plt.xlabel('Model prediction [mm/h]')
-plt.ylabel('Observation [mm/h]')
-plt.show()
-
-# Plot small dataset, sequence lenght 8 1 sample mean scaled 1 link higher lr, 100 ep with early stopping after 20 epochs
-data_small_testRDF_newarch_lr = pd.read_csv(new_small_folder + sample_small_newarch_lr)
-plt.scatter(data_small_testRDF_newarch_lr['outputs'],data_small_testRDF_newarch_lr['targets'])
-plt.title('Small dataset seq = 8, meanscaled and \n with logsine, 2 epochs, 1 link, lr=0.0005, new architecture')
-plt.xlabel('Model prediction [mm/h]')
-plt.ylabel('Observation [mm/h]')
-plt.show()
-
-# Plot small dataset, sequence lenght 8 1 sample mean scaled 1 link higher lr, 100 ep with early stopping after 20 epochs
-data_small_LSTM = pd.read_csv(new_small_folder + sample_LSTM)
-plt.scatter(data_small_LSTM['outputs'],data_small_LSTM['targets'])
-plt.title('Small dataset seq = 8, meanscaled and \n with logsine, 100 epochs, 1 link, lr=0.0005, LSTM')
-plt.xlabel('Model prediction [mm/h]')
-plt.ylabel('Observation [mm/h]')
-plt.show()
 
 # Plot small dataset, sequence lenght 8 1 sample mean scaled 1 link higher lr, 100 ep with early stopping after 20 epochs
 data_small_LSTM_10 = pd.read_csv(new_small_folder + sample_LSTM_10)
@@ -242,7 +122,78 @@ plt.show()
 plt.hist2d(data_small_onlyrain['outputs_nontrans'],data_small_onlyrain['targets_nontrans'], bins=(10,50), cmap=plt.cm.jet)
 plt.show()
 
+# Plot small dataset, only rain events and without scaling or transforming.
+data_small_UTC_notrans = pd.read_csv(new_small_folder + sample_10links_notransform_UTC)
+plt.scatter(data_small_UTC_notrans['outputs_nontrans'],data_small_UTC_notrans['targets_nontrans'])
+plt.title('LSTM, 10 links. Correct timings (UTC), 10 epochs')
+plt.xlabel('Model prediction [mm/h]')
+plt.ylabel('Observation [mm/h]')
+plt.show()
 
+# Plot small dataset, only rain events and without scaling or transforming.
+data_small_UTC_trans = pd.read_csv(new_small_folder + sample_10links_transform_UTC)
+plt.scatter(data_small_UTC_trans['outputs'],data_small_UTC_trans['targets'])
+plt.title('LSTM, 10 links. Correct timings (UTC), 10 epochs, transformed')
+plt.xlabel('Model prediction [mm/h]')
+plt.ylabel('Observation [mm/h]')
+plt.show()
+
+# Plot small dataset, only rain events and without scaling or transforming.
+data_small_UTC_trans_median = pd.read_csv(new_small_folder + sample_10links_transform_UTC_median)
+plt.scatter(data_small_UTC_trans_median['outputs'],data_small_UTC_trans_median['targets'])
+plt.title('LSTM, 10 links. Correct timings (UTC), 10 epochs,\n transformed and features scaled with median')
+plt.xlabel('Model prediction [mm/h]')
+plt.ylabel('Observation [mm/h]')
+plt.show()
+
+# Plot small dataset, only rain events and without scaling or transforming.
+data_small_UTC_notrans_onlyrain = pd.read_csv(new_small_folder + sample_10links_notransform_UTC_onlyrain)
+plt.scatter(data_small_UTC_notrans_onlyrain['outputs_nontrans'],data_small_UTC_notrans_onlyrain['targets_nontrans'])
+plt.title('LSTM, 10 links. Correct timings (UTC), 10 epochs,\n non transformed and features scaled with median')
+plt.xlabel('Model prediction [mm/h]')
+plt.ylabel('Observation [mm/h]')
+plt.show()
+
+# Plot small dataset, only rain events and without scaling or transforming.
+data_small_UTC_test = pd.read_csv(new_small_folder + sample_test)
+plt.scatter(data_small_UTC_test['outputs_nontrans'],data_small_UTC_test['targets_nontrans'])
+plt.title('LSTM, 10 links. Correct timings (UTC), 1 epochs,\n non-transformed and MSE as loss function')
+plt.xlabel('Model prediction [mm/h]')
+plt.ylabel('Observation [mm/h]')
+plt.show()
+
+# Plot small dataset, only rain events and without scaling or transforming.
+data_small_UTC_test_trans = pd.read_csv(new_small_folder + sample_test_trans)
+plt.scatter(data_small_UTC_test_trans['outputs'],data_small_UTC_test_trans['targets'])
+plt.title('LSTM, 10 links. Correct timings (UTC), 10 epochs,\n transformed and MSE as loss function')
+plt.xlabel('Model prediction [mm/h]')
+plt.ylabel('Observation [mm/h]')
+plt.show()
+
+# Plot small dataset, only rain events and without scaling or transforming.
+data_small_UTC_test_trans_RDF = pd.read_csv(new_small_folder + sample_test_trans_RDF)
+plt.scatter(data_small_UTC_test_trans_RDF['outputs'],data_small_UTC_test_trans_RDF['targets'])
+plt.title('LSTM, 10 links. Correct timings (UTC), 10 epochs,\n transformed and RDF MSE as loss function')
+plt.xlabel('Model prediction [mm/h]')
+plt.ylabel('Observation [mm/h]')
+plt.show()
+
+
+# Plot small dataset, all events with scaling, MAE RDF as loss
+data_small_UTC_test_trans_MAE_RDF = pd.read_csv(new_small_folder + sample_test_trans_MAE_RDF)
+plt.scatter(data_small_UTC_test_trans_MAE_RDF['outputs'],data_small_UTC_test_trans_MAE_RDF['targets'])
+plt.title('LSTM, 10 links. Correct timings (UTC), 10 epochs,\n transformed and RDF MAE as loss function')
+plt.xlabel('Model prediction [mm/h]')
+plt.ylabel('Observation [mm/h]')
+plt.show()
+
+# Plot small dataset, all events with scaling, MAE RDF as loss
+data_small_UTC_test_full_features = pd.read_csv(new_small_folder + sample_test_full_features_RDF)
+plt.scatter(data_small_UTC_test_full_features['outputs'],data_small_UTC_test_full_features['targets'])
+plt.title('LSTM, 10 links. Correct timings (UTC), 10 epochs,\n transformed and RDF MSE as loss function, full data')
+plt.xlabel('Model prediction [mm/h]')
+plt.ylabel('Observation [mm/h]')
+plt.show()
 #### PLOT RDF ############
 plt.plot(testx,RDF(torch.tensor(testx)))
 plt.xlabel('Precipitation (mm/h)')

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.1)  8 MAR 2022 16:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.1)  30 MAR 2022 16:18
 entering extended mode
 **./Final_thesis_LMD_v1.tex
 (Final_thesis_LMD_v1.tex
@@ -932,7 +932,7 @@ Package pdftex.def Info: ./images//Transfer_learning_concept.png  used on input
  line 166.
 (pdftex.def)             Requested size: 227.62204pt x 100.37929pt.
 
-Underfull \vbox (badness 3977) has occurred while \output is active []
+Underfull \vbox (badness 1675) has occurred while \output is active []
 
  [1
 
@@ -942,61 +942,63 @@ Underfull \vbox (badness 3977) has occurred while \output is active []
 ] [3
 
 
+
 ] [4
 
-] [5]
-<C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/multilayer_RNN.png, id=4
-4, 1046.91125pt x 495.8525pt>
-File: C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/multilayer_RNN.png 
-Graphic file (type png)
-<use C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/multilayer_RNN.png>
-Package pdftex.def Info: C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/
-multilayer_RNN.png  used on input line 370.
-(pdftex.def)             Requested size: 231.88997pt x 109.82936pt.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 371.
-LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
-384.
+]
 
-(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmss.fd
+LaTeX Warning: Reference `transferlearning' on page 5 undefined on input line 3
+32.
+
+[5]
+<C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/images/Schematic_LSTM_TR
+_23_3_LudoDiender.png, id=44, 963.6pt x 542.025pt>
+File: C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/images/Schematic_LS
+TM_TR_23_3_LudoDiender.png Graphic file (type png)
+<use C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/images/Schematic_LST
+M_TR_23_3_LudoDiender.png>
+Package pdftex.def Info: C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/
+images/Schematic_LSTM_TR_23_3_LudoDiender.png  used on input line 355.
+(pdftex.def)             Requested size: 483.69687pt x 272.07874pt.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 356.
+LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
+369.
+ (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmss.fd
 File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Overfull \hbox (2.65472pt too wide) in paragraph at lines 418--418
+[6]
+Overfull \hbox (2.65472pt too wide) in paragraph at lines 404--404
 []|\T1/lmss/m/n/10 Group|  
  []
 
 
-Overfull \hbox (9.87184pt too wide) in paragraph at lines 418--418
+Overfull \hbox (9.87184pt too wide) in paragraph at lines 404--404
 []|\T1/lmss/m/n/10 Hyperparameter|  
  []
 
 
-Overfull \hbox (0.6107pt too wide) in paragraph at lines 412--437
+Overfull \hbox (0.6107pt too wide) in paragraph at lines 398--423
  []|  [] [] 
  []
 
-[6 <C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/multilayer_RNN.png>]
-[7]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+[7 <C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/images/Schematic_LSTM
+_TR_23_3_LudoDiender.png>] [8]
+Underfull \vbox (badness 1466) has occurred while \output is active []
 
- [8]
-Overfull \hbox (4.61711pt too wide) in paragraph at lines 477--477
+
+Overfull \hbox (4.61711pt too wide) in paragraph at lines 474--474
 []|$\OML/cmm/m/it/10 Hyperparameter$| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 481--481
+Underfull \hbox (badness 10000) in paragraph at lines 478--478
 []|\T1/lmss/m/n/10 Number of
  []
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9]
-[10
+[9] [10
 
 ] [11
-
 
 ] [12
 
@@ -1005,167 +1007,191 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ] [14
 
 ] (Final_thesis_LMD_v1.bbl
-Underfull \hbox (badness 1460) in paragraph at lines 184--201
+Underfull \hbox (badness 1735) in paragraph at lines 14--30
+[]\T1/lmss/m/n/10 Bengio, Y.  (2012).  Prac-ti-cal rec-om-men-da-tions
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
+9.
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Underfull \hbox (badness 1038) in paragraph at lines 44--63
+\T1/lmss/m/n/10 Al-ter-na-tive trans-for-ma-tions to han-dle ex-treme
+ []
+
+
+Underfull \hbox (badness 1460) in paragraph at lines 245--262
 []\T1/lmss/m/n/10 French, M. N., Kra-jew-ski, W. F., & Cuyk-endall,
  []
 
 
-Underfull \hbox (badness 1558) in paragraph at lines 309--326
+Underfull \hbox (badness 1558) in paragraph at lines 401--418
 \T1/lmss/m/n/10 cle].  \T1/lmss/m/sl/10 Re-new-able En-ergy\T1/lmss/m/n/10 , \T
 1/lmss/m/sl/10 85\T1/lmss/m/n/10 , 83-95.  doi:
  []
 
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 3
-53.
-(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \hbox (badness 3503) in paragraph at lines 340--358
+
+Underfull \hbox (badness 3503) in paragraph at lines 463--481
 []\T1/lmss/m/n/10 Kilmartin, R. F., & Pe-ter-son, J. R.  (1972).
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--358
+Underfull \hbox (badness 10000) in paragraph at lines 463--481
 \T1/lmss/m/n/10 Rainfall-runoff re-gres-sion with log-a-rith-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--358
+Underfull \hbox (badness 10000) in paragraph at lines 463--481
 \T1/lmss/m/n/10 mic trans-forms and ze-ros in the data
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--358
+Underfull \hbox (badness 10000) in paragraph at lines 463--481
 \T1/lmss/m/n/10 [Jour-nal Ar-ti-cle].  \T1/lmss/m/sl/10 Wa-ter Re-sources Re-
  []
 
 
-Underfull \hbox (badness 4181) in paragraph at lines 340--358
+Underfull \hbox (badness 4181) in paragraph at lines 463--481
 \T1/lmss/m/sl/10 search\T1/lmss/m/n/10 , \T1/lmss/m/sl/10 8\T1/lmss/m/n/10 (4),
  1096-1099.  Re-trieved from
  []
 
 
-Overfull \hbox (13.60942pt too wide) in paragraph at lines 340--358
+Overfull \hbox (13.60942pt too wide) in paragraph at lines 463--481
 \T1/lmtt/m/n/10 https://dx.doi.org/10.1029/wr008i004p01096
  []
 
 
-Underfull \hbox (badness 1072) in paragraph at lines 372--388
+Underfull \hbox (badness 7925) in paragraph at lines 495--510
+[]\T1/lmss/m/n/10 Kingma, D., & Ba, J.  (2014).  Adam:
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--510
+\T1/lmss/m/n/10 A method or stochas-tic op-ti-miza-tion
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 495--510
+\T1/lmss/m/n/10 [Jour-nal Ar-ti-cle].  \T1/lmss/m/sl/10 arXiv eprint\T1/lmss/m/
+n/10 .  doi:
+ []
+
+
+Underfull \hbox (badness 1072) in paragraph at lines 524--540
 []\T1/lmss/m/n/10 Leijnse, H., Ui-jlen-hoet, R., & Stricker, J. N. M.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 461--478
-[]\T1/lmss/m/n/10 Overeem, A., Lei-jnse, H., & Ui-jlen-hoet, R.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 461--478
-\T1/lmss/m/n/10 (2011).  Mea-sur-ing ur-ban rain-fall us-ing
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 461--478
-\T1/lmss/m/n/10 mi-crowave links from com-mer-cial cel-lu-lar
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 461--478
-\T1/lmss/m/n/10 com-mu-ni-ca-tion net-works [Jour-nal Ar-ti-cle].
- []
-
-
-Underfull \hbox (badness 5417) in paragraph at lines 461--478
-\T1/lmss/m/sl/10 Wa-ter Re-sources Re-search\T1/lmss/m/n/10 , \T1/lmss/m/sl/10 
-47\T1/lmss/m/n/10 (12).  doi:
  []
 
 
 Underfull \vbox (badness 6252) has occurred while \output is active []
 
  [15]
-Underfull \hbox (badness 1303) in paragraph at lines 552--573
+Underfull \hbox (badness 10000) in paragraph at lines 613--630
+[]\T1/lmss/m/n/10 Overeem, A., Lei-jnse, H., & Ui-jlen-hoet, R.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--630
+\T1/lmss/m/n/10 (2011).  Mea-sur-ing ur-ban rain-fall us-ing
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--630
+\T1/lmss/m/n/10 mi-crowave links from com-mer-cial cel-lu-lar
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 613--630
+\T1/lmss/m/n/10 com-mu-ni-ca-tion net-works [Jour-nal Ar-ti-cle].
+ []
+
+
+Underfull \hbox (badness 5417) in paragraph at lines 613--630
+\T1/lmss/m/sl/10 Wa-ter Re-sources Re-search\T1/lmss/m/n/10 , \T1/lmss/m/sl/10 
+47\T1/lmss/m/n/10 (12).  doi:
+ []
+
+
+Underfull \hbox (badness 1303) in paragraph at lines 704--725
 []\T1/lmss/m/n/10 Pudashine, J., Guyot, A., Pe-tit-jean, F., Pauwels,
  []
 
 
-Underfull \hbox (badness 2521) in paragraph at lines 588--607
+Underfull \hbox (badness 2521) in paragraph at lines 740--759
 []\T1/lmss/m/n/10 Qureshi, A. S., Khan, A., Za-meer, A., & Us-
  []
 
 
-Underfull \hbox (badness 1389) in paragraph at lines 588--607
+Underfull \hbox (badness 1389) in paragraph at lines 740--759
 \T1/lmss/m/n/10 and trans-fer learn-ing [Jour-nal Ar-ti-cle].  \T1/lmss/m/sl/10
  Ap-
  []
 
 
-Underfull \hbox (badness 2698) in paragraph at lines 588--607
+Underfull \hbox (badness 2698) in paragraph at lines 740--759
 \T1/lmss/m/sl/10 plied Soft Com-put-ing\T1/lmss/m/n/10 , \T1/lmss/m/sl/10 58\T1
 /lmss/m/n/10 , 742-755.  doi:
  []
 
 
-Underfull \hbox (badness 1158) in paragraph at lines 622--641
+Underfull \hbox (badness 1158) in paragraph at lines 774--793
 \T1/lmss/m/n/10 (1996).  35-ghz dual-polarization prop-a-ga-tion
  []
 
 
-Underfull \hbox (badness 1189) in paragraph at lines 622--641
+Underfull \hbox (badness 1189) in paragraph at lines 774--793
 \T1/lmss/m/n/10 link for rain-rate es-ti-ma-tion [Jour-nal Ar-ti-cle].
  []
 
 
-Underfull \hbox (badness 1968) in paragraph at lines 622--641
+Underfull \hbox (badness 1968) in paragraph at lines 774--793
 \T1/lmss/m/sl/10 ogy\T1/lmss/m/n/10 , \T1/lmss/m/sl/10 13\T1/lmss/m/n/10 (2), 4
 19-425.  doi: 10.1175/1520-
  []
 
 
-Underfull \hbox (badness 2980) in paragraph at lines 653--667
+Underfull \hbox (badness 2980) in paragraph at lines 805--819
 []\T1/lmss/m/n/10 Sarkar, D.  (2018, Novem-ber 14, 2018).  \T1/lmss/m/sl/10 A
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 653--667
+Underfull \hbox (badness 10000) in paragraph at lines 805--819
 \T1/lmss/m/sl/10 com-pre-hen-sive hands-on guide to trans-
  []
 
 
-Underfull \hbox (badness 5359) in paragraph at lines 653--667
+Underfull \hbox (badness 5359) in paragraph at lines 805--819
 \T1/lmss/m/sl/10 fer learn-ing with real-world ap-pli-ca-tions in
  []
 
 
-Underfull \hbox (badness 1762) in paragraph at lines 653--667
+Underfull \hbox (badness 1762) in paragraph at lines 805--819
 \T1/lmss/m/sl/10 deep learn-ing \T1/lmss/m/n/10 [Web Page].  Re-trieved from
  []
 
 
-Overfull \hbox (533.35791pt too wide) in paragraph at lines 653--667
+Overfull \hbox (533.35791pt too wide) in paragraph at lines 805--819
 \T1/lmtt/m/n/10 https://towardsdatascience.com/a-comprehensive-hands-on-guide-t
 o-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 653--667
+Underfull \hbox (badness 10000) in paragraph at lines 805--819
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 740--757
+Underfull \hbox (badness 10000) in paragraph at lines 919--936
 \T1/lmtt/m/n/10 https://www.mdpi.com/2073-4441/9/12/931
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 740--757
+Underfull \hbox (badness 10000) in paragraph at lines 919--936
 
  []
 
-) [16
-
-] [17
+) [16] [17
 
 
 ]
@@ -1176,15 +1202,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 740--757
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 10591 strings out of 478927
- 153648 string characters out of 2852536
- 560559 words of memory out of 3000000
- 28271 multiletter control sequences out of 15000+600000
+ 10608 strings out of 478927
+ 154080 string characters out of 2852536
+ 554120 words of memory out of 3000000
+ 28288 multiletter control sequences out of 15000+600000
  447883 words of font info for 49 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 61i,15n,70p,1645b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,14n,70p,1849b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
 :/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/U
 sers/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.
@@ -1202,9 +1231,9 @@ pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/ludod/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/ludod/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/ludod/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Final_thesis_LMD_v1.pdf (23 pages, 407275 bytes).
+Output written on Final_thesis_LMD_v1.pdf (23 pages, 410598 bytes).
 PDF statistics:
- 156 PDF objects out of 1000 (max. 8388607)
+ 155 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

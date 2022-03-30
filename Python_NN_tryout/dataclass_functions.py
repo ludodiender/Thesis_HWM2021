@@ -18,7 +18,8 @@ def load_data_separate(data_input, do_transform = True,include_dist_as_feature =
 
     if do_transform:
         features_div = data_input[['RXMIN', 'RXMAX']].divide(data_input['DIST'], axis=0)
-        features = torch.tensor(features_div.values)
+        features_divdist = torch.tensor(features_div.values)
+        features = torch.from_numpy(data_input[['RXMIN','RXMAX']].values).type(torch.DoubleTensor)
         # print('Size of features:', features.size())
         # features_dist = features / data_input['DIST'] # switch to distance scaled data
 
@@ -42,7 +43,7 @@ def load_data_separate(data_input, do_transform = True,include_dist_as_feature =
             index = 1
 
         RXMAX_max, RXMAX_min, RXMIN_max, RXMIN_min, targ_max, targ_min = minmax_values[index]
-        RXMAX_mean, RXMAX_std, RXMIN_mean, RXMIN_std = mean_std_values_dist[index]  # Switch to distance scaled data
+        RXMAX_mean, RXMAX_std, RXMIN_mean, RXMIN_std = mean_std_values[index]  # Switch to distance scaled data
         targets = torch.from_numpy(data_input['TARG_PRCP'].values).type(torch.DoubleTensor)
 
         # Check for NaNs in the features or targets
@@ -66,9 +67,24 @@ def load_data_separate(data_input, do_transform = True,include_dist_as_feature =
             targets_norm = (targets_transform - targ_min_transform) / (targ_max_transform - targ_min_transform)
 
         # Normalize the features as well using mean and standard deviation scaling
-        # mean_tensor = torch.tensor([RXMIN_mean, RXMAX_mean])
-        median_tensor = torch.tensor(
-            [np.median(features_div['RXMIN']), np.median(features_div['RXMAX'])])  # Calculate the median for each link
+        # Due to an error in the dataloading function, two links might be concatenated if a large gap of data is present.
+        # To correct for this, the median tensor is constructed as a fully shaped tensor.
+
+        # Index where change happens between the links:
+        index_2nd_link = data_input[data_input['SITE_LAT']==data_input['SITE_LAT'].iloc[-1]].index.values.min()
+
+        median_tensor = torch.zeros(len(features),2)
+
+
+        if index_2nd_link == 0:
+            median_tensor[:] = torch.tensor([np.median(data_input['RXMIN']),np.median(data_input['RXMAX'])])
+        else:
+            median_link1 = (np.median(data_input['RXMIN'][:index_2nd_link]), np.median(data_input['RXMAX'][:index_2nd_link]))
+            median_link2 = (np.median(data_input['RXMIN'][index_2nd_link:]), np.median(data_input['RXMAX'][index_2nd_link:]))
+            median_tensor[:index_2nd_link] = torch.tensor(median_link1)
+            median_tensor[index_2nd_link:] = torch.tensor(median_link2)
+
+        #median_tensor = torch.tensor([np.median(features['RXMIN']), np.median(features['RXMAX'])])  # Calculate the median for each link
         std_tensor = torch.tensor([RXMIN_std, RXMAX_std])
 
         # features_norm = (features - mean_tensor) / (std_tensor)  # Switch to distance scaled data here as well
@@ -148,6 +164,17 @@ def custom_MSE_RDF_loss(outputs, targets):
     RDF = torch.where(outputs.double() < 0, 2.0, (1 - (ys * torch.exp(new_outputs))))
     MSE = ((outputs.double() - targets.double())**2)
     loss = torch.mean(RDF * MSE)
+    if loss.item() < 0:
+        print('Output tensor:',outputs,'Target tensor:',targets)
+    return loss
+
+def custom_MAE_RDF_loss(outputs, targets):
+    ys = 0.95
+    yr = -5
+    new_outputs = torch.mul(targets.double(),yr)
+    RDF = torch.where(outputs.double() < 0, 2.0, (1 - (ys * torch.exp(new_outputs))))
+    MAE = ((outputs.double() - targets.double())**2)**0.5
+    loss = torch.mean(RDF * MAE)
     if loss.item() < 0:
         print('Output tensor:',outputs,'Target tensor:',targets)
     return loss

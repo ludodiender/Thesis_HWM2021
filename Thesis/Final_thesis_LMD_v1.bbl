@@ -1,6 +1,67 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+Bengio%
+}{%
+Bengio%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+Bengio2012}
+\APACinsertmetastar {%
+Bengio2012}%
+\begin{APACrefauthors}%
+Bengio, Y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Practical Recommendations for Gradient-Based Training of
+  Deep Architectures} {Practical recommendations for gradient-based training of
+  deep architectures}{\BBCQ}\ [Book Section].
+\newblock
+\BIn{} G.~Montavon, G\BPBI B.~Orr\BCBL {}\ \BBA {} K\BHBI R.~Müller\ (\BEDS),
+  \APACrefbtitle {Neural Networks: Tricks of the Trade: Second Edition} {Neural
+  networks: Tricks of the trade: Second edition}\ (\BPG~437-478).
+\newblock
+\APACaddressPublisher{Berlin, Heidelberg}{Springer Berlin Heidelberg}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Burbidge%
+, Magee%
+\BCBL {}\ \BBA {} Robb%
+}{%
+Burbidge%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {1988}}%
+}]{%
+Burbidge1988}
+\APACinsertmetastar {%
+Burbidge1988}%
+\begin{APACrefauthors}%
+Burbidge, J\BPBI B.%
+, Magee, L.%
+\BCBL {}\ \BBA {} Robb, A\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1988}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Alternative Transformations to Handle Extreme Values of
+  the Dependent Variable} {Alternative transformations to handle extreme values
+  of the dependent variable}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{Journal of the American Statistical
+  Association}{83}{401}{123-127}.
+\newblock
+\begin{APACrefURL} \url{http://www.jstor.org/stable/2288929} \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.2307/2288929} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Chwala%
 \ \BBA {} Kunstmann%
 }{%
@@ -270,9 +331,40 @@ Graf, M.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Habi%
+H\BPBI V.~Habi%
+\ \BBA {} Messer%
 }{%
-Habi%
+H\BPBI V.~Habi%
+\ \BBA {} Messer%
+}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+HabiYear}
+\APACinsertmetastar {%
+HabiYear}%
+\begin{APACrefauthors}%
+Habi, H\BPBI V.%
+\BCBT {}\ \BBA {} Messer, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Wet-dry classification using lstm and commercial
+  microwave links} {Wet-dry classification using lstm and commercial microwave
+  links}{\BBCQ}\ [Conference Proceedings].
+\newblock
+\BIn{} \APACrefbtitle {2018 IEEE 10th Sensor Array and Multichannel Signal
+  Processing Workshop (SAM)} {2018 ieee 10th sensor array and multichannel
+  signal processing workshop (sam)}\ (\BPG~149-153).
+\newblock
+\APACaddressPublisher{}{IEEE}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+V.~Habi%
+}{%
+V.~Habi%
 }{%
 {\protect \APACyear {2019}}%
 }]{%
@@ -325,6 +417,37 @@ Hu, Q.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Kandel%
+\ \BBA {} Castelli%
+}{%
+Kandel%
+\ \BBA {} Castelli%
+}{%
+{\protect \APACyear {2020}}%
+}]{%
+Kandel2020}
+\APACinsertmetastar {%
+Kandel2020}%
+\begin{APACrefauthors}%
+Kandel, I.%
+\BCBT {}\ \BBA {} Castelli, M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The effect of batch size on the generalizability of the
+  convolutional neural networks on a histopathology dataset} {The effect of
+  batch size on the generalizability of the convolutional neural networks on a
+  histopathology dataset}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{ICT Express}{6}{4}{312-315}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.icte.2020.04.010}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Kilmartin%
 \ \BBA {} Peterson%
 }{%
@@ -354,6 +477,35 @@ Kilmartin, R\BPBI F.%
   \end{APACrefURL}
 \newblock
 \begin{APACrefDOI} \doi{10.1029/wr008i004p01096} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kingma%
+\ \BBA {} Ba%
+}{%
+Kingma%
+\ \BBA {} Ba%
+}{%
+{\protect \APACyear {2014}}%
+}]{%
+Kingma2014}
+\APACinsertmetastar {%
+Kingma2014}%
+\begin{APACrefauthors}%
+Kingma, D.%
+\BCBT {}\ \BBA {} Ba, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Adam: A Method or Stochastic Optimization} {Adam: A
+  method or stochastic optimization}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{arXiv eprint}{}{}{}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.48550/arXiv.1412.6980}
+  \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -663,6 +815,33 @@ Sarkar, D.%
 \begin{APACrefURL}
   \url{https://towardsdatascience.com/a-comprehensive-hands-on-guide-to-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a}
   \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Staudemeyer%
+\ \BBA {} Morris%
+}{%
+Staudemeyer%
+\ \BBA {} Morris%
+}{%
+{\protect \APACyear {2019}}%
+}]{%
+Staudemeyer2019}
+\APACinsertmetastar {%
+Staudemeyer2019}%
+\begin{APACrefauthors}%
+Staudemeyer, R\BPBI C.%
+\BCBT {}\ \BBA {} Morris, E\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2019}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Understanding LSTM--a tutorial into long short-term
+  memory recurrent neural networks} {Understanding lstm--a tutorial into long
+  short-term memory recurrent neural networks}{\BBCQ}\ [Journal Article].
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1909.09586}{}{}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
