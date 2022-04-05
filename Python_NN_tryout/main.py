@@ -87,16 +87,18 @@ importlib.reload(dc)
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-output_file_name = 'output_LSTM_seql8_numl_2_hids_128_nepo_100_lr01_1link_notransform.txt'
+output_file_name = 'output_LSTM_RDF_test_trans_features.txt'
+
+# Set boolean flags for different types of model runs
+include_dist_as_feature = False
+do_transform = True
+only_rain = False
 
 # Hyper parameter setting, only needed when not tuning using RayTune
-include_dist_as_feature = False
-do_transform = False
-
 num_classes = 1
-num_epochs = 100
+num_epochs = 10
 batch_size = 256
-learning_rate = 0.1
+learning_rate = 0.005
 input_size = 2
 
 if include_dist_as_feature:
@@ -118,11 +120,12 @@ header_names = ['ID', 'SITE_LAT', 'SITE_LON', 'FAR_LAT', 'FAR_LON', 'FREQ', 'DAT
 
 class MyCMLDataset(torch.utils.data.Dataset):
 
-    def __init__(self, data_dir: str, seq_len: int, headers: list):
+    def __init__(self, data_dir: str, seq_len: int, headers: list, only_rain: bool):
         self.directory = Path(data_dir)
         self.files = sorted((f, dc.get_sample_count_by_file(f)) for f in self.directory.iterdir() if f.is_file())
         self.total_sample_count = sum(f[-1] for f in self.files)
         self.header_names = headers
+        self.only_rain = only_rain
 
         self.seq_len = seq_len
 
@@ -167,8 +170,11 @@ class MyCMLDataset(torch.utils.data.Dataset):
             return None
         elif not dc.DatesCheck(self.dates[file_idx - (self.seq_len - 1):file_idx + 1]):
             return None
-        elif self.data.tensors[1][file_idx] == 0: # Add a check that only uses the wet cases in the dataset
-            return None
+        elif self.only_rain:
+            if self.data.tensors[1][file_idx] == 0: # Add a check that only uses the wet cases in the dataset
+                return None
+            else:
+                return self.data.tensors[0][file_idx - (self.seq_len - 1):file_idx + 1], self.data.tensors[1][file_idx]
         else:
             return self.data.tensors[0][file_idx - (self.seq_len - 1):file_idx + 1], self.data.tensors[1][file_idx]
 
@@ -268,14 +274,14 @@ def train_cifar(config, output, checkpoint_dir=None, data_dir=None):
     #trainpath = '/lustre/scratch/WUR/ESG/diend004/CML_RAD_perID/2011_training/NOKIA'
     #testpath = '/lustre/scratch/WUR/ESG/diend004/CML_RAD_perID/2012_testing/NOKIA'
 
-    trainpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_train_testing'
-    testpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_test_testing'
+    trainpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_perID_UTC_4months/2011_training'
+    testpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_perID_UTC_4months/2012_testing'
 
     # trainpath = '/lustre/scratch/WUR/ESG/diend004/Testfiles_JupyterNotebook/train'
     # testpath = '/lustre/scratch/WUR/ESG/diend004/Testfiles_JupyterNotebook/test'
 
-    trainset = MyCMLDataset(data_dir=trainpath, seq_len=sequence_length, headers=header_names)
-    testset = MyCMLDataset(data_dir=testpath, seq_len=sequence_length, headers=header_names)
+    trainset = MyCMLDataset(data_dir=trainpath, seq_len=sequence_length, headers=header_names, only_rain = only_rain)
+    testset = MyCMLDataset(data_dir=testpath, seq_len=sequence_length, headers=header_names, only_rain = only_rain)
 
     train_loader = DataLoader(trainset, batch_size=batch_size, collate_fn=dc.my_collate, shuffle=False, drop_last=True,
                               num_workers=1, pin_memory=True)
@@ -392,10 +398,10 @@ def train_cifar(config, output, checkpoint_dir=None, data_dir=None):
 
 def val_accuracy(model, output_Name, device='cpu'):
     #valpath = '/lustre/scratch/WUR/ESG/diend004/CML_RAD_perID/2013_validating/NOKIA'
-    valpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_validate_testing'
+    valpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_perID_UTC_4months/2013_validating'
     # valpath = '/lustre/scratch/WUR/ESG/diend004/Testfiles_JupyterNotebook/validate'
 
-    valset = MyCMLDataset(data_dir=valpath, seq_len=sequence_length, headers=header_names)
+    valset = MyCMLDataset(data_dir=valpath, seq_len=sequence_length, headers=header_names, only_rain = only_rain)
     with open(output_Name, 'w') as f:
         f.write('outputs,targets \n')
     val_loader = DataLoader(valset, batch_size=batch_size, collate_fn=dc.my_collate, shuffle=False, drop_last=True,
@@ -499,7 +505,7 @@ if __name__ == "__main__":
 #################
 # OLD MODEL RUN # This model run works, beforehand is the optimizing tuning algorithm implemented
 #################
-writer = SummaryWriter(filename_suffix='DIST as feature, not transformed, 5 epochs')
+writer = SummaryWriter(filename_suffix='UTC fixed, 10 links')
 
 #model = RNNModel(input_size,hidden_size,num_layers,num_classes,device)
 model = LSTMModel(input_size,hidden_size,num_layers,num_classes,device)
@@ -508,7 +514,7 @@ model = LSTMModel(input_size,hidden_size,num_layers,num_classes,device)
 # error = nn.MSELoss() # Use MSELoss instead of CrossEntropyLoss, since CEL needs labels and classification
 error = dc.custom_MSE_RDF_loss
 # SGD Optimizer
-optimizer = torch.optim.SGD(model.parameters(), lr=learning_rate)
+optimizer = torch.optim.Adam(model.parameters(), lr=learning_rate)
 
 loss_list = []
 iteration_list = []
@@ -524,18 +530,18 @@ old_loss = 10
 #testpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_test_testing'
 #valpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_validate_testing'
 
-# 1 link
-trainpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_Small_testset/train'
-testpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_Small_testset/test'
-valpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_Small_testset/validate'
+# 10 links, UTC scaled
+trainpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_perID_UTC_4months/2011_training'
+testpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_perID_UTC_4months/2012_testing'
+valpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_perID_UTC_4months/2013_validating'
 
-train_pytorch = MyCMLDataset(data_dir=trainpath, seq_len=sequence_length, headers=header_names)
-test_pytorch = MyCMLDataset(data_dir=testpath, seq_len=sequence_length, headers=header_names)
-val_pytorch= MyCMLDataset(data_dir=valpath, seq_len=sequence_length, headers=header_names)
+train_pytorch = MyCMLDataset(data_dir=trainpath, seq_len=sequence_length, headers=header_names, only_rain = only_rain)
+test_pytorch = MyCMLDataset(data_dir=testpath, seq_len=sequence_length, headers=header_names, only_rain = only_rain)
+val_pytorch= MyCMLDataset(data_dir=valpath, seq_len=sequence_length, headers=header_names, only_rain = only_rain)
 
-train_loader = DataLoader(train_pytorch, batch_size=batch_size, collate_fn=dc.my_collate, shuffle=False,drop_last=True)
-test_loader = DataLoader(test_pytorch, batch_size=batch_size, collate_fn=dc.my_collate, shuffle=False, drop_last=True)
-val_loader = DataLoader(val_pytorch, batch_size=batch_size, collate_fn=dc.my_collate, shuffle=False, drop_last=True)
+train_loader = DataLoader(train_pytorch, batch_size=batch_size, shuffle=False,drop_last=True,collate_fn=dc.my_collate)
+test_loader = DataLoader(test_pytorch, batch_size=batch_size, shuffle=False, drop_last=True,collate_fn=dc.my_collate)
+val_loader = DataLoader(val_pytorch, batch_size=batch_size, shuffle=False, drop_last=True, collate_fn=dc.my_collate)
 
 TuningStop = False
 
@@ -546,6 +552,7 @@ for epoch in range(num_epochs):
     running_loss_train = []
     for i in enumerate(train_loader):
         if len(i[1]) == 0: # Only selecting rain events can cause the batch to be empty. Skip it in that case.
+            #print('Batch',i,'empty, this batch is skipped')
             continue
         features, targets = i[1]
         train_set = torch.autograd.Variable(features)
@@ -617,10 +624,11 @@ for epoch in range(num_epochs):
                         f. write(write_str)
 
                     
-            MSE_per_batch.append(dc.custom_MSE_RDF_loss(outputs,targets))
+            MSE_per_batch.append(float(dc.custom_MSE_RDF_loss(outputs,targets)))
             test_count.append(len(outputs))
             #print('RDF MSE:',dc.custom_MSE_RDF_loss(outputs,targets))
-            MSE_per_batch_nontrans.append((targets_real - outputs_real).square().mean().item())
+            #MSE_per_batch_nontrans.append((targets_real - outputs_real).square().mean().item())
+            MSE_per_batch_nontrans.append(float(dc.custom_MSE_RDF_loss(outputs_real, targets_real)))
             output_to_calc = outputs
             targets_to_calc = targets
 
@@ -638,7 +646,7 @@ for epoch in range(num_epochs):
     writer.add_scalar('Training loss',batch_train_loss,count)
     writer.add_scalar('Test loss (untransformed)',MSE_nontrans,count)
 
-    print('Iteration: {}  Loss: {}  MSE: {} %'.format(count, batch_train_loss, MSE))
+    print('Iteration: {}  Loss: {}  MSE: {}  MSE untransformed: {}%'.format(count, batch_train_loss, MSE, MSE_nontrans))
 
     if TuningStop: break
     # Check if tuning can continue

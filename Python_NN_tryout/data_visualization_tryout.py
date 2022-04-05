@@ -18,6 +18,7 @@ sample_test_trans = 'output_LSTM_MSE_test_trans.txt'
 sample_test_trans_RDF = 'output_LSTM_RDF_test_trans.txt'
 sample_test_trans_MAE_RDF = 'output_LSTM_RDF_MAE_test_trans.txt'
 sample_test_full_features_RDF = 'output_LSTM_RDF_test_trans_features.txt'
+sample_test_gpu_onlyrain = 'output_gpu_1runs_all_links_nontrans_onlyrain.txt'
 # Plot the target precipitation
 testlink = pd.read_csv('C:/Users/ludod/Documents/MSc Thesis/CML_Small_testset/train/NOKIA_linkID_1003.txt', sep=',',header=0,names=header_names)
 RXMIN_med = np.median(testlink['RXMIN'])
@@ -191,6 +192,14 @@ plt.show()
 data_small_UTC_test_full_features = pd.read_csv(new_small_folder + sample_test_full_features_RDF)
 plt.scatter(data_small_UTC_test_full_features['outputs'],data_small_UTC_test_full_features['targets'])
 plt.title('LSTM, 10 links. Correct timings (UTC), 10 epochs,\n transformed and RDF MSE as loss function, full data')
+plt.xlabel('Model prediction [mm/h]')
+plt.ylabel('Observation [mm/h]')
+plt.show()
+
+# Plot full corrected dataset, all events without scaling, MAE RDF as loss
+data_large_full_onlyrain = pd.read_csv(main_folder + sample_test_gpu_onlyrain)
+plt.scatter(data_large_full_onlyrain['output_trans'],data_large_full_onlyrain['targets_trans '])
+plt.title('LSTM, All links. Correct timings (UTC), 2 epochs,\n nontransformed and RDF MSE as loss function, only rain')
 plt.xlabel('Model prediction [mm/h]')
 plt.ylabel('Observation [mm/h]')
 plt.show()

@@ -36,6 +36,7 @@
 \contentsline {subsection}{\numberline {4.3.1}Data splitting}{11}{}%
 \contentsline {subsection}{\numberline {4.3.2}Equifinality and optimal hyperparameter combination}{11}{}%
 \contentsline {subsection}{\numberline {4.3.3}No signal picked up}{11}{}%
+\contentsline {subsection}{\numberline {4.3.4}Outlook}{11}{}%
 \contentsline {chapter}{\chapternumberline {5}Conclusion}{13}{}%
 \contentsline {chapter}{Acknowledgements}{15}{}%
 \contentsline {section}{References}{15}{}%

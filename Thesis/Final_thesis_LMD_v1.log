@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.1)  30 MAR 2022 16:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.1)  5 APR 2022 12:26
 entering extended mode
 **./Final_thesis_LMD_v1.tex
 (Final_thesis_LMD_v1.tex
@@ -923,17 +923,12 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 ] [6
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 <./images//Transfer_learning_concept.png, id=23, 534.36pt x 235.644pt>
 File: ./images//Transfer_learning_concept.png Graphic file (type png)
 <use ./images//Transfer_learning_concept.png>
 Package pdftex.def Info: ./images//Transfer_learning_concept.png  used on input
- line 166.
+ line 173.
 (pdftex.def)             Requested size: 227.62204pt x 100.37929pt.
-
-Underfull \vbox (badness 1675) has occurred while \output is active []
-
  [1
 
 
@@ -947,8 +942,12 @@ Underfull \vbox (badness 1675) has occurred while \output is active []
 
 ]
 
+LaTeX Warning: Reference `modelselection' on page 5 undefined on input line 340
+.
+
+
 LaTeX Warning: Reference `transferlearning' on page 5 undefined on input line 3
-32.
+40.
 
 [5]
 <C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/images/Schematic_LSTM_TR
@@ -958,47 +957,53 @@ TM_TR_23_3_LudoDiender.png Graphic file (type png)
 <use C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/images/Schematic_LST
 M_TR_23_3_LudoDiender.png>
 Package pdftex.def Info: C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/
-images/Schematic_LSTM_TR_23_3_LudoDiender.png  used on input line 355.
+images/Schematic_LSTM_TR_23_3_LudoDiender.png  used on input line 363.
 (pdftex.def)             Requested size: 483.69687pt x 272.07874pt.
 LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 356.
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 364.
 LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
-369.
+377.
  (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmss.fd
 File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 [6]
-Overfull \hbox (2.65472pt too wide) in paragraph at lines 404--404
+Overfull \hbox (2.65472pt too wide) in paragraph at lines 412--412
 []|\T1/lmss/m/n/10 Group|  
  []
 
 
-Overfull \hbox (9.87184pt too wide) in paragraph at lines 404--404
+Overfull \hbox (9.87184pt too wide) in paragraph at lines 412--412
 []|\T1/lmss/m/n/10 Hyperparameter|  
  []
 
 
-Overfull \hbox (0.6107pt too wide) in paragraph at lines 398--423
+Overfull \hbox (0.6107pt too wide) in paragraph at lines 406--431
  []|  [] [] 
  []
 
+
+LaTeX Warning: Reference `RayTune' on page 7 undefined on input line 433.
+
+
+LaTeX Warning: Reference `Nonauto tuning' on page 7 undefined on input line 433
+.
+
 [7 <C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/images/Schematic_LSTM
 _TR_23_3_LudoDiender.png>] [8]
-Underfull \vbox (badness 1466) has occurred while \output is active []
-
-
-Overfull \hbox (4.61711pt too wide) in paragraph at lines 474--474
+Overfull \hbox (4.61711pt too wide) in paragraph at lines 483--483
 []|$\OML/cmm/m/it/10 Hyperparameter$| 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 478--478
+Underfull \hbox (badness 10000) in paragraph at lines 487--487
 []|\T1/lmss/m/n/10 Number of
  []
 
-[9] [10
+[9]
 
-] [11
+LaTeX Warning: Reference `RayTune' on page 10 undefined on input line 501.
+
+[10] [11
 
 ] [12
 
@@ -1019,6 +1024,9 @@ File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 Underfull \hbox (badness 1038) in paragraph at lines 44--63
 \T1/lmss/m/n/10 Al-ter-na-tive trans-for-ma-tions to han-dle ex-treme
  []
+
+
+Underfull \vbox (badness 2418) has occurred while \output is active []
 
 
 Underfull \hbox (badness 1460) in paragraph at lines 245--262
@@ -1079,14 +1087,14 @@ n/10 .  doi:
  []
 
 
+Underfull \vbox (badness 6252) has occurred while \output is active []
+
+ [15]
 Underfull \hbox (badness 1072) in paragraph at lines 524--540
 []\T1/lmss/m/n/10 Leijnse, H., Ui-jlen-hoet, R., & Stricker, J. N. M.
  []
 
 
-Underfull \vbox (badness 6252) has occurred while \output is active []
-
- [15]
 Underfull \hbox (badness 10000) in paragraph at lines 613--630
 []\T1/lmss/m/n/10 Overeem, A., Lei-jnse, H., & Ui-jlen-hoet, R.
  []
@@ -1191,6 +1199,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 919--936
 
  []
 
+
+Package lineno Warning: Linenumber reference failed, 
+(lineno)                rerun to get it right.
+
 ) [16] [17
 
 
@@ -1207,13 +1219,13 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 10608 strings out of 478927
- 154080 string characters out of 2852536
- 554120 words of memory out of 3000000
- 28288 multiletter control sequences out of 15000+600000
+ 10615 strings out of 478927
+ 154205 string characters out of 2852536
+ 554082 words of memory out of 3000000
+ 28295 multiletter control sequences out of 15000+600000
  447883 words of font info for 49 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 61i,14n,70p,1849b,409s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 61i,14n,70p,1849b,407s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
 :/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/U
 sers/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.
@@ -1231,7 +1243,7 @@ pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/ludod/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/ludod/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/ludod/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Final_thesis_LMD_v1.pdf (23 pages, 410598 bytes).
+Output written on Final_thesis_LMD_v1.pdf (23 pages, 414558 bytes).
 PDF statistics:
  155 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
