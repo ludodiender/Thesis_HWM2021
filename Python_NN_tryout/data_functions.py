@@ -313,7 +313,7 @@ def get_ID_table_from_data(foldername):
     folders = [f for f in listdir(foldername)]
     links_already_used = []
     for f in folders:
-        foldername_sub = foldername + '/' + f + '/NOKIA'
+        foldername_sub = foldername + '/' + f
         files = [f_ for f_ in listdir(foldername_sub) if isfile(join(foldername_sub, f_))]
 
         for sepf in files:
@@ -330,7 +330,7 @@ def get_ID_table_from_data(foldername):
                 print('Done with', sepf)
 
 
-    matching_ID_table = empty_matchset[['ID', 'AVG_LON', 'AVG_LAT', 'FREQ']].reset_index(drop=True)
+    matching_ID_table = empty_matchset[['ID', 'AVG_LON', 'AVG_LAT', 'FREQ', 'DIST']].reset_index(drop=True)
     matching_ID_table = matching_ID_table.assign(X_radar=0)
     matching_ID_table = matching_ID_table.assign(Y_radar=0)
 

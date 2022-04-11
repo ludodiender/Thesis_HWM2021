@@ -1,6 +1,17 @@
 \begin{thebibliography}{}
 
 \bibitem [\protect \citeauthoryear {%
+\APACcitebtitle {KNMI}}{%
+\APACcitebtitle {KNMI}}{%
+{\protect \APACyear {{\protect \bibnodate {}}}}%
+}]{%
+KNMI}
+\APACinsertmetastar {%
+KNMI}%
+\APACrefYearMonthDay{{\protect \bibnodate {}}}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Bengio%
 }{%
 Bengio%
@@ -19,7 +30,7 @@ Bengio, Y.%
 \newblock
 {\BBOQ}\APACrefatitle {Practical Recommendations for Gradient-Based Training of
   Deep Architectures} {Practical recommendations for gradient-based training of
-  deep architectures}{\BBCQ}\ [Book Section].
+  deep architectures}.{\BBCQ}
 \newblock
 \BIn{} G.~Montavon, G\BPBI B.~Orr\BCBL {}\ \BBA {} K\BHBI R.~Müller\ (\BEDS),
   \APACrefbtitle {Neural Networks: Tricks of the Trade: Second Edition} {Neural
@@ -51,7 +62,7 @@ Burbidge, J\BPBI B.%
 \newblock
 {\BBOQ}\APACrefatitle {Alternative Transformations to Handle Extreme Values of
   the Dependent Variable} {Alternative transformations to handle extreme values
-  of the dependent variable}{\BBCQ}\ [Journal Article].
+  of the dependent variable}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of the American Statistical
   Association}{83}{401}{123-127}.
@@ -84,7 +95,7 @@ Chwala, C.%
 {\BBOQ}\APACrefatitle {Commercial microwave link networks for rainfall
   observation: Assessment of the current status and future challenges}
   {Commercial microwave link networks for rainfall observation: Assessment of
-  the current status and future challenges}{\BBCQ}\ [Journal Article].
+  the current status and future challenges}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{WIREs Water}{6}{2}{e1337}.
 \newblock
@@ -118,7 +129,7 @@ de Vos, L\BPBI W.%
   Instantaneously Sampling Commercial Microwave Link Network: Error Dependency
   on Known Characteristics} {Rainfall estimation accuracy of a nationwide
   instantaneously sampling commercial microwave link network: Error dependency
-  on known characteristics}{\BBCQ}\ [Journal Article].
+  on known characteristics}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Atmospheric and Oceanic
   Technology}{36}{7}{1267-1283}.
@@ -152,7 +163,7 @@ Diba, F.%
 {\BBOQ}\APACrefatitle {Wireless Telecommunication Links for Rainfall
   Monitoring: Deep Learning Approach and Experimental Results} {Wireless
   telecommunication links for rainfall monitoring: Deep learning approach and
-  experimental results}{\BBCQ}\ [Journal Article].
+  experimental results}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{IEEE}{9}{}{11}.
 \newblock
@@ -188,7 +199,7 @@ Doumounia, A.%
   cellular telecommunication networks: First results from a West African test
   bed} {Rainfall monitoring based on microwave links from cellular
   telecommunication networks: First results from a west african test
-  bed}{\BBCQ}\ [Journal Article].
+  bed}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Geophysical Research Letters}{41}{16}{6016-6022}.
 \newblock
@@ -220,7 +231,7 @@ Fencl, M.%
 \newblock
 {\BBOQ}\APACrefatitle {Gauge-adjusted rainfall estimates from commercial
   microwave links} {Gauge-adjusted rainfall estimates from commercial microwave
-  links}{\BBCQ}\ [Journal Article].
+  links}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Hydrol. Earth Syst. Sci.}{21}{1}{617-634}.
 \newblock
@@ -252,7 +263,7 @@ French, M\BPBI N.%
 \newblock
 {\BBOQ}\APACrefatitle {Rainfall forecasting in space and time using a neural
   network} {Rainfall forecasting in space and time using a neural
-  network}{\BBCQ}\ [Journal Article].
+  network}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Hydrology}{137}{1}{1-31}.
 \newblock
@@ -287,7 +298,7 @@ Gaona, M.%
 \newblock
 {\BBOQ}\APACrefatitle {Rainfall retrieval with commercial microwave links in
   Sao Paulo, Brazil} {Rainfall retrieval with commercial microwave links in sao
-  paulo, brazil}{\BBCQ}\ [Journal Article].
+  paulo, brazil}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Atmos. Meas. Tech.}{11}{7}{11}.
 \newblock
@@ -320,8 +331,7 @@ Graf, M.%
 {\BBOQ}\APACrefatitle {Rainfall estimation from a German-wide commercial
   microwave link network: optimized processing and validation for 1 year of
   data} {Rainfall estimation from a german-wide commercial microwave link
-  network: optimized processing and validation for 1 year of data}{\BBCQ}\
-  [Journal Article].
+  network: optimized processing and validation for 1 year of data}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Hydrol. Earth Syst. Sci.}{24}{6}{2931-2950}.
 \newblock
@@ -352,7 +362,7 @@ Habi, H\BPBI V.%
 \newblock
 {\BBOQ}\APACrefatitle {Wet-dry classification using lstm and commercial
   microwave links} {Wet-dry classification using lstm and commercial microwave
-  links}{\BBCQ}\ [Conference Proceedings].
+  links}.{\BBCQ}
 \newblock
 \BIn{} \APACrefbtitle {2018 IEEE 10th Sensor Array and Multichannel Signal
   Processing Workshop (SAM)} {2018 ieee 10th sensor array and multichannel
@@ -386,34 +396,59 @@ Habi, V.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Hu%
-, Zhang%
-\BCBL {}\ \BBA {} Zhou%
+Hampel%
+\ \BBA {} Zurich%
 }{%
-Hu%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2016}}%
+Hampel%
+\ \BBA {} Zurich%
+}{%
+{\protect \APACyear {1998}}%
 }]{%
-Hu2016}
+Hampel1998}
 \APACinsertmetastar {%
-Hu2016}%
+Hampel1998}%
 \begin{APACrefauthors}%
-Hu, Q.%
-, Zhang, R.%
-\BCBL {}\ \BBA {} Zhou, Y.%
+Hampel, F.%
+\BCBT {}\ \BBA {} Zurich, E.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2016}{}{}.
+\APACrefYearMonthDay{1998}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Transfer learning for short-term wind speed prediction
-  with deep neural networks} {Transfer learning for short-term wind speed
-  prediction with deep neural networks}{\BBCQ}\ [Journal Article].
+{\BBOQ}\APACrefatitle {Is statistics too difficult?} {Is statistics too
+  difficult?}{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Renewable Energy}{85}{}{83-95}.
+\APACjournalVolNumPages{Canadian Journal of Statistics}{26}{3}{497-513}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Imhoff%
+\ \protect \BOthers {.}}{%
+Imhoff%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2020}}%
+}]{%
+Imhoff2020}
+\APACinsertmetastar {%
+Imhoff2020}%
+\begin{APACrefauthors}%
+Imhoff, R\BPBI O.%
+, Overeem, A.%
+, Brauer, C\BPBI C.%
+, Leijnse, H.%
+, Weerts, A\BPBI H.%
+\BCBL {}\ \BBA {} Uijlenhoet, R.%
+\end{APACrefauthors}%
+\unskip\
 \newblock
-\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.renene.2015.06.034}
-  \end{APACrefDOI}
+\APACrefYearMonthDay{2020}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Rainfall Nowcasting Using Commercial Microwave Links}
+  {Rainfall nowcasting using commercial microwave links}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Geophysical Research Letters}{47}{19}{e2020GL089365}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1029/2020GL089365} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -439,7 +474,7 @@ Kandel, I.%
 {\BBOQ}\APACrefatitle {The effect of batch size on the generalizability of the
   convolutional neural networks on a histopathology dataset} {The effect of
   batch size on the generalizability of the convolutional neural networks on a
-  histopathology dataset}{\BBCQ}\ [Journal Article].
+  histopathology dataset}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{ICT Express}{6}{4}{312-315}.
 \newblock
@@ -469,7 +504,7 @@ Kilmartin, R\BPBI F.%
 \newblock
 {\BBOQ}\APACrefatitle {Rainfall-runoff regression with logarithmic transforms
   and zeros in the data} {Rainfall-runoff regression with logarithmic
-  transforms and zeros in the data}{\BBCQ}\ [Journal Article].
+  transforms and zeros in the data}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Water Resources Research}{8}{4}{1096-1099}.
 \newblock
@@ -500,7 +535,7 @@ Kingma, D.%
 \APACrefYearMonthDay{2014}{}{}.
 \newblock
 {\BBOQ}\APACrefatitle {Adam: A Method or Stochastic Optimization} {Adam: A
-  method or stochastic optimization}{\BBCQ}\ [Journal Article].
+  method or stochastic optimization}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{arXiv eprint}{}{}{}.
 \newblock
@@ -531,11 +566,44 @@ Leijnse, H.%
 \newblock
 {\BBOQ}\APACrefatitle {Hydrometeorological application of a microwave link: 2.
   Precipitation} {Hydrometeorological application of a microwave link: 2.
-  precipitation}{\BBCQ}\ [Journal Article].
+  precipitation}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Water Resources Research}{43}{4}{}.
 \newblock
 \begin{APACrefDOI} \doi{https://doi.org/10.1029/2006WR004989} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Leijnse%
+, Uijlenhoet%
+\BCBL {}\ \BBA {} Stricker%
+}{%
+Leijnse%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2008}}%
+}]{%
+Leijnse2008}
+\APACinsertmetastar {%
+Leijnse2008}%
+\begin{APACrefauthors}%
+Leijnse, H.%
+, Uijlenhoet, R.%
+\BCBL {}\ \BBA {} Stricker, J\BPBI N\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2008}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Microwave link rainfall estimation: Effects of link
+  length and frequency, temporal sampling, power resolution, and wet antenna
+  attenuation} {Microwave link rainfall estimation: Effects of link length and
+  frequency, temporal sampling, power resolution, and wet antenna
+  attenuation}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Advances in Water Resources}{31}{11}{1481-1493}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.advwatres.2008.03.004}
+  \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -566,6 +634,41 @@ Li, L.%
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
+Lin%
+, Shi%
+, Wang%
+\BCBL {}\ \BBA {} Yang%
+}{%
+Lin%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+Lin2016}
+\APACinsertmetastar {%
+Lin2016}%
+\begin{APACrefauthors}%
+Lin, L.%
+, Shi, Y.%
+, Wang, X.%
+\BCBL {}\ \BBA {} Yang, S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {k-sample upper expectation linear regression—Modeling,
+  identifiability, estimation and prediction} {k-sample upper expectation
+  linear regression—modeling, identifiability, estimation and
+  prediction}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Journal of Statistical Planning and
+  Inference}{170}{}{15-26}.
+\newblock
+\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.jspi.2015.09.002}
+  \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
 Overeem%
 \ \protect \BOthers {.}}{%
 Overeem%
@@ -590,7 +693,7 @@ Overeem, A.%
 \newblock
 {\BBOQ}\APACrefatitle {Tropical rainfall monitoring with commercial microwave
   links in Sri Lanka} {Tropical rainfall monitoring with commercial microwave
-  links in sri lanka}{\BBCQ}\ [Journal Article].
+  links in sri lanka}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Environmental Research Letters}{16}{}{}.
 \newblock
@@ -620,8 +723,7 @@ Overeem, A.%
 \newblock
 {\BBOQ}\APACrefatitle {Measuring urban rainfall using microwave links from
   commercial cellular communication networks} {Measuring urban rainfall using
-  microwave links from commercial cellular communication networks}{\BBCQ}\
-  [Journal Article].
+  microwave links from commercial cellular communication networks}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Water Resources Research}{47}{12}{}.
 \newblock
@@ -635,11 +737,11 @@ Overeem%
 }{%
 Overeem%
 \ \protect \BOthers {.}}{%
-{\protect \APACyear {2013}}%
+{\protect \APACyear {2016}}%
 }]{%
-Overeem2013}
+Overeem2016}
 \APACinsertmetastar {%
-Overeem2013}%
+Overeem2016}%
 \begin{APACrefauthors}%
 Overeem, A.%
 , Leijnse, H.%
@@ -647,16 +749,17 @@ Overeem, A.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2013}{}{}.
+\APACrefYearMonthDay{2016}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {Country-wide rainfall maps from cellular communication
-  networks} {Country-wide rainfall maps from cellular communication
-  networks}{\BBCQ}\ [Journal Article].
+{\BBOQ}\APACrefatitle {Retrieval algorithm for rainfall mapping from microwave
+  links in a cellular communication network} {Retrieval algorithm for rainfall
+  mapping from microwave links in a cellular communication network}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Proceedings of the National Academy of
-  Sciences}{110}{8}{2741-2745}.
+\APACjournalVolNumPages{Atmos. Meas. Tech.}{9}{5}{2425-2444}.
 \newblock
-\begin{APACrefDOI} \doi{10.1073/pnas.1217961110} \end{APACrefDOI}
+\APACrefnote{AMT}
+\newblock
+\begin{APACrefDOI} \doi{10.5194/amt-9-2425-2016} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -685,7 +788,7 @@ Polz, J.%
 {\BBOQ}\APACrefatitle {Rain event detection in commercial microwave link
   attenuation data using convolutional neural networks} {Rain event detection
   in commercial microwave link attenuation data using convolutional neural
-  networks}{\BBCQ}\ [Journal Article].
+  networks}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Atmos. Meas. Tech.}{13}{}{18}.
 \PrintBackRefs{\CurrentBib}
@@ -715,46 +818,11 @@ Pudashine, J.%
 \newblock
 {\BBOQ}\APACrefatitle {Deep Learning for an Improved Prediction of Rainfall
   Retrievals From Commercial Microwave Links} {Deep learning for an improved
-  prediction of rainfall retrievals from commercial microwave links}{\BBCQ}\
-  [Journal Article].
+  prediction of rainfall retrievals from commercial microwave links}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Water Resources Research}{56}{7}{e2019WR026255}.
 \newblock
 \begin{APACrefDOI} \doi{https://doi.org/10.1029/2019WR026255} \end{APACrefDOI}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Qureshi%
-, Khan%
-, Zameer%
-\BCBL {}\ \BBA {} Usman%
-}{%
-Qureshi%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2017}}%
-}]{%
-Qureshi2017}
-\APACinsertmetastar {%
-Qureshi2017}%
-\begin{APACrefauthors}%
-Qureshi, A\BPBI S.%
-, Khan, A.%
-, Zameer, A.%
-\BCBL {}\ \BBA {} Usman, A.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2017}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {Wind power prediction using deep neural network based
-  meta regression and transfer learning} {Wind power prediction using deep
-  neural network based meta regression and transfer learning}{\BBCQ}\ [Journal
-  Article].
-\newblock
-\APACjournalVolNumPages{Applied Soft Computing}{58}{}{742-755}.
-\newblock
-\begin{APACrefDOI} \doi{https://doi.org/10.1016/j.asoc.2017.05.031}
-  \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -782,7 +850,7 @@ Ruf, C\BPBI S.%
 \newblock
 {\BBOQ}\APACrefatitle {35-GHz Dual-Polarization Propagation Link for Rain-Rate
   Estimation} {35-ghz dual-polarization propagation link for rain-rate
-  estimation}{\BBCQ}\ [Journal Article].
+  estimation}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Journal of Atmospheric and Oceanic
   Technology}{13}{2}{419-425}.
@@ -839,68 +907,43 @@ Staudemeyer, R\BPBI C.%
 \newblock
 {\BBOQ}\APACrefatitle {Understanding LSTM--a tutorial into long short-term
   memory recurrent neural networks} {Understanding lstm--a tutorial into long
-  short-term memory recurrent neural networks}{\BBCQ}\ [Journal Article].
+  short-term memory recurrent neural networks}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{arXiv preprint arXiv:1909.09586}{}{}{}.
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
-Tan%
-\ \protect \BOthers {.}}{%
-Tan%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2018}}%
-}]{%
-TanYear}
-\APACinsertmetastar {%
-TanYear}%
-\begin{APACrefauthors}%
-Tan, C.%
-, Sun, F.%
-, Kong, T.%
-, Zhang, W.%
-, Yang, C.%
-\BCBL {}\ \BBA {} Liu, C.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2018}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {A Survey on Deep Transfer Learning} {A survey on deep
-  transfer learning}{\BBCQ}\ [Conference Proceedings].
-\newblock
-\BIn{} (\BPG~270-279).
-\newblock
-\APACaddressPublisher{}{Springer International Publishing}.
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Weiss%
-, Khoshgoftaar%
-\BCBL {}\ \BBA {} Wang%
+Xu%
+\ \BBA {} Xuan%
 }{%
-Weiss%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2016}}%
+Xu%
+\ \BBA {} Xuan%
+}{%
+{\protect \APACyear {2019}}%
 }]{%
-Weiss2016}
+2019}
 \APACinsertmetastar {%
-Weiss2016}%
+2019}%
 \begin{APACrefauthors}%
-Weiss, K.%
-, Khoshgoftaar, T\BPBI M.%
-\BCBL {}\ \BBA {} Wang, D.%
+Xu, Q.%
+\BCBT {}\ \BBA {} Xuan, X.%
 \end{APACrefauthors}%
 \unskip\
 \newblock
-\APACrefYearMonthDay{2016}{}{}.
+\APACrefYearMonthDay{2019}{}{}.
 \newblock
-{\BBOQ}\APACrefatitle {A survey of transfer learning} {A survey of transfer
-  learning}{\BBCQ}\ [Journal Article].
+{\BBOQ}\APACrefatitle {Nonlinear regression without i.i.d. assumption}
+  {Nonlinear regression without i.i.d. assumption}.{\BBCQ}
 \newblock
-\APACjournalVolNumPages{Journal of Big Data}{3}{1}{9}.
+\APACjournalVolNumPages{Probability, Uncertainty and Quantitative
+  Risk}{4}{1}{8}.
 \newblock
-\begin{APACrefDOI} \doi{10.1186/s40537-016-0043-6} \end{APACrefDOI}
+\begin{APACrefURL} \url{https://doi.org/10.1186/s41546-019-0042-6}
+  \end{APACrefURL}
+\newblock
+\APACrefnote{(Michael)}
+\newblock
+\begin{APACrefDOI} \doi{10.1186/s41546-019-0042-6} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \bibitem [\protect \citeauthoryear {%
@@ -926,43 +969,12 @@ Yoon, S\BHBI S.%
 {\BBOQ}\APACrefatitle {Effects of Using High-Density Rain Gauge Networks and
   Weather Radar Data on Urban Hydrological Analyses} {Effects of using
   high-density rain gauge networks and weather radar data on urban hydrological
-  analyses}{\BBCQ}\ [Journal Article].
+  analyses}.{\BBCQ}
 \newblock
 \APACjournalVolNumPages{Water}{9}{12}{931}.
 \newblock
 \begin{APACrefURL} \url{https://www.mdpi.com/2073-4441/9/12/931}
   \end{APACrefURL}
-\PrintBackRefs{\CurrentBib}
-
-\bibitem [\protect \citeauthoryear {%
-Zhuang%
-\ \protect \BOthers {.}}{%
-Zhuang%
-\ \protect \BOthers {.}}{%
-{\protect \APACyear {2021}}%
-}]{%
-Zhuang2021}
-\APACinsertmetastar {%
-Zhuang2021}%
-\begin{APACrefauthors}%
-Zhuang, F.%
-, Qi, Z.%
-, Duan, K.%
-, Xi, D.%
-, Zhu, Y.%
-, Zhu, H.%
-\BDBL {}He, Q.%
-\end{APACrefauthors}%
-\unskip\
-\newblock
-\APACrefYearMonthDay{2021}{}{}.
-\newblock
-{\BBOQ}\APACrefatitle {A Comprehensive Survey on Transfer Learning} {A
-  comprehensive survey on transfer learning}{\BBCQ}\ [Journal Article].
-\newblock
-\APACjournalVolNumPages{Proceedings of the IEEE}{109}{1}{43-76}.
-\newblock
-\begin{APACrefDOI} \doi{10.1109/JPROC.2020.3004555} \end{APACrefDOI}
 \PrintBackRefs{\CurrentBib}
 
 \end{thebibliography}

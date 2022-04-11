@@ -1,0 +1,35 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Overeem%
+, Leijnse%
+\BCBL {}\ \BBA {} Uijlenhoet%
+}{%
+Overeem%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+Overeem2016}
+\APACinsertmetastar {%
+Overeem2016}%
+\begin{APACrefauthors}%
+Overeem, A.%
+, Leijnse, H.%
+\BCBL {}\ \BBA {} Uijlenhoet, R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Retrieval algorithm for rainfall mapping from microwave
+  links in a cellular communication network} {Retrieval algorithm for rainfall
+  mapping from microwave links in a cellular communication network}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Atmos. Meas. Tech.}{9}{5}{2425-2444}.
+\newblock
+\APACrefnote{AMT}
+\newblock
+\begin{APACrefDOI} \doi{10.5194/amt-9-2425-2016} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

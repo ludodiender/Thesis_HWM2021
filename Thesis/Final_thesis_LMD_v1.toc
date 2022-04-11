@@ -4,17 +4,9 @@
 \contentsline {section}{\numberline {1.1}Context and motivation}{1}{}%
 \contentsline {section}{\numberline {1.2}Research questions}{2}{}%
 \contentsline {section}{\numberline {1.3}Thesis contents}{2}{}%
-\contentsline {chapter}{\chapternumberline {2}Field site and data}{3}{}%
-\contentsline {section}{\numberline {2.1}Commercial Microwave Link data}{3}{}%
-\contentsline {subsection}{\numberline {2.1.1}Netherlands}{3}{}%
-\contentsline {paragraph}{Location of the links}{3}{}%
-\contentsline {paragraph}{Static vs dynamic data}{3}{}%
-\contentsline {paragraph}{Freq,temp res and timespan}{3}{}%
-\contentsline {section}{\numberline {2.2}Reference precipitation data}{3}{}%
-\contentsline {subsection}{\numberline {2.2.1}Netherlands}{3}{}%
-\contentsline {paragraph}{Obtained from (provider)}{3}{}%
-\contentsline {paragraph}{Temporal and spatial resolution}{3}{}%
-\contentsline {paragraph}{Quality and availability}{3}{}%
+\contentsline {chapter}{\chapternumberline {2}Data}{3}{}%
+\contentsline {section}{\numberline {2.1}Commercial Microwave Link}{3}{}%
+\contentsline {section}{\numberline {2.2}Gauge-adjusted radar precipitation}{3}{}%
 \contentsline {chapter}{\chapternumberline {3}Methods}{5}{}%
 \contentsline {section}{\numberline {3.1}Neural network explanation}{5}{}%
 \contentsline {subsection}{\numberline {3.1.1}Goal and concepts of neural networks}{5}{}%
@@ -27,17 +19,16 @@
 \contentsline {subsection}{\numberline {3.2.3}Data splitting and scaling}{8}{}%
 \contentsline {section}{\numberline {3.3}Model selection}{9}{}%
 \contentsline {subsection}{\numberline {3.3.1}Automated hyperparameter tuning}{9}{}%
-\contentsline {subsection}{\numberline {3.3.2}Non-automated hyperparameter tuning}{9}{}%
+\contentsline {subsection}{\numberline {3.3.2}Non-automated hyperparameter tuning}{10}{}%
 \contentsline {section}{\numberline {3.4}Experimental setup and evaluation of results}{10}{}%
-\contentsline {chapter}{\chapternumberline {4}Results}{11}{}%
-\contentsline {section}{\numberline {4.1}The Netherlands}{11}{}%
-\contentsline {section}{\numberline {4.2}Transfer learning to Sri Lanka}{11}{}%
-\contentsline {section}{\numberline {4.3}Discussion}{11}{}%
-\contentsline {subsection}{\numberline {4.3.1}Data splitting}{11}{}%
-\contentsline {subsection}{\numberline {4.3.2}Equifinality and optimal hyperparameter combination}{11}{}%
-\contentsline {subsection}{\numberline {4.3.3}No signal picked up}{11}{}%
-\contentsline {subsection}{\numberline {4.3.4}Outlook}{11}{}%
-\contentsline {chapter}{\chapternumberline {5}Conclusion}{13}{}%
-\contentsline {chapter}{Acknowledgements}{15}{}%
-\contentsline {section}{References}{15}{}%
-\contentsline {appendix}{\chapternumberline {A}Additional figures}{17}{}%
+\contentsline {chapter}{\chapternumberline {4}Results}{13}{}%
+\contentsline {chapter}{\chapternumberline {5}Discussion}{15}{}%
+\contentsline {section}{\numberline {5.1}Assumptions and choices}{15}{}%
+\contentsline {subsection}{\numberline {5.1.1}Data splitting}{15}{}%
+\contentsline {subsection}{\numberline {5.1.2}Equifinality and optimal hyperparameter combination}{15}{}%
+\contentsline {subsection}{\numberline {5.1.3}No signal picked up}{15}{}%
+\contentsline {section}{\numberline {5.2}Outlook}{15}{}%
+\contentsline {chapter}{\chapternumberline {6}Conclusion}{17}{}%
+\contentsline {chapter}{Acknowledgements}{19}{}%
+\contentsline {section}{References}{19}{}%
+\contentsline {appendix}{\chapternumberline {A}Additional figures}{21}{}%

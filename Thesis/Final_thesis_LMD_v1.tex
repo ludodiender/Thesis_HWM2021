@@ -11,6 +11,7 @@
 \usepackage{multirow}                                              % correct hyphenation (afbreekstreepjes)
 \usepackage{booktabs}                                                     % for midrule in tables
 \usepackage{array}
+\usepackage{float}
 \newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 \usepackage[modulo, switch]{lineno}   % use for linenumbers at the sides
 % PAGE MARGINS
@@ -198,139 +199,38 @@
 	%%%%%%%%%%%%
 	% FIELD SITE AND DATA
 	%%%%%%%%%%%%
-	
+	 
 	\cleardoublepage
-	\chapter{Field site and data}\vspace{-6mm}
-	\label{ch: field}
-	Some text here about how the field site and data are structured? YES!
-	DOI van dataset als hij op de 4Tu website staat! 
+	\chapter{Data}\vspace{-6mm}\label{ch: field}
+	In this study, two types of data are used: Commercial Microwave Link (CML) signal data which is used as input to the model, and precipitation observations (gauge-adjusted radar) as reference to evaluate the model. Both types of data will be elaborated upon in this section.
 	
-	\section{Commercial Microwave Link data}
-	\subsection{Netherlands}
-	\paragraph{Location of the links}
-	First paragraph
-	text text text text text text text text text text text text text text text text text text text text text
-	\paragraph{Static vs dynamic data}
-	First paragraph
-	text text text text text text text text text text text text text text text text text text text text text
-	\paragraph{Freq,temp res and timespan}
-	First paragraph
-	text text text text text text text text text text text text text text text text text text text text text
 	
-	\section{Reference precipitation data}
-	\subsection{Netherlands}
-	\paragraph{Obtained from (provider)}
-	First paragraph
-	text text text text text text text text text text text text text text text text text text text text text
-	\paragraph{Temporal and spatial resolution}
-	First paragraph
-	text text text text text text text text text text text text text text text text text text text text text
-	\paragraph{Quality and availability}
-	First paragraph
-	text text text text text text text text text text text text text text text text text text text text text
-	t text
+	\section{Commercial Microwave Link} \label{sec: CML data}
+	The CML data used in this research is the same as used in previous research \shortcite{Overeem2016}.
+	The CML data is received from NOKIA microwave links, operated by T-Mobile. The dataset spans from January 14 2011 until June 30 2013. The dataset consists of  3101 links, but as shown before \shortcite{Overeem2016}, not all of these links are useful or continuously available. The total number of actual links used will therefore be lower, depending on the availability of the data. On average, around 2500 links are used at a time. THe minimum and maximum Received Signal Level (RSL) in decibel-milliwatts (dBm) is stored at 15-minute intervals. The power resolution of this data is 1 dB. 
+	
+	\begin{figure}[h]
+		\includegraphics[height= 9cm]{Dutch_CML_network}
+		\caption{Used CML network in the Netherlands. Retrieved from \protect\citeA{Overeem2016}}
+		\label{fig: cmlnetworkmaps}	
+	\end{figure}
+
+
+	\begin{figure}[h]
+		\includegraphics[width=10cm]{val_freq_dist}
+		\caption{Static data for the CMLs with a) the frequency distribution, b) the link path length distribution and c) the occurence of the combination of the two parameters. Figures apply to the final independent test set covering half of 2013 (see Section~\ref{sec: datasplitting})}
+		\label{fig: CML validation}
+	\end{figure}
+
+	Apart from the dynamic time signal data, static metadata is included as well. This includes coordinates of the start and end point of the link, distance between these points and frequency per link. Figure \ref{fig: cmlnetworkmaps} shows the distribution of the links throughout the Netherlands, where the highest link density can be found around urban areas. The frequency at which the links operates and the distance the links cover determine the baseline for the link's signal, which is the second step in the RAINLINK methodology. Their respective distributions can be found in Figure~\ref{fig: CML validation} a and b. Figure~\ref{fig: CML validation} c shows the combined distribution of the distance and frequency. The spikes in the frequency distributions indicate that the links roughly operate at 4 different frequencies. The distance distributions shows that although most links operate at quite short distances (<4 km), there are still links included in the data set that cover over 5 or even 10 km. The effects of link path length and frequency on the estimation of precipitation has been discussed before by \citeA{Leijnse2008}.	
 	
 	
 	
-	%
-	%
-	%text text text text text text text text text text text text text text text text text text text text text
-	%text text text text text text text text text text text text text text text text text text text text text
-	%text text text text text text text text text text text text text text text text text text text text text
-	%text text text text text text text text text text text text text text text text text text text text text
-	%text text text text text text text text text text text text text text text text text text text text text
-	%
-	%\section{Figures}
-	%
-	%Figures are moved automatically to nice places.
-	%
-	%\begin{figure}[t]
-	%\center
-	%\includegraphics[width=\columnwidth]{figs/ponds.jpg}
-	%\caption{Single column figure, located in the directory of the field sites chapter}
-	%\label{fig: ponds}
-	%\end{figure}
-	%
-	%\begin{figure*}[t]
-	%\center
-	%\includegraphics[width=2\columnwidth]{C:/Users/ludod/Documents/MSc Thesis/LaTeX thesis template/figs/ponds}
-	%\caption{Two-column figure located somewhere else on my hard drive.}
-	%\label{fig: GWD world}
-	%\end{figure*}
-	%
-	%
-	%
-	%
-	%
-	%text text text text text text text text text text text text text text text text text text text text text
-	%text text text text text text text text text text text text text text text text text text text text text
-	%text text text text text text text text text text text text text text text text text text text text text
-	%text text text text text text text text text text text text text text text text text text text text text
-	%text text text text text text text text text text text text text text text text text text text text text
-	%
-	%
-	%
-	%\section{Tables}
-	%
-	%Tables are moved automatically to nice places too.
-	%
-	%\begin{table}[t]
-	%\caption{Parameter values obtained by optimization with HydroPSO using different objective functions.}
-	%\label{tab: testtable}
-	%\centering
-	%\begin{tabular}{lllll}
-	%\toprule
-	%fit on:&$Q^2$&$Q$&$\sqrt{Q}$&$d_\mathrm{G}$\\
-	%\midrule
-	%$c_\mathrm{W}$&400&380&379&107\\
-	%$c_\mathrm{V}$&1.8&0.8&8.2&0.2\\
-	%$c_\mathrm{G}$&5.3&5.0&5.0&5.0\\
-	%$c_\mathrm{Q}$&1&4&12&87\\
-	%\bottomrule
-	%\end{tabular}
-	%\end{table}
-	%
-	%\subsection{Equations}
-	%
-	%\begin{equation}
-	%Q = \overline{v} \times A
-	%\end{equation}
-	%\label{eq: testequation}
-	%
-	%\section{References and citations}
-	%\label{sec: header 2}
-	%
-	%
-	%\subsection{References}
-	%
-	%
-	%Refer to Chapter~\ref{ch: field}.
-	%
-	%Refer to Section~\ref{sec: header 2}.
-	%
-	%Refer to Figure~\ref{fig: GWD world}.
-	%
-	%Refer to Table~\ref{tab: testtable}.
-	%
-	%Refer to Equation~\ref{eq: testequation}.
-	%
-	%
-	%\subsection{Citations}
-	%
-	%
-	%Floods are important \citep{Brauer2011}.
-	%
-	%\cite{Brauer2011} state that floods are important.
-	%
-	%Floods are important \citep[according to][]{Brauer2011}.
-	%
-	%\section{Section header 3}
-	%
-	%\subsection{Subsection header}
-	%
-	%\subsubsection{Subsubsection header}
+
 	
-	
+	\section{Gauge-adjusted radar precipitation} \label{sec: Ref prec data}
+	The precipitation observations are taken from the gauge-adjusted radar rainfall product\footnote{Freely available as "Radar precipitation climatology" via http://climate4impact.eu} with a resolution of 1 km\textsuperscript{2}. The radarmeasurements are adjusted with the use of both automated and manual rain gauge networks operated by the Royal Netherlands Meteorological Institute (KNMI). The gauge-adjusted radar observations are available at a 5-min temporal resolution. To match the 15-min intervals from the CML data, the precipitation data is summed to 15-min intervals. This dataset is of high quality and fully available in the considered time period (Jan 2011 - June 2013). Other studies that used the same gauge-adjusted radar data in combination with CMLs include \shortciteA{Overeem2016} and \shortciteA{Imhoff2020}.
+
 	
 	%%%%%%
 	% METHODS
@@ -430,7 +330,7 @@
 		\hspace*{\fill}
 	\end{table*}
 	
-	The process of calibrating hyperparameters in order to find an optimal combination (if it exists) is refered to as tuning. Not all hyperparameters were automatically tuned. Only the Structure hyperparameters were tuned, as the other two hyperparameter groups need to be determined based on the input data and the available computational resources. More details on the automatically tuned Structure hyperparameters can be found in Section \ref{RayTune}. The Data and Efficiency group of hyperparameters are set based on convenience and literature study and will be elaborated on in Section \ref{Nonauto tuning}.
+	The process of calibrating hyperparameters in order to find an optimal combination (if it exists) is refered to as tuning. Not all hyperparameters were automatically tuned. Only the Structure hyperparameters were tuned, as the other two hyperparameter groups need to be determined based on the input data and the available computational resources. More details on the automatically tuned Structure hyperparameters can be found in Section \ref{sec: RayTune}. The Data and Efficiency group of hyperparameters are set based on convenience and literature study and will be elaborated on in Section \ref{sec: Nonauto tuning}.
 	
 	
 	\section{Data preprocessing} \label{sec: datapreprocess}
@@ -442,13 +342,15 @@
 	A Deep Learning model with a varying set of hyperparameters needs three independent datasets to run: a training set, a validation set and a test set.The training dataset is used to improve the models weights and parameters and is fed through the SGD algorithm, in which the model is updated in a backwards propagating fashion. The validation set is subsequently used to independently judge the performance of the model. This set needs to be as independent as possible, to prevent overfitting of the model.
 	As different models with different combinations of hyperparameters are tested, a third independent test set is needed to check how well the best model out of these different combinations performs.  
 	
-	In creating the three separate datasets, multiple approaches can be taken. The core of the split is based on the IID principle (Independent and Identically Distributed):
+	In creating the three separate datasets, multiple approaches can be taken. The core of the split is based on the IID principle (Independent and Identically Distributed) \cite{Hampel1998}:
 	
 	\begin{itemize}
 		\item There is little to no information leaked from one set to the other (truly independent datasets)
 		\item There is enough data in each of the sets to cover a wide range of events and situations (comparable datasets and thus assumed identically distributed)
 	\end{itemize}
-	The data for the Netherlands has been split in a 40\%/40\%/20\% for training, validating and testing respectively. Previous studies use varying ratios to split the data, with the one common aspect being a smaller validation set compared to the training and testing \cite{Polz2020,Diba2021,Pudashine2020}. This particular split has been chosen as a rough average of these varying ratios.
+	IID data ideally does not have any internal dependencies in the data left that could complicate the model's ability to generalize. 
+	
+	The data for the Netherlands has been split in a 40/40/20 for training, validating and testing respectively. Previous studies use varying ratios to split the data, with the one common aspect being a smaller validation set compared to the training and testing \cite{Polz2020,Diba2021,Pudashine2020}. This particular split has been chosen as a rough average of these varying ratios.
 	The year 2011 is used for training, 2012 for testing and 2013 (up until July 21st) for validating. By taking full years for training and testing, all seasons are incorporated and the datasets are assumed to be closer to being identically distributed. Considerations on and implications of this split will be discussed later on in this thesis in section \ref{sec: datasplitting}
 	
 	Having large outliers and ranges in the input data can cause the Adam algorithm to have exploding gradients. Therefore, a scaling has been applied to both the features and targets. 
@@ -478,7 +380,7 @@
 		\label{tab: raytunetable}
 		\centering
 		\renewcommand{\arraystretch}{1.5}
-		\begin{tabular}{p{2.5cm}p{4.2cm}}
+		\begin{tabular}{P{2.5cm}P{4.2cm}}
 			\hline
 			$Hyperparameter$&$Range$\\
 			\hline
@@ -498,7 +400,46 @@
 	From the Efficiency group, the batch size is the most important hyperparameter to evaluate.\citeA{Kandel2020} described the effect of the batch size on the final performance of the model. The batch size and the learning rate are intimately linked: a smaller batch size requires a lower learning rate and vice versa. A batch size of 32 is used as standard, but the options of batch sizes of 64 and 128 are explored as well. A batch size of 32 has been shown to be a good default value \cite{Bengio2012}. Using a power of 2 as batch size is common to fully use GPU processing power.
 	
 	\section{Experimental setup and evaluation of results} \label{sec: EvalStats}
-	For this study, different model runs are performed. In the first run, all automatically tuned hyperparameters mentioned in Section~\ref{RayTune} are included. The 25 different randomly chosen model runs, as picked by the random selector in RayTune, are depicted in Table (INCLUDE TABLE WHEN ANUNNA IS READY). The model run with the best score on the independent test set will be used to test different non-automatically tuned hyperparameter settings. This results in three more combinations of model runs, where the batch size, the loss function and the sequence length are evaluated respectively with their ranges as put in Section~\ref{sec: Nonauto tuning}.
+	For this study, different model runs are performed. In the first run, all automatically tuned hyperparameters mentioned in Section~\ref{sec: RayTune} are included. The 25 different randomly chosen model runs, as picked by the random selector in RayTune, are depicted in Table~\ref{tab: hyperparameter combi}. 
+	
+	\begin{table}[t]
+		\label{tab: hyperparameter combi}
+		\caption{Different hyperparameter combinations used for the tuning experiment.}
+		\hspace*{\fill}
+		\centering
+		\renewcommand{\arraystretch}{1.2}
+		\begin{tabular}{P{0.4cm}P{1.2cm}P{1.2cm}P{1.4cm}P{1.2cm}}
+			\toprule
+			\multicolumn{1}{c}{Model ID} & Hidden size & Learning rate & Number of epochs & Number of layers \\ \midrule
+			1                            & x           & x             & x                & x                \\
+			2                            & xx          & x             & x                & x                \\
+			3                            & x           & x             & x                & x                \\ 
+			4                            & x           & x             & x                & x                \\
+			5                            & x           & x             & x                & x                \\
+			6                            & x           & x             & x                & x                \\
+			7                            & x           & x             & x                & x                \\
+			8                            & x           & x             & x                & x                \\
+			9                            & x           & x             & x                & x                \\
+			10                           & x           & x             & x                & x                \\
+			11                           & x           & x             & x                & x                \\
+			12                           & x           & x             & x                & x                \\
+			13                           & x           & x             & x                & x                \\
+			14                           & x           & x             & x                & x                \\
+			15                           & x           & x             & x                & x                \\
+			16                           & x           & x             & x                & x                \\
+			17                           & x           & x             & x                & x                \\
+			18                           & x           & x             & x                & x                \\
+			19                           & x           & x             & x                & x                \\
+			20                           & x           & x             & x                & x                \\
+			21                           & x           & x             & x                & x                \\
+			22                           & x           & x             & x                & x                \\
+			23                           & x           & x             & x                & x                \\
+			24                           & x           & x             & x                & x                \\
+			25                           & x           & x             & x                & x                
+		\end{tabular}
+		
+	\end{table}
+	The model run with the best score on the independent test set will be used to test different non-automatically tuned hyperparameter settings. This results in three more combinations of model runs, where the batch size, the loss function and the sequence length are evaluated respectively with their ranges as put in Section~\ref{sec: Nonauto tuning}.
 	For the final model run, only timesteps that show precipitation are taken into account. This functions as a very crude wet-dry classification, the first step in the RAINLINK methodology. By running the model only on rain samples, we investigate the impact of using such a wet-dry classification, as multiple previous studies included a model part on this step \cite{Habi2019}.
 
 	The model results will be evaluated using the coefficient of determination (R$^{2}$, see Eq~\ref{eq: R2}), the Coefficient of Variation (CV, Eq~\ref{eq: CV}) and the Root Mean Square Error (RMSE, Eq~\ref{eq: RMSE}).
@@ -514,39 +455,44 @@
 		RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y_i})^2}
 	\end{equation}
 	where $y_i$ is the predicted 15-min precipitation rate, $\hat{y_i}$ is the observed 15-min precipitation rate and $\sigma$ is the standard deviation of the predicted 15-min precipitation rate.
-	These statistical evaluation metrics will be able to tell something about the fit of the model prediction to the observed values.2- The selected metrics are based on similar studies that use these metrics to evaluate their model performance \shortcite{Overeem2011, Pudashine2020,Diba2021}.
+	These statistical evaluation metrics will be able to tell something about the fit of the model prediction to the observed values. The selected metrics are based on similar studies that use these metrics to evaluate their model performance \shortcite{Overeem2011, Pudashine2020,Diba2021}.
 	
 	%%%%%%
 	% RESULTS
 	%%%%%%
 	
 	\chapter{Results} \label{ch: results}
-	\section{The Netherlands}
-	Ideas: table with different hyperparameter sets and the best one out of all these.
-	Line graph with 25 different lines: all the runs that are performed at once and to see the difference in their learning behaviour/where they end up. ONly the line that actually matters black, others can be greyed out.
+	Figure~\ref{fig: loss epochs} shows the validation loss for the 25 different combinations of hyperparameters. Due to the random initialization of each model, the starting losses differ between the runs. Almost all combinations show a decreasing loss over the epochs, which indicates the self-learning capabilities of the neural network. Some models hardly improve over time or even worsen. This particuliar behaviour could be caused by the overfitting of the model on the training dataset. The best model yields a final loss of [INSERT RDF MSE LOSS HERE].
 	
-	Performance on training, testing and validation set for the best one
+	\begin{figure}[h]
+		\includegraphics[width=\columnwidth]{ex_loss_epochs}
+		\caption{The validation loss (RDF MSE) per epoch for all 25 tuning runs. The best model that will be used for subsequent model runs is depicted in black.}
+		\label{fig: loss epochs}
+	\end{figure}
+
+	The performance of the best combination of hyperparameters on the final independent test set is depicted in figure~\ref{fig: scatter statistics}. This shows that the model, although it improved over time, manages to predict one specific value the majority of the time. The observed range in precipitation rates and the modelled range in precipitation rates are vastly different. The range of the prediction is orders of magnitude smaller than the observed range. The CV of [INSERT CV] and RMSE of [INSERT RMSE] do not tell the complete story of the prediction, as their values are in line with previous research \cite{Pudashine2020}. The R\textsuperscript{2} of [INSERT R2] however does indicate the poorness of the modelled fit. The investigated hyperparameters for these runs are not the deciding factors in this modelling effort and the predictions and observations are still widely different. The impact of other hyperparameters and the exclusive use of samples with a precipitation rate above 0 will be showed in the following figures. 
 	
-	Scatterplot: predicted vs estimated precipitation for different loss functions, sequence lengths and batch sizes
 	
+	\begin{figure}
+		\includegraphics[width=\columnwidth]{scatter_final}
+		\caption{Predicted versus observed precipitation for the best model configuration out of Figure~\ref{fig: loss epochs}.}
+		\label{fig: scatter statistics}
+	\end{figure}
 	Summarizing table with statistics on RAINLINK vs My Model
 	
-	\section{Transfer learning to Sri Lanka}
-	Ideas: table with different hyperparameter sets and the best one out of all these.
+
 	
-	Performance on training, testing and validation set for the best one
-	
-	Scatterplot: predicted vs estimated precipitation for different loss functions
-	
-	Summarizing table with statistics on RAINLINK vs My Model
-	
-	\section{Discussion} \label{ch: discussion}
+	\chapter{Discussion} \label{ch: discussion}
+	The discussion of this research will be split up in two parts. The first parts deals with the more general assumptions and choices that have been made in this modelling effort and their implications, consequences and impacts, supported by previous studies. The second part, the outlook, deals with the very poor results of this study. This part describes what possible shortcomings of this methodology could be, what could be included in future similar modelling efforts to improve the results and finally some recommendations for follow up investigations on this topic. 
+	\section{Assumptions and choices}
 	\subsection{Data splitting} \label{sec: datasplitting}
-	Including more information like neighbouring links
-	The chosen years are not identical in their precipitation distributions. The year 2011 was somewhat drier than average, with a particularly dry spring. 2012 was slightly wetter than average, with above average precipitation in the first and last month of the year. Finally, 2013 had a dry winter with some snow and a very wet autumn, yielding a yearly average precipitation considerably lower than average. (SOURCE: KNMI?)  
-	This inconsistency in precipitation over the years violates the IID assumption that underpins the datasplit. It highlights the tradeoff that has been made in creating this split. Ideally, all datasets would have an equal precipitation distribution. However, wherever two datasets meet in time, there is a chance of information leaking from one dataset to the other. If the years would have been reshuffled to create a more identically distributed split, there would have been more information leaking from one set to the other and the independence of the datasets would have been at stake. Therefore, this split by full years was still preferred, to minimize information leakage. For the test set, half a year is taken due to limitations in data availability. As the validation set is only used to judge the final model, and not to update the model anymore, this dataset can be smaller as in (LITERATURE).
+	The chosen years are not identical in their precipitation distributions. The year 2011 was somewhat drier than average, with a particularly dry spring. 2012 was slightly wetter than average, with above average precipitation in the first and last month of the year. Finally, 2013 had a dry winter with some snow and a very wet autumn, yielding a yearly average precipitation considerably lower than average. \cite{KNMI}  
+	This inconsistency in precipitation over the years violates the IID assumption that underpins the datasplit. It highlights the tradeoff that has been made in creating this split. Ideally, all datasets would have an equal identical precipitation distribution. However, wherever two datasets meet in time, there is a chance of information leaking from one dataset to the other. If the years would have been reshuffled to create a more identically distributed split, there would have been more information leaking from one set to the other and the independence of the datasets would have been at stake. Therefore, this split by full years was still preferred, to minimize information leakage. For the test set, half a year is taken due to limitations in data availability. As the validation set is only used to judge the final model, and not to update the model anymore, this dataset can be smaller as for example in \citeA{Pudashine2020}.
 	
-	\textbf{Include a part on discussing the impact of not having a valid IID assumption - multiple papers!}
+	Due to the aforementioned reasons, the data is not perfectly IID. Apart from the more abstract discussion whether the IID principle is ever really attainable (as there are always some long term dependencies in your data according to \citeA{Hampel1998}), the impact of not having precisely IID data has been discussed before. Several studies have dealt with data that is not IID. \shortciteA{Lin2016} proposed a method where the non-IID data is further split up in small groups that can be assumed to be IID. The loss per group is determined and the maximum average loss per group was taken as a loss function. \citeA{2019} suggested a numerical algorithm to solve this method for non-linear problems.
+	
+	Although the data is not perfectly IID, during this study we deemed it non necessary to implement a specific algorithm suitable for non-IID data. Both training and validation data include all 4 seasons, have a full year span and have not been filtered on any sort of events. When the model would be evaluated with a completely new independent dataset, this dataset could also include the natural variability that is present in these datasets. As the sets are long enough, the effect of not perfectly IID data is assumed to not have a major influence on the final results. Studies that used similar data before used a similar split of the data, assuming that this split guarantees the data to be sufficiently IID \cite{Diba2021,Pudashine2020}.
+	
 	
 	\subsection{Equifinality and optimal hyperparameter combination} \label{sec: Equifinality}
 	Trying out different types of NN and different hyperparameters: thousands to choose from
@@ -554,9 +500,9 @@
 	\subsection{No signal picked up} \label{sec: no results}
 	More preprocessing of the data: stronger error filtering, only including the wet events (so wet-dry classficiation). Separate models with separate architectures for the different parts of the algorithm: a classifying CNN for the wet/dry, LSTM for baseline estimation, normal ANN for WAA and another LSTM for the final rainfall retrieval.
 	
-	\subsection{Outlook}
+	\section{Outlook}
 	Wat is de manier verder vanaf hier: wat zou wel kunnen werken? 
-	
+	Including more information like neighbouring links
 	%%%%%%%%%%%%
 	% CONCLUSION
 	%%%%%%%%%%%%
@@ -581,7 +527,7 @@
 	%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 	
 	\renewcommand{\bibname}{Bibliography}
-	\bibliographystyle{apacite}
+	\bibliographystyle{myapacite}
 	\bibliography{Thesis_Ludo}
 	
 	% to add items to the bibliography:
