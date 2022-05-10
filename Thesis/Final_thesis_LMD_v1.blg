@@ -14,65 +14,55 @@ Reallocating 'singl_function' (item size: 4) to 100 items.
 Reallocating 'wiz_functions' (item size: 4) to 9000 items.
 Reallocating 'singl_function' (item size: 4) to 100 items.
 Database file #1: Thesis_Ludo.bib
-I was expecting a `,' or a `}'---line 330 of file Thesis_Ludo.bib
- :    
- :    author = {KNMI},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
-Repeated entry---line 350 of file Thesis_Ludo.bib
+Repeated entry---line 431 of file Thesis_Ludo.bib
  : @article{Leijnse2007
  :                     ,
 I'm skipping whatever remains of this entry
-Repeated entry---line 494 of file Thesis_Ludo.bib
+Repeated entry---line 590 of file Thesis_Ludo.bib
  : @article{Overeem2016
  :                     ,
 I'm skipping whatever remains of this entry
 apacite.bst [2013/07/21 v6.03 APA bibliography style]
-Warning--No author, editor, title, type, and howpublished in KNMI
-ptr=1, stack=
-
----the literal stack isn't empty for entry KNMI
-while executing---line 5077 of file myapacite.bst
 Warning--No school in Habi2019
-You've used 32 entries,
+You've used 44 entries,
             6947 wiz_defined-function locations,
-            1507 strings with 17703 characters,
-and the built_in function-call counts, 70430 in all, are:
-= -- 8569
-> -- 609
-< -- 3743
-+ -- 3917
-- -- 62
-* -- 4908
-:= -- 13491
-add.period$ -- 127
-call.type$ -- 32
-change.case$ -- 519
+            1593 strings with 20250 characters,
+and the built_in function-call counts, 97694 in all, are:
+= -- 11880
+> -- 884
+< -- 5192
++ -- 5431
+- -- 90
+* -- 6779
+:= -- 18694
+add.period$ -- 177
+call.type$ -- 44
+change.case$ -- 750
 chr.to.int$ -- 0
-cite$ -- 68
-duplicate$ -- 1832
-empty$ -- 2481
-format.name$ -- 1082
-if$ -- 12874
+cite$ -- 89
+duplicate$ -- 2579
+empty$ -- 3371
+format.name$ -- 1548
+if$ -- 17833
 int.to.chr$ -- 0
-int.to.str$ -- 96
+int.to.str$ -- 132
 missing$ -- 0
-newline$ -- 889
-num.names$ -- 250
-pop$ -- 904
+newline$ -- 1227
+num.names$ -- 354
+pop$ -- 1160
 preamble$ -- 1
-purify$ -- 126
+purify$ -- 176
 quote$ -- 0
-skip$ -- 4167
+skip$ -- 5878
 stack$ -- 0
-substring$ -- 4220
-swap$ -- 1083
-text.length$ -- 78
+substring$ -- 5885
+swap$ -- 1514
+text.length$ -- 119
 text.prefix$ -- 0
 top$ -- 1
-type$ -- 2776
-warning$ -- 2
-while$ -- 373
+type$ -- 3776
+warning$ -- 1
+while$ -- 531
 width$ -- 0
-write$ -- 1150
-(There were 4 error messages)
+write$ -- 1598
+(There were 2 error messages)

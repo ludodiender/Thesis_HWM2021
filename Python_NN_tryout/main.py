@@ -87,25 +87,25 @@ importlib.reload(dc)
 # Device configuration
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-output_file_name = 'output_LSTM_RDF_test_trans_features.txt'
+output_file_name = 'output_fin_onlyrain_1run.txt'
 
 # Set boolean flags for different types of model runs
 include_dist_as_feature = False
 do_transform = True
-only_rain = False
+only_rain = True
 
 # Hyper parameter setting, only needed when not tuning using RayTune
 num_classes = 1
-num_epochs = 10
-batch_size = 256
-learning_rate = 0.005
+num_epochs = 26
+batch_size = 32
+learning_rate = 0.00000378
 input_size = 2
 
 if include_dist_as_feature:
     input_size = 3
 
 sequence_length = 8
-hidden_size = 128
+hidden_size = 8
 num_layers = 2
 
 # Set starting time
@@ -505,7 +505,7 @@ if __name__ == "__main__":
 #################
 # OLD MODEL RUN # This model run works, beforehand is the optimizing tuning algorithm implemented
 #################
-writer = SummaryWriter(filename_suffix='UTC fixed, 10 links')
+#writer = SummaryWriter(filename_suffix='UTC fixed, 10 links')
 
 #model = RNNModel(input_size,hidden_size,num_layers,num_classes,device)
 model = LSTMModel(input_size,hidden_size,num_layers,num_classes,device)
@@ -530,10 +530,10 @@ old_loss = 10
 #testpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_test_testing'
 #valpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_validate_testing'
 
-# 10 links, UTC scaled
+# 10 links, UTC scaled: SWITCH THE DATASETS TO TRY AND GET THE PERFORMANCE ON THE VALIDATION SET
 trainpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_perID_UTC_4months/2011_training'
-testpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_perID_UTC_4months/2012_testing'
-valpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_perID_UTC_4months/2013_validating'
+testpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_perID_UTC_4months/2013_validating'
+valpath = 'C:/Users/ludod/Documents/MSc Thesis/CML_perID_UTC_4months/2012_testing'
 
 train_pytorch = MyCMLDataset(data_dir=trainpath, seq_len=sequence_length, headers=header_names, only_rain = only_rain)
 test_pytorch = MyCMLDataset(data_dir=testpath, seq_len=sequence_length, headers=header_names, only_rain = only_rain)
@@ -574,10 +574,11 @@ for epoch in range(num_epochs):
         optimizer.step()
 
         count += 1
+        #print('Done with epoch:', epoch)
         train_count.append(len(outputs))
 
     # Calculate Accuracy
-    print('count is: ', count)
+    print('Trained epoch: ', epoch)
     correct = 0
     MSE_per_batch = []
     MSE_per_batch_nontrans = []
@@ -621,7 +622,7 @@ for epoch in range(num_epochs):
                         output_val_non = outputs.data[k].item()
                         target_val_non = targets.data[k].item()
                         write_str = str(output_val) + ','+str(target_val)+','+str(output_val_non)+','+str(target_val_non)+'\n'
-                        f. write(write_str)
+                        f.write(write_str)
 
                     
             MSE_per_batch.append(float(dc.custom_MSE_RDF_loss(outputs,targets)))
@@ -642,9 +643,9 @@ for epoch in range(num_epochs):
     loss_list.append(batch_train_loss)
     iteration_list.append(count)
     MSE_list.append(MSE)
-    writer.add_scalar('Test loss', MSE, count)
-    writer.add_scalar('Training loss',batch_train_loss,count)
-    writer.add_scalar('Test loss (untransformed)',MSE_nontrans,count)
+    #writer.add_scalar('Test loss', MSE, count)
+    #writer.add_scalar('Training loss',batch_train_loss,count)
+    #writer.add_scalar('Test loss (untransformed)',MSE_nontrans,count)
 
     print('Iteration: {}  Loss: {}  MSE: {}  MSE untransformed: {}%'.format(count, batch_train_loss, MSE, MSE_nontrans))
 
@@ -667,7 +668,7 @@ for epoch in range(num_epochs):
     old_loss = MSE
 
     train_pytorch.current_iter += 1
-writer.close()
+#writer.close()
 
 
 

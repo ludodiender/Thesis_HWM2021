@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.1)  11 APR 2022 17:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.8) (preloaded format=pdflatex 2021.9.1)  9 MAY 2022 15:37
 entering extended mode
 **./Final_thesis_LMD_v1.tex
 (Final_thesis_LMD_v1.tex
@@ -500,6 +500,10 @@ Package: apacite 2013/07/21 v6.03 APA citation
 \bibitemsep=\skip256
 \biblabelsep=\skip257
 )
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2021/07/22 3.63 The Babel package
 
@@ -564,29 +568,92 @@ Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \bframebox=\box60
 LaTeX Info: Redefining \\ on input line 3056.
 )
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/siunitx\siunitx.sty
+Package: siunitx 2022-04-04 v3.0.50 A comprehensive (SI) units package
+\l__siunitx_angle_tmp_dim=\dimen262
+\l__siunitx_angle_marker_box=\box61
+\l__siunitx_angle_unit_box=\box62
+\l__siunitx_compound_count_int=\count349
+
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/translations\translatio
+ns.sty
+Package: translations 2022/02/05 v1.12 internationalization of LaTeX2e packages
+ (CN)
+
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count350
+)
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+))
+\l__siunitx_number_exponent_fixed_int=\count351
+\l__siunitx_number_min_decimal_int=\count352
+\l__siunitx_number_min_integer_int=\count353
+\l__siunitx_number_round_precision_int=\count354
+\l__siunitx_number_group_minimum_int=\count355
+\l__siunitx_table_tmp_box=\box63
+\l__siunitx_table_tmp_dim=\dimen263
+\l__siunitx_table_column_width_dim=\dimen264
+\l__siunitx_table_integer_box=\box64
+\l__siunitx_table_decimal_box=\box65
+\l__siunitx_table_before_box=\box66
+\l__siunitx_table_after_box=\box67
+\l__siunitx_table_before_dim=\dimen265
+\l__siunitx_table_carry_dim=\dimen266
+\l__siunitx_unit_tmp_int=\count356
+\l__siunitx_unit_position_int=\count357
+\l__siunitx_unit_total_int=\count358
+
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/l3packages/l3keys2e\l3k
+eys2e.sty
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/l3kernel\expl3.sty
+Package: expl3 2021-08-27 L3 programming layer (loader) 
+
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
+tex.def
+File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count359
+\l__pdf_internal_box=\box68
+))
+Package: l3keys2e 2021-08-27 LaTeX2e option processing using LaTeX3 keys
+))
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count349
-\Gm@cntv=\count350
-\c@Gm@tempcnt=\count351
-\Gm@bindingoffset=\dimen262
-\Gm@wd@mp=\dimen263
-\Gm@odd@mp=\dimen264
-\Gm@even@mp=\dimen265
-\Gm@layoutwidth=\dimen266
-\Gm@layoutheight=\dimen267
-\Gm@layouthoffset=\dimen268
-\Gm@layoutvoffset=\dimen269
+\Gm@cnth=\count360
+\Gm@cntv=\count361
+\c@Gm@tempcnt=\count362
+\Gm@bindingoffset=\dimen267
+\Gm@wd@mp=\dimen268
+\Gm@odd@mp=\dimen269
+\Gm@even@mp=\dimen270
+\Gm@layoutwidth=\dimen271
+\Gm@layoutheight=\dimen272
+\Gm@layouthoffset=\dimen273
+\Gm@layoutvoffset=\dimen274
 \Gm@dimlist=\toks35
 
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
-(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/berenisadf\berenis.sty
-Package: berenis 2010/08/26 v1.0 berenis
 
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjustbox.sty
+Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/xkeyval\xkeyval.sty
 Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 
@@ -595,9 +662,79 @@ Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
 \XKV@toks=\toks36
 \XKV@tempa@toks=\toks37
 )
-\XKV@depth=\count352
+\XKV@depth=\count363
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
-)) (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+))
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\adjcalc.sty
+Package: adjcalc 2012/05/16 v1.1 Provides advanced setlength with multiple back
+-ends (calc, etex, pgfmath)
+)
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\trimclip.sty
+Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
+
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/collectbox\collectbox.s
+ty
+Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
+\collectedbox=\box69
+)
+\tc@llx=\dimen275
+\tc@lly=\dimen276
+\tc@urx=\dimen277
+\tc@ury=\dimen278
+Package trimclip Info: Using driver 'tc-pdftex.def'.
+
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/adjustbox\tc-pdftex.def
+File: tc-pdftex.def 2019/01/04 v2.2 Clipping driver for pdftex
+))
+\adjbox@Width=\dimen279
+\adjbox@Height=\dimen280
+\adjbox@Depth=\dimen281
+\adjbox@Totalheight=\dimen282
+\adjbox@pwidth=\dimen283
+\adjbox@pheight=\dimen284
+\adjbox@pdepth=\dimen285
+\adjbox@ptotalheight=\dimen286
+
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/ifoddpage\ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count364
+LaTeX Info: Redefining \checkoddpage on input line 45.
+) (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/varwidth\varwidth.sty
+Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
+\@vwid@box=\box70
+\sift@deathcycles=\count365
+\@vwid@loff=\dimen287
+\@vwid@roff=\dimen288
+)) (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen289
+\captionmargin@=\dimen290
+\captionwidth=\dimen291
+\caption@tempdima=\dimen292
+\caption@indent=\dimen293
+\caption@parindent=\dimen294
+\caption@hangindent=\dimen295
+Package caption Info: memoir document class detected.
+
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/caption\caption-memoir.
+sto
+File: caption-memoir.sto 2020/10/10 v2.1 Adaption of the caption package to the
+ memoir document class (AR)
+))
+\c@caption@flags=\count366
+\c@continuedfloat=\count367
+Package caption Info: changepage package is loaded.
+\caption@adjustwidth@hsize=\dimen296
+\caption@adjustwidth@linewidth=\dimen297
+Package caption Info: float package is loaded.
+)
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/berenisadf\berenis.sty
+Package: berenis 2010/08/26 v1.0 berenis
+
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
 
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/ly1\ly1enc.def
@@ -758,7 +895,7 @@ ed on 2003/03/14 v1.2 Experimental NFSS Extensions
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/base\ifthen.sty
 Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
 )
-\c@taken=\count353
+\c@taken=\count368
 LaTeX Info: Redefining \itshape on input line 515.
 LaTeX Info: Redefining \scshape on input line 523.
 LaTeX Info: Redefining \upshape on input line 537.
@@ -775,57 +912,49 @@ File: t1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ))
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/eso-pic\eso-pic.sty
 Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
-\ESO@tempdima=\dimen270
-\ESO@tempdimb=\dimen271
+\ESO@tempdima=\dimen298
+\ESO@tempdimb=\dimen299
 )
-(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backend-pdf
-tex.def
-File: l3backend-pdftex.def 2021-08-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count354
-\l__pdf_internal_box=\box61
-) (Final_thesis_LMD_v1.aux)
+(Final_thesis_LMD_v1.aux)
 \openout1 = `Final_thesis_LMD_v1.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
-LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 87.
-LaTeX Font Info:    ... okay on input line 87.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for LY1/ptm/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
 
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count355
-\scratchdimen=\dimen272
-\scratchbox=\box62
-\nofMPsegments=\count356
-\nofMParguments=\count357
+\scratchcounter=\count369
+\scratchdimen=\dimen300
+\scratchbox=\box71
+\nofMPsegments=\count370
+\nofMParguments=\count371
 \everyMPshowfont=\toks38
-\MPscratchCnt=\count358
-\MPscratchDim=\dimen273
-\MPnumerator=\count359
-\makeMPintoPDFobject=\count360
+\MPscratchCnt=\count372
+\MPscratchDim=\dimen301
+\MPnumerator=\count373
+\makeMPintoPDFobject=\count374
 \everyMPtoPDFconversion=\toks39
 )
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-b
 ase.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 
-(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/generic/infwarerr\infwarerr.s
-ty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
-) (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/grfext\grfext.sty
 Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
 
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/generic/kvdefinekeys\kvdefine
@@ -834,21 +963,11 @@ Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
 ))
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.sty
 Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
-(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
-Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
-)
+
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/generic/kvsetkeys\kvsetkeys.s
 ty
 Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 ))
-(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/generic/pdftexcmds\pdftexcmds
-.sty
-Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 Package grfext Info: Graphics extension search list:
@@ -860,12 +979,17 @@ G,.JBIG2,.JB2,.eps]
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-\c@maskedRefs=\count361
+\c@maskedRefs=\count375
 
 (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/apacite\english.apc
 File: english.apc 2013/07/21 v6.03 apacite language file
 LaTeX Info: Redefining \BPBI on input line 129.
 LaTeX Info: Redefining \BHBI on input line 130.
+)
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/translations/dicts\tran
+slations-basic-dictionary-english.trsl
+File: translations-basic-dictionary-english.trsl (english translation file `tra
+nslations-basic-dictionary')
 )
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -901,14 +1025,23 @@ LaTeX Info: Redefining \BHBI on input line 130.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
 
 LaTeX Warning: Optional argument of \twocolumn too tall on page i.
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \vbox (30.0pt too high) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Warning: Text page i contains only floats.
+
+
+Overfull \vbox (30.0pt too high) has occurred while \output is active []
+
+
+Overfull \vbox (16.0pt too high) has occurred while \output is active []
 
  [1{C:/Users/ludod/AppData/Local/MiKTeX/pdftex/config/pdftex.map}
 
@@ -921,385 +1054,217 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 
-] [4
+]
+(Final_thesis_LMD_v1.toc) [4
+
+
 
 ]
-(Final_thesis_LMD_v1.toc) [5
+<./images//CML_concept_adapted.png, id=17, 558.669pt x 269.37pt>
+File: ./images//CML_concept_adapted.png Graphic file (type png)
+<use ./images//CML_concept_adapted.png>
+Package pdftex.def Info: ./images//CML_concept_adapted.png  used on input line 
+185.
+(pdftex.def)             Requested size: 227.62204pt x 109.75188pt.
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <9> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 186.
 
+Underfull \vbox (badness 5431) has occurred while \output is active []
 
-
-] [6
-
-]
-<./images//Transfer_learning_concept.png, id=23, 534.36pt x 235.644pt>
-File: ./images//Transfer_learning_concept.png Graphic file (type png)
-<use ./images//Transfer_learning_concept.png>
-Package pdftex.def Info: ./images//Transfer_learning_concept.png  used on input
- line 174.
-(pdftex.def)             Requested size: 227.62204pt x 100.37929pt.
  [1
 
 
- <./images//Transfer_learning_concept.png>] [2
+
+ <./images//CML_concept_adapted.png>] [2
 
 ]
-<./images//Dutch_CML_network.png, id=35, 268.713pt x 311.199pt>
+<./images//Dutch_CML_network.png, id=29, 268.713pt x 311.199pt>
 File: ./images//Dutch_CML_network.png Graphic file (type png)
 <use ./images//Dutch_CML_network.png>
-Package pdftex.def Info: ./images//Dutch_CML_network.png  used on input line 21
+Package pdftex.def Info: ./images//Dutch_CML_network.png  used on input line 22
 3.
 (pdftex.def)             Requested size: 221.12102pt x 256.0748pt.
-<./images//val_freq_dist.png, id=36, 578.16pt x 1011.78pt>
+<./images//val_freq_dist.png, id=30, 578.16pt x 1011.78pt>
 File: ./images//val_freq_dist.png Graphic file (type png)
 <use ./images//val_freq_dist.png>
-Package pdftex.def Info: ./images//val_freq_dist.png  used on input line 220.
+Package pdftex.def Info: ./images//val_freq_dist.png  used on input line 230.
 (pdftex.def)             Requested size: 284.52756pt x 497.92249pt.
 
-Overfull \hbox (52.63759pt too wide) in paragraph at lines 220--221
-[][] 
+Overfull \hbox (52.63759pt too wide) in paragraph at lines 230--232
+[][]
  []
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-[3
-
-
- <./images//Dutch_CML_network.png>] [4
-
- <./images//val_freq_dist.png>]
-
-LaTeX Warning: Reference `modelselection' on page 5 undefined on input line 240
-.
+ [3
 
 
-LaTeX Warning: Reference `transferlearning' on page 5 undefined on input line 2
-40.
+ <./images//Dutch_CML_network.png> <./images//val_freq_dist.png>] [4
 
-[5
+] [5
 
 ]
 <C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/images/Schematic_LSTM_TR
-_23_3_LudoDiender.png, id=48, 963.6pt x 542.025pt>
+_23_3_LudoDiender.png, id=43, 963.6pt x 542.025pt>
 File: C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/images/Schematic_LS
 TM_TR_23_3_LudoDiender.png Graphic file (type png)
 <use C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/images/Schematic_LST
 M_TR_23_3_LudoDiender.png>
 Package pdftex.def Info: C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/
-images/Schematic_LSTM_TR_23_3_LudoDiender.png  used on input line 263.
+images/Schematic_LSTM_TR_23_3_LudoDiender.png  used on input line 273.
 (pdftex.def)             Requested size: 483.69687pt x 272.07874pt.
-LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
-(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 264.
 LaTeX Font Info:    Trying to load font information for TS1+lmss on input line 
-277.
- (C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmss.fd
+287.
+
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/lm\ts1lmss.fd
 File: ts1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-[6]
-Overfull \hbox (2.65472pt too wide) in paragraph at lines 312--312
+) [6]
+Overfull \hbox (2.65472pt too wide) in paragraph at lines 324--324
 []|\T1/lmss/m/n/10 Group|  
  []
 
 
-Overfull \hbox (9.87184pt too wide) in paragraph at lines 312--312
+Overfull \hbox (9.87184pt too wide) in paragraph at lines 324--324
 []|\T1/lmss/m/n/10 Hyperparameter|  
  []
 
 
-Overfull \hbox (0.6107pt too wide) in paragraph at lines 306--331
+Overfull \hbox (0.6107pt too wide) in paragraph at lines 318--343
  []|  [] [] 
  []
 
-[7 <C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/images/Schematic_LSTM
-_TR_23_3_LudoDiender.png>] [8]
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-
-Overfull \hbox (4.61711pt too wide) in paragraph at lines 385--385
-[]|$\OML/cmm/m/it/10 Hyperparameter$|  
+ [7 <C:/Users/ludod/Documents/GitHub/Thesis_HWM2021/Thesis/images/Schematic_LST
+M_TR_23_3_LudoDiender.png>] [8] [9]
+Overfull \hbox (0.96378pt too wide) in paragraph at lines 431--431
+[]|\T1/lmss/m/n/10 Hidden 
  []
 
 
-Underfull \vbox (badness 6078) has occurred while \output is active []
-
- [9]
-Overfull \hbox (1.38467pt too wide) in paragraph at lines 413--413
-[]|\T1/lmss/m/n/10 Learning 
- []
-
-
-Overfull \hbox (14.1789pt too wide) in paragraph at lines 408--440
+Overfull \hbox (2.2896pt too wide) in paragraph at lines 426--459
  []|   [] 
  []
 
-[10] [11
-
-] [12
-
-]
-<./images//ex_loss_epochs.png, id=80, 462.528pt x 346.896pt>
+[10] [11]
+<./images//ex_loss_epochs.png, id=71, 794.97pt x 794.97pt>
 File: ./images//ex_loss_epochs.png Graphic file (type png)
 <use ./images//ex_loss_epochs.png>
-Package pdftex.def Info: ./images//ex_loss_epochs.png  used on input line 468.
-(pdftex.def)             Requested size: 231.88997pt x 173.91866pt.
-<./images//scatter_final.png, id=81, 462.528pt x 346.896pt>
+Package pdftex.def Info: ./images//ex_loss_epochs.png  used on input line 491.
+(pdftex.def)             Requested size: 231.88997pt x 231.89398pt.
+<./images//scatter_final.png, id=72, 462.528pt x 346.896pt>
 File: ./images//scatter_final.png Graphic file (type png)
 <use ./images//scatter_final.png>
-Package pdftex.def Info: ./images//scatter_final.png  used on input line 477.
+Package pdftex.def Info: ./images//scatter_final.png  used on input line 498.
 (pdftex.def)             Requested size: 231.88997pt x 173.91866pt.
- [13 <./images//ex_loss_epochs.png> <./images//scatter_final.png>] [14
 
-] [15] [16
+Underfull \vbox (badness 1383) has occurred while \output is active []
 
-] [17
+ [12
 
-] [18
+ <./images//ex_loss_epochs.png> <./images//scatter_final.png>]
+<./images//CML_timesignal_faulty.png, id=78, 462.528pt x 346.896pt>
+File: ./images//CML_timesignal_faulty.png Graphic file (type png)
+<use ./images//CML_timesignal_faulty.png>
+Package pdftex.def Info: ./images//CML_timesignal_faulty.png  used on input lin
+e 506.
+(pdftex.def)             Requested size: 231.88997pt x 173.91866pt.
+<./images//ex_seq_len.png, id=79, 2529.45pt x 1806.75pt>
+File: ./images//ex_seq_len.png Graphic file (type png)
+<use ./images//ex_seq_len.png>
+Package pdftex.def Info: ./images//ex_seq_len.png  used on input line 514.
+(pdftex.def)             Requested size: 711.3189pt x 508.06448pt.
 
-] (Final_thesis_LMD_v1.bbl
-LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 7
-0.
-
-(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \hbox (badness 4739) in paragraph at lines 55--74
-[]\T1/lmss/m/n/10 Burbidge, J. B., Magee, L., & Robb, A. L.
+Overfull \hbox (144.48598pt too wide) in paragraph at lines 513--516
+[]|  []
  []
 
 
-Underfull \hbox (badness 1478) in paragraph at lines 55--74
-\T1/lmss/m/n/10 (1988).  Al-ter-na-tive trans-for-ma-tions to han-
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+<./images//scatter_onlyRain_final.png, id=80, 462.528pt x 346.896pt>
+File: ./images//scatter_onlyRain_final.png Graphic file (type png)
+<use ./images//scatter_onlyRain_final.png>
+Package pdftex.def Info: ./images//scatter_onlyRain_final.png  used on input li
+ne 528.
+(pdftex.def)             Requested size: 231.88997pt x 173.91866pt.
+ [13 <./images//CML_timesignal_faulty.png>] [14
+
+ <./images//ex_seq_len.png>] [15
+
+ <./images//scatter_onlyRain_final.png>] [16
 
 
-Underfull \hbox (badness 3965) in paragraph at lines 55--74
-\T1/lmss/m/n/10 dle ex-treme val-ues of the de-pen-dent vari-
- []
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+[18] [19] [20
 
 
-Underfull \hbox (badness 2469) in paragraph at lines 188--208
-[]\T1/lmss/m/n/10 Doumounia, A., Gos-set, M., Cazenave, F., Ka-
- []
+] (Final_thesis_LMD_v1.bbl [21
 
 
-Underfull \hbox (badness 1173) in paragraph at lines 188--208
-\T1/lmss/m/n/10 cou, M., & Zoug-more, F.  (2014).  Rain-
- []
+]
+LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10> not available
+(Font)              Font shape `T1/lmss/m/sl' tried instead on input line 30.
 
-
-Underfull \hbox (badness 5862) in paragraph at lines 435--453
-[]\T1/lmss/m/n/10 Imhoff, R. O., Overeem, A., Brauer, C. C.,
- []
-
-
-Underfull \hbox (badness 3417) in paragraph at lines 435--453
-\T1/lmss/m/n/10 Lei-jnse, H., Weerts, A. H., & Ui-jlen-hoet,
- []
-
-
-Underfull \hbox (badness 4205) in paragraph at lines 435--453
-\T1/lmss/m/n/10 mer-cial mi-crowave links.  \T1/lmss/m/sl/10 Geo-phys-i-cal Re-
-
- []
-
-
-Underfull \hbox (badness 2671) in paragraph at lines 498--516
-\T1/lmss/m/n/10 runoff re-gres-sion with log-a-rith-mic trans-forms
- []
-
-
-Underfull \hbox (badness 2961) in paragraph at lines 498--516
-\T1/lmss/m/n/10 and ze-ros in the data.  \T1/lmss/m/sl/10 Wa-ter Re-sources
- []
-
-
-Underfull \hbox (badness 1490) in paragraph at lines 498--516
-\T1/lmss/m/sl/10 Re-search\T1/lmss/m/n/10 , \T1/lmss/m/sl/10 8\T1/lmss/m/n/10 (
-4), 1096-1099.  Re-trieved from
- []
-
-
-Overfull \hbox (13.60942pt too wide) in paragraph at lines 498--516
-\T1/lmtt/m/n/10 https://dx.doi.org/10.1029/wr008i004p01096
- []
+Underfull \vbox (badness 6252) has occurred while \output is active []
 
 
 Underfull \vbox (badness 6252) has occurred while \output is active []
 
- [19]
-Underfull \hbox (badness 1072) in paragraph at lines 559--575
+ [22
+
+]
+Underfull \hbox (badness 3503) in paragraph at lines 657--672
+[]\T1/lmss/m/n/10 Kilmartin, R. F., & Pe-ter-son, J. R.  (1972).
+ []
+
+
+Underfull \hbox (badness 1502) in paragraph at lines 657--672
+\T1/lmss/m/sl/10 Re-search\T1/lmss/m/n/10 , \T1/lmss/m/sl/10 8\T1/lmss/m/n/10 (
+4), 1096-1099.  doi: $10 [] .1029 /
+ []
+
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 7
+23.
+(C:\Users\ludod\AppData\Local\Programs\MiKTeX\tex/latex/lm\t1lmtt.fd
+File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Underfull \hbox (badness 1072) in paragraph at lines 770--789
 []\T1/lmss/m/n/10 Leijnse, H., Ui-jlen-hoet, R., & Stricker, J. N. M.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 559--575
-\T1/lmss/m/n/10 (2007).  Hy-drom-e-te-o-ro-log-i-cal ap-pli-ca-tion
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 559--575
-\T1/lmss/m/n/10 of a mi-crowave link: 2. pre-cip-i-ta-tion.
- []
-
-
-Underfull \hbox (badness 7759) in paragraph at lines 559--575
-\T1/lmss/m/sl/10 Wa-ter Re-sources Re-search\T1/lmss/m/n/10 , \T1/lmss/m/sl/10 
-43\T1/lmss/m/n/10 (4).  doi:
- []
-
-
-Underfull \hbox (badness 1072) in paragraph at lines 589--608
-[]\T1/lmss/m/n/10 Leijnse, H., Ui-jlen-hoet, R., & Stricker, J. N. M.
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 589--608
-\T1/lmss/m/n/10 (2008).  Mi-crowave link rain-fall es-ti-ma-
- []
-
-
-Underfull \hbox (badness 2261) in paragraph at lines 589--608
-\T1/lmss/m/n/10 tion: Ef-fects of link length and fre-quency,
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 589--608
-\T1/lmss/m/n/10 tem-po-ral sam-pling, power res-o-lu-tion, and
- []
-
-
-Underfull \hbox (badness 1259) in paragraph at lines 589--608
-\T1/lmss/m/n/10 wet an-tenna at-ten-u-a-tion.  \T1/lmss/m/sl/10 Ad-vances in Wa
--
- []
-
-
-Underfull \hbox (badness 6412) in paragraph at lines 589--608
-\T1/lmss/m/sl/10 ter Re-sources\T1/lmss/m/n/10 , \T1/lmss/m/sl/10 31\T1/lmss/m/
-n/10 (11), 1481-1493.  doi:
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 589--608
-\T1/lmss/m/n/10 https://doi.org/10.1016/j.advwatres.2008.03.004
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 589--608
-
- []
-
-
-Underfull \hbox (badness 1194) in paragraph at lines 650--670
+Underfull \hbox (badness 1194) in paragraph at lines 860--880
 \T1/lmss/m/n/10 up-per ex-pec-ta-tion lin-ear re-gres-sionmodeling,
  []
 
 
-Underfull \hbox (badness 1874) in paragraph at lines 716--732
-\T1/lmss/m/n/10 from com-mer-cial cel-lu-lar com-mu-ni-ca-tion net-
- []
-
-
-Underfull \hbox (badness 1303) in paragraph at lines 807--827
+Underfull \hbox (badness 1303) in paragraph at lines 1076--1096
 []\T1/lmss/m/n/10 Pudashine, J., Guyot, A., Pe-tit-jean, F., Pauwels,
  []
 
-
-Underfull \hbox (badness 4441) in paragraph at lines 807--827
-\T1/lmss/m/n/10 V. R. N., Ui-jlen-hoet, R., Seed, A., ...
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 1234--1256
+\T1/lmtt/m/n/10 https :// www [] .sciencedirect [] .com / science /
  []
 
 
-Underfull \hbox (badness 1472) in paragraph at lines 807--827
-\T1/lmss/m/n/10 Walker, J. P.  (2020).  Deep learn-ing for
+Underfull \hbox (badness 10000) in paragraph at lines 1234--1256
+\T1/lmtt/m/n/10 article / pii / S0309170812000784$   \T1/lmss/m/n/10 doi:
  []
 
 
-Underfull \hbox (badness 3646) in paragraph at lines 807--827
-\T1/lmss/m/n/10 an im-proved pre-dic-tion of rain-fall re-trievals
+Underfull \hbox (badness 10000) in paragraph at lines 1234--1256
+\T1/lmss/m/n/10 https :// doi [] .org / 10 [] .1016 / j [] .advwatres [] .2012 
+[] .03 []
  []
 
-
-Underfull \hbox (badness 2837) in paragraph at lines 842--861
-[]\T1/lmss/m/n/10 Ruf, C. S., Ay-din, K., Mathur, S., & Bobak,
- []
-
-
-Underfull \hbox (badness 1596) in paragraph at lines 842--861
-\T1/lmss/m/n/10 a-ga-tion link for rain-rate es-ti-ma-tion.  \T1/lmss/m/sl/10 J
-our-
- []
-
-
-Underfull \hbox (badness 6708) in paragraph at lines 842--861
-\T1/lmss/m/sl/10 nal of At-mo-spheric and Oceanic Tech-nol-
- []
-
-
-Underfull \hbox (badness 1968) in paragraph at lines 842--861
-\T1/lmss/m/sl/10 ogy\T1/lmss/m/n/10 , \T1/lmss/m/sl/10 13\T1/lmss/m/n/10 (2), 4
-19-425.  doi: 10.1175/1520-
- []
-
-
-Underfull \hbox (badness 2980) in paragraph at lines 873--887
-[]\T1/lmss/m/n/10 Sarkar, D.  (2018, Novem-ber 14, 2018).  \T1/lmss/m/sl/10 A
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 873--887
-\T1/lmss/m/sl/10 com-pre-hen-sive hands-on guide to trans-
- []
-
-
-Underfull \hbox (badness 5359) in paragraph at lines 873--887
-\T1/lmss/m/sl/10 fer learn-ing with real-world ap-pli-ca-tions in
- []
-
-
-Underfull \hbox (badness 1762) in paragraph at lines 873--887
-\T1/lmss/m/sl/10 deep learn-ing \T1/lmss/m/n/10 [Web Page].  Re-trieved from
- []
-
-
-Overfull \hbox (533.35791pt too wide) in paragraph at lines 873--887
-\T1/lmtt/m/n/10 https://towardsdatascience.com/a-comprehensive-hands-on-guide-t
-o-transfer-learning-with-real-world-applications-in-deep-learning-212bf3b2f27a
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 873--887
-
- []
-
-
-Overfull \hbox (8.35944pt too wide) in paragraph at lines 928--948
-\T1/lmtt/m/n/10 https://doi.org/10.1186/s41546-019-0042-6
- []
-
-
-Underfull \hbox (badness 8038) in paragraph at lines 962--979
-\T1/lmss/m/n/10 ing high-density rain gauge net-works and
- []
-
-
-Underfull \hbox (badness 1221) in paragraph at lines 962--979
-\T1/lmss/m/n/10 y-ses.  \T1/lmss/m/sl/10 Wa-ter\T1/lmss/m/n/10 , \T1/lmss/m/sl/
-10 9\T1/lmss/m/n/10 (12), 931.  Re-trieved from
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 962--979
-\T1/lmtt/m/n/10 https://www.mdpi.com/2073-4441/9/12/931
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 962--979
-
- []
-
-) [20] [21
-
+) [24
 
 ]
 \tf@toc=\write4
@@ -1309,18 +1274,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 962--979
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-
-LaTeX Warning: There were undefined references.
-
  ) 
 Here is how much of TeX's memory you used:
- 10762 strings out of 478927
- 156880 string characters out of 2852536
- 574546 words of memory out of 3000000
- 28432 multiletter control sequences out of 15000+600000
- 452628 words of font info for 57 fonts, out of 8000000 for 9000
+ 16638 strings out of 478927
+ 305172 string characters out of 2852536
+ 690513 words of memory out of 3000000
+ 34246 multiletter control sequences out of 15000+600000
+ 460984 words of font info for 60 fonts, out of 8000000 for 9000
  1144 hyphenation exceptions out of 8191
- 61i,14n,70p,1849b,468s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,14n,117p,1617b,510s stack positions out of 5000i,500n,10000p,200000b,80000s
 {C:/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ec.enc}{C
 :/Users/ludod/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/lm/lm-ts1.enc}<C:/U
 sers/ludod/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.
@@ -1337,10 +1299,11 @@ pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss17.pfb><C:/Users/ludod/Ap
 pData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmss8.pfb><C:/Users/ludod/App
 Data/Local/Programs/MiKTeX/fonts/type1/public/lm/lmssbx10.pfb><C:/Users/ludod/A
 ppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso10.pfb><C:/Users/ludod/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmsso9.pfb><C:/Users/ludod/
 AppData/Local/Programs/MiKTeX/fonts/type1/public/lm/lmtt10.pfb>
-Output written on Final_thesis_LMD_v1.pdf (27 pages, 2395956 bytes).
+Output written on Final_thesis_LMD_v1.pdf (28 pages, 5132527 bytes).
 PDF statistics:
- 176 PDF objects out of 1000 (max. 8388607)
+ 190 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
